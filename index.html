@@ -135,6 +135,15 @@
         max-height: 30%;
         max-width: 30%;
       }
+      @media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .grid-item img {
+        max-height: 20%;
+        max-width: 20%;
+      }
+}
     </style>
     <script>
       window._wpemojiSettings = {
@@ -962,9 +971,9 @@
         </g>
       </symbol>
     </svg>
-    <div data-preloader class="preloader-main">
+    <!-- <div data-preloader class="preloader-main">
       <svg class="k-ico"><use xlink:href="#ico-logo-min"></use></svg>
-    </div>
+    </div> -->
     <!--Recent News hero-->
     <header
       class="main-header home-header"
@@ -2379,7 +2388,7 @@
                 rel="follow"
               >
                 <!--<img src="--><!--/images/logo.svg">-->
-                <img src="https://clickvs.com/images/logo.png" alt="s" style="width: 50px;">
+                <img src="https://clickvs.com/images/biglogo.jpg" alt="s" >
                 <svg class="k-ico logo-design">
                   <use xlink:href="#main-logo-design"></use>
                 </svg>
