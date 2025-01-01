@@ -568,7 +568,7 @@ svg.lines {
   background-color: #46b473;
 }
 .intro.is-blue {
-  background-color: #3A97FF;
+  background-color: ##3A97FF;
 }
 .intro.is-orange {
   background-color: #f7941f;
@@ -653,16 +653,16 @@ svg.lines {
   border-color: transparent transparent transparent #1a1a1b;
 }
 .performance-marketing {
-  background: #52aadd;
+  background: #3A97FF;
 }
 .performance-marketing .services-description {
-  background: #52aadd;
+  background: #3A97FF;
 }
 .ideas.performance-marketing {
   background: #1a1a1b !important;
 }
 .ideas.performance-marketing h3 {
-  color: #52aadd;
+  color: #3A97FF;
   font-size: 3.125rem;
   margin-bottom: 0.9em;
 }
@@ -670,11 +670,11 @@ svg.lines {
   font-size: 17px;
 }
 .performance-marketing .left .arrow {
-  border-color: transparent transparent transparent #52aadd;
+  border-color: transparent transparent transparent #3A97FF;
   border-width: 30px 0 30px 30px;
 }
 .performance-marketing .right .arrow {
-  border-color: transparent #52aadd transparent transparent;
+  border-color: transparent #3A97FF transparent transparent;
   border-width: 30px 30px 30px 0;
   left: -30px;
 }
@@ -5795,24 +5795,24 @@ body.menu-opened {
   }
 }
 .services.is-blue {
-  background: #52aadd;
+  background: #3A97FF;
 }
 .services.is-blue .services-description {
-  background: #52aadd;
+  background: #3A97FF;
 }
 @media screen and (min-width: 768px) {
   .services.is-blue .left .arrow {
-    border-color: transparent transparent transparent #52aadd;
+    border-color: transparent transparent transparent #3A97FF;
   }
 }
 @media screen and (min-width: 768px) {
   .services.is-blue .right .arrow {
-    border-color: transparent #52aadd transparent #52aadd;
+    border-color: transparent #3A97FF transparent #3A97FF;
   }
 }
 @media screen and (max-width: 767px) {
   .services.is-blue .arrow {
-    border-color: transparent transparent #52aadd transparent;
+    border-color: transparent transparent #3A97FF transparent;
   }
 }
 .services h3 {
@@ -6700,7 +6700,7 @@ body.menu-opened {
   color: #f7941f;
 }
 .feature-cols__footer .fcf-text.is-blue {
-  color: #52aadd;
+  color: #3A97FF;
 }
 .feature-cols__footer .fcf-cta {
   padding-top: 40px;
@@ -6718,7 +6718,7 @@ body.menu-opened {
   color: #f7941f;
 }
 .feature-cols__footer .fcf-cta.is-blue a:hover {
-  color: #52aadd;
+  color: #3A97FF;
 }
 .feature-types {
   padding: 0 !important;
@@ -6776,10 +6776,10 @@ body.menu-opened {
   color: #fff;
 }
 .feature-types__col.main-logo-media .feature-types__logo .k-ico {
-  fill: #52aadd;
+  fill: #3A97FF;
 }
 .feature-types__col.main-logo-media .feature-types__cta a {
-  color: #52aadd;
+  color: #3A97FF;
 }
 .feature-types__col.main-logo-media .feature-types__cta a:hover {
   color: #fff;
@@ -7574,7 +7574,7 @@ body.menu-opened {
   background-color: #46b473;
 }
 .intro-section.is-blue {
-  background-color: #52aadd;
+  background-color: #3A97FF;
 }
 .intro-section.is-orange {
   background-color: #f7941f;
@@ -9746,7 +9746,7 @@ body.menu-opened {
   stroke-width: 7px !important;
 }
 .circle-section.pm-active .circle_tab_content a:hover {
-  color: #52aadd;
+  color: #3A97FF;
 }
 .circle-section.dd-active .circlebox svg {
   -webkit-transform: rotate(124deg) !important;
@@ -10028,7 +10028,7 @@ body.menu-opened {
   background-color: #46b371;
 }
 .circle_tab_content[data-id="pm"] ul li::before {
-  background-color: #52aadd;
+  background-color: #3A97FF;
 }
 .service-tab {
   min-height: 225px;
@@ -10063,7 +10063,7 @@ a[data-link="dd"].active {
 }
 a[data-link="pm"].active {
   font-size: 1.5em;
-  color: #52aadd;
+  color: #3A97FF;
 }
 .linecolor-shadow.anim {
   stroke-width: 7;
@@ -12369,39 +12369,39 @@ body.is-orange .feature-steps .owl-item:before {
   color: #f7941f;
 }
 body.is-blue .hero-inner__cta .more-link:hover {
-  color: #52aadd;
+  color: #3A97FF;
 }
 body.is-blue .services.is-black .services-description a:hover {
-  color: #52aadd;
+  color: #3A97FF;
 }
 body.is-blue .nav-bar-flex > .btnbase .btn__toggle:hover span {
-  background-color: #52aadd;
+  background-color: #3A97FF;
 }
 body.is-blue .main-header .nav-item .menu-icon {
-  border-top-color: #52aadd;
-  border-right-color: #52aadd;
+  border-top-color: #3A97FF;
+  border-right-color: #3A97FF;
 }
 @media screen and (min-width: 768px) {
   body.is-blue .main-header .nav-item:hover > .nav-link {
-    color: #52aadd;
+    color: #3A97FF;
   }
 }
 @media screen and (min-width: 768px) {
   body.is-blue .main-header .nav-item:hover > span .nav-link {
-    color: #52aadd;
+    color: #3A97FF;
   }
 }
 body.is-blue .main-header .nav-link:hover {
-  color: #52aadd;
+  color: #3A97FF;
 }
 body.is-blue .main-header .navbar-nav .nav-link:hover {
-  color: #52aadd;
+  color: #3A97FF;
 }
 body.is-blue .main-header .navbar-brand .k-ico {
   display: none;
 }
 body.is-blue .main-header .navbar-brand .logo-media {
-  fill: #52aadd;
+  fill: #3A97FF;
   display: block;
 }
 body.is-blue .main-header .btn {
@@ -12409,36 +12409,36 @@ body.is-blue .main-header .btn {
   color: #000;
 }
 body.is-blue .main-header .btn:hover {
-  background-color: #52aadd;
+  background-color: #3A97FF;
   color: #fff;
 }
 body.is-blue .hero-simple .social-media a:hover {
-  color: #52aadd;
+  color: #3A97FF;
 }
 body.is-blue .header-alt-elements .navbar-brand .k-ico {
   display: none;
 }
 body.is-blue .header-alt-elements .navbar-brand .logo-media {
-  fill: #52aadd;
+  fill: #3A97FF;
   display: block;
 }
 body.is-blue .header-alt-elements .btn-hire-us:hover {
-  color: #52aadd;
+  color: #3A97FF;
 }
 body.is-blue .feature-steps.kobe-design .feature-steps__item:before {
-  color: #52aadd;
+  color: #3A97FF;
 }
 body.is-blue .schedule-module.kobe-design {
-  background-color: #52aadd;
+  background-color: #3A97FF;
 }
 body.is-blue .schedule-module.kobe-design .schedule-btn:hover i {
-  background-color: #52aadd;
+  background-color: #3A97FF;
 }
 body.is-blue .feature-steps .owl-nav button {
-  color: #52aadd !important;
+  color: #3A97FF !important;
 }
 body.is-blue .feature-steps .owl-item:before {
-  color: #52aadd;
+  color: #3A97FF;
 }
 
 /*# sourceMappingURL=style.css.map */
