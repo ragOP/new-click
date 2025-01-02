@@ -135,6 +135,16 @@
         max-height: 45%;
         max-width: 45%;
       }
+      #contain{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .circle1 {
+        width: 1000px; 
+        height: 25  0px; 
+        transform: translate(40px, 30px);
+      }
 
       @media (max-width: 768px) {
   .grid-container {
@@ -143,6 +153,28 @@
   .grid-item img {
         max-height: 20%;
         max-width: 20%;
+      }
+      .container-xl {
+        left: 3% !important;
+      }
+      h3{
+        font-size: 2rem !important;
+      }
+      p{
+        font-size: 1.5rem !important;
+        line-height: 4rem !important;
+      }
+      #contain {
+        display: block !important;;
+      }
+      .grid-item img {
+        max-height: 25%;
+        max-width: 25%;
+      }
+      .circle1 {
+        width: 1000px; 
+        height: 25  0px; 
+        transform: translate(25px, 30px);
       }
     }
     
@@ -2986,17 +3018,17 @@
           </div>
           <div data-caption="2" class="hero-banner__caption caption-2">
             <div class="container">
-              <h3 style="color: blue;">Our Focus:</h3>
+              <h3 style="color: blue; margin-top: 30px;">Our Focus:</h3>
               <p class="has-relative" style="color: blue;">
                 
                 <br>
-                To optimize the user experience for  all <br>
-              consumers  engaging   with our
-              funnels,<br> driving  the  highest-intent 
+                To optimize the user experience <br> for   all 
+              consumers  engaging   with <br> our 
+              funnels, driving  the   highest <br>intent 
               
-              leads for each <br> of our promoted
+              leads for each of our  <br>  promoted
               
-              verticals ensuring  a <br> seamless
+              verticals ensuring <br> a seamless
               flow from beginning to end.
               </p>
 
@@ -3291,7 +3323,7 @@ We prioritize audience targeting to provide the most qualified leads to our clie
                                   <img 
                                   src="https://clickvs.com/images/logo.png" 
                                   alt="Click Ventures Logo with a stylized K."
-                                  style="width: 1000px; height: 25  0px; transform: translate(-20px, 30px);"
+                                  id="circle1"
                                 />
                                 
     
@@ -3305,7 +3337,7 @@ We prioritize audience targeting to provide the most qualified leads to our clie
                                 <div class="circle_tab_content" data-id="vp">
     
                                     
-                                        <h4 style="font-size: 32px;">WEB DESIGN & DEVELOPMENT</h4>
+                                        <h4>WEB DESIGN & DEVELOPMENT</h4>
     
                                     
                                      
@@ -3428,10 +3460,7 @@ To ensure the highest quality leads and calls, we use custom trackers to monitor
     </section>
 
       <section class="section ideas performance-marketing TODO--base-font">
-        <div class="container-xl" style="display: flex
-;
-    align-items: center;
-    justify-content: center;">
+        <div class="container-xl" id="contain">
           <div class="allidea">
             <h3 class="wow fadeInUp" style="font-family: 'Helvetica Neue LT W05_75 Bold', sans-serif; color:#3A97FF" >
 
