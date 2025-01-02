@@ -593,7 +593,7 @@ svg.lines {
   margin-top: 1.4rem !important;
 }
 .ideas {
-  background-color: #2b2c2c !important;
+  background-color: #ffffff !important;
   color: #fff;
   font-size: 18px;
   position: relative;
@@ -630,7 +630,7 @@ svg.lines {
   font-size: 17px;
 }
 .ideas *:not(.container-xl) {
-  max-width: 820px;
+  /* max-width: 820px; */
 }
 .video-yellow {
   background: #f79520;
@@ -660,7 +660,7 @@ svg.lines {
   background: #3A97FF;
 }
 .ideas.performance-marketing {
-  background: #1a1a1b !important;
+  background: #ffffff !important;
 }
 .ideas.performance-marketing h3 {
   color: #3A97FF;
