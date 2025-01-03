@@ -40,14 +40,13 @@
       format("woff");
   font-display: swap;
 }
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rowdies:wght@300;400;700&display=swap');
 body,
 html {
   font-size: 16px;
   height: 100%;
 }
 body {
-  font-family: "Helvetica Neue LT W05 55 Roman", sans-serif;
+  font-family: "Poppins", serif !important;
 }
 body.page,
 body.post {
@@ -5156,7 +5155,7 @@ body.menu-opened {
 }
 .hero-banner__img img {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 65%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
