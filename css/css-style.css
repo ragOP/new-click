@@ -75,6 +75,9 @@ p {
 h3 {
   font-size: 4rem !important;
 }
+h4 { 
+  font-size: 2rem !important;
+}
 .mb0 {
   margin-bottom: 0 !important;
 }
