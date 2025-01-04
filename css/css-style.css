@@ -5173,7 +5173,7 @@ body.menu-opened {
   left: 65%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  max-height: 105%;
+  max-height: 95%;
   max-width: 90%;
 }
 @media screen and (min-width: 1400px) {
