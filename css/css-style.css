@@ -4773,7 +4773,7 @@ body.menu-opened {
     border: 0;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1080px) {
   .main-footer .f-col:first-child {
     width: 100%;
     -ms-flex-preferred-size: 100%;
