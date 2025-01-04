@@ -5162,6 +5162,18 @@ body.menu-opened {
   max-height: 105%;
   max-width: 90%;
 }
+@media screen and (min-width: 1400px) {
+  .hero-banner__img img {
+    position: absolute;
+    top: 35%;
+    left: 65%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-height: 95%;
+    max-width: 90%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero-banner__img img {
     margin-left: 11vw;
