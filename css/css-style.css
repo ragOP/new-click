@@ -69,15 +69,15 @@ h6, p {
 }
 @media screen and (max-width: 768px) {
   p {
-    font-size: 1.5rem !important;
-    line-height: 2.6rem !important;
+    font-size: 1.4rem !important;
+    line-height: 2.5rem !important;
   }
   h3 {
-    font-size: 3rem !important;
+    font-size: 2.8rem !important;
     line-height: 3.5rem !important;
   }
   h4 { 
-    font-size: 2.2rem !important;
+    font-size: 2.1rem !important;
     line-height: 2.5rem !important;
   }
 }
@@ -9882,7 +9882,7 @@ body.menu-opened {
 }
 @media screen and (max-width: 767px) {
   #circleContainer {
-    padding-top: 100px;
+    padding-top: 60px;
   }
 }
 .circlebox {
