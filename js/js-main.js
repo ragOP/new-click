@@ -1108,9 +1108,9 @@ $('document').ready(function ($) {
                     animstep_2.delay(.3).duration(.5).play();
                     animstep_1.duration(.5).play();
                     animstep_5.duration(.5).reverse();
-                    //animstep_3.duration(.4).reverse();
+                    animstep_3.duration(.4).reverse();
                     animstep_4.duration(.6).reverse();
-                    animstep_3.duration(.4).play();
+                    // animstep_3.duration(.4).play();
                 }
                 if (destination.index == 2) {
                     animstep_1.duration(.5).reverse();
