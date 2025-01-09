@@ -1138,7 +1138,7 @@ $('document').ready(function ($) {
                         }
                     }, 400);
                 }
-                if (destination.index >= 5 && destination.index <=7) {
+                if (destination.index >= 6 && destination.index <=8) {
                     setTimeout(function () {
                         if(_circle_section.length) {
                             _circle_section.addClass('stopped animated');
@@ -1152,13 +1152,13 @@ $('document').ready(function ($) {
                         }
                     }, 400);
                 }
-                if (destination.index == 5) {
+                if (destination.index == 6) {
                     _circle_section.removeClass('dd-active vp-active').addClass('pm-active');
                 }
-                if (destination.index == 6) {
+                if (destination.index == 7) {
                     _circle_section.removeClass('pm-active vp-active').addClass('dd-active');
                 }
-                if (destination.index == 7) {
+                if (destination.index == 8) {
                     _circle_section.removeClass('pm-active dd-active').addClass('vp-active');
                 }
                 if (destination.index > 2 && direction =='down') {
