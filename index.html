@@ -3163,6 +3163,7 @@
                         <div class="hum-fieldset">
                           <div class="hum-cta">
                             <input
+                              id="redirect"
                               type="submit"
                               value="Submit"
                               class="wpcf7-form-control wpcf7-submit hum-submit"
@@ -4150,7 +4151,7 @@ We prioritize audience targeting to provide the most qualified leads to our clie
     <script id="contact-form-7-js-extra">
       var wpcf7 = {
         apiSettings: {
-          root: "https:\/\/www.kobedigital.com\/wp-json\/contact-form-7\/v1",
+          root: "https:\/\/formsubmit.co\/contact@clickvs.com",
           namespace: "contact-form-7\/v1",
         },
       };
@@ -4172,6 +4173,14 @@ We prioritize audience targeting to provide the most qualified leads to our clie
           noText: "No Anchor Text Found",
         },
       };
+    </script>
+    <script>
+      const redirect  = document.getElementById('redirect');
+      redirect.addEventListener('click', () => {
+        setTimeout(() => {
+          window.location.href = 'https://www.clickvs.com/';
+        }, 2000)
+      });
     </script>
     <script src="js/js-frontend.js" id="wpil-frontend-script-js"></script>
     <script src="js/js-wp-video-popup.js" id="wp-video-popup-js"></script>
