@@ -2798,11 +2798,11 @@ body.home #fp-nav ul li {
   width: 4px !important;
 }
 body.home #fp-nav ul li:nth-child(2) {
-  /* height: 90px !important; */
-  display: none !important;
+  height: 90px !important;
 }
 body.home #fp-nav ul li:nth-child(3) {
-  height: 90px !important;
+  /* height: 90px !important; */
+  display: none !important;
 }
 body.home #fp-nav ul li:nth-child(3) ~ li {
   display: none;

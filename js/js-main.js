@@ -1098,47 +1098,56 @@ $('document').ready(function ($) {
                 console.log("fullPage.js has manually being re-builded");
             },
             onLeave: function (origin, destination, direction) {
-                //console.log(origin, destination, direction, destination.index)
-                if (destination.index == 0) {
-                    animstep_3.duration(.4).reverse();
-                    animstep_1.duration(.5).reverse();
-                    animstep_2.duration(.5).reverse();
+                console.log(origin, destination, direction, destination.index, "destination")
+                if (destination.index === 0) {
+                    // Reverse animations for destination.index === 1
+                    animstep_4.duration(0.6).reverse();
+                    animstep_5.duration(0.5).reverse();
+                    animstep_3.duration(0.4).reverse();
+                
+                    // Play animations for destination.index === 0
+                    animstep_1.duration(0.5).reverse();
+                    animstep_2.duration(0.5).reverse();
+                } else if (destination.index === 1) {
+                    // Reverse animations for destination.index === 0
+                    animstep_1.duration(0.5).reverse();
+                    animstep_2.duration(0.5).reverse();
+                
+                    // Play animations for destination.index === 1
+                    animstep_4.duration(0.6).play();
+                    animstep_5.duration(0.5).play();
+                    animstep_3.duration(0.4).play();
                 }
-                if (destination.index == 1) {
-                    animstep_2.delay(.3).duration(.5).play();
-                    animstep_1.duration(.5).play();
-                    animstep_5.duration(.5).reverse();
-                    animstep_3.duration(.4).reverse();
-                    animstep_4.duration(.6).reverse();
-                    // animstep_3.duration(.4).play();
-                }
-                if (destination.index == 2) {
-                    animstep_1.duration(.5).reverse();
-                    animstep_4.duration(.6).play();
-                    animstep_5.duration(.5).play();
-                    animstep_3.duration(.4).play();
-                }
-                if (destination.index > 2) {
+                
+                // if (destination.index == 1) {
+                //     animstep_2.delay(.3).duration(.5).play();
+                //     animstep_1.duration(.5).play();
+                //     animstep_5.duration(.5).reverse();
+                //     animstep_3.duration(.4).reverse();
+                //     animstep_4.duration(.6).reverse();
+                //     // animstep_3.duration(.4).play();
+                // }
+                if (destination.index > 1) {
                     _root.addClass('hero-unpin');
                     setTimeout(function () {
                         $('.main-header').addClass('fixed-header');
                     }, 400);
                 }
-                if (destination.index <= 2) {
+                if (destination.index <= 1) {
                     _root.removeClass('hero-unpin');
                     setTimeout(function () {
                         $('.main-header').removeClass('fixed-header');
                     }, 400);
                 }
                 // define movement of panels .pm - blue, .dd - green, .vp - yellow
-                if (destination.index == 5 && direction =='down') {
+                if (destination.index == 4 && direction =='down') {
                     setTimeout(function () {
                         if(_circle_section.length) {
                             _circle_section.addClass('start-animated');
                         }
                     }, 400);
                 }
-                if (destination.index >= 6 && destination.index <=8) {
+                if (destination.index >= 5 && destination.index <=7) {
                     setTimeout(function () {
                         if(_circle_section.length) {
                             _circle_section.addClass('stopped animated');
@@ -1152,16 +1161,16 @@ $('document').ready(function ($) {
                         }
                     }, 400);
                 }
-                if (destination.index == 6) {
+                if (destination.index == 5) {
                     _circle_section.removeClass('dd-active vp-active').addClass('pm-active');
                 }
-                if (destination.index == 7) {
+                if (destination.index == 6) {
                     _circle_section.removeClass('pm-active vp-active').addClass('dd-active');
                 }
-                if (destination.index == 8) {
+                if (destination.index == 7) {
                     _circle_section.removeClass('pm-active dd-active').addClass('vp-active');
                 }
-                if (destination.index > 2 && direction =='down') {
+                if (destination.index > 1 && direction =='down') {
                     $('.main-header').addClass('normal-header');
                 }
                 if (direction =='up' && destination.index !== 0 &&

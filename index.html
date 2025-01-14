@@ -3283,23 +3283,7 @@
         </div>
 
         <div data-hero-mark class="hero-banner__mark">
-          <div
-            data-hero-bg
-            class="hero-banner__bg"
-            style="
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('./images/main3.png');
            
-            z-index: 1;
-          
-          "
-          
-          ></div>
           <div data-hero-img class="hero-banner__img">
             <img src="https://clickvs.com/images/logo.png" alt="Click Venture Ai" />
           </div>
@@ -3361,40 +3345,11 @@
             </div>
             </div>
           </div>
-           
-
-        <script>
-          let lastScrollY = window.scrollY;
-        
-          function adjustScattering() {
-            const svg = document.getElementById('scatterSvg');
-            const svgRect = svg.getBoundingClientRect();
-            const isScrollingDown = window.scrollY > lastScrollY;
-            lastScrollY = window.scrollY;
-        
-            if (isScrollingDown && svgRect.top < window.innerHeight && svgRect.bottom > 0) {
-              svg.classList.remove('scatter');
-              svg.style.opacity = 1;
-              // Reset the animations on scroll up
-              document.getElementById('letterC').style.animation = 'none';
-              document.getElementById('letterV').style.animation = 'none';
-            } else {
-              svg.classList.add('scatter');
-              svg.style.opacity = 0;
-            }
-          }
-        
-          // Attach scroll and resize events
-          window.addEventListener('scroll', adjustScattering);
-          window.addEventListener('resize', adjustScattering);
-        
-          // Call once on page load
-          window.onload = adjustScattering;
-        </script>        
+                  
         </div>
       </section>
       <section class="section hero-add-box"></section>
-      <section class="section hero-add-box"></section>
+      <!-- <section class="section hero-add-box"></section> -->
       <section class="section hero-add-box"></section>
 
       <!-- <section class="section intro" id="intro">
