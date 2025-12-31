@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MVA Relief Network – Get Help After a Motor Vehicle Accident</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --primary: #026f48;
+      --primary-dark: #01442f;
+      --accent: #f8971d;
+      --bg: #f1f5f9;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --cta: #00b157;
+      --cta-dark: #009247;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      width: 100%;
+      background: #ffffff;
+    }
+
+    .bar-top {
+      background: var(--accent);
+      color: #fff;
+      font-size: 12px;
+      padding: 6px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .bar-top span {
+      font-weight: 600;
+    }
+
+    .bar-top small {
+      opacity: 0.95;
+    }
+
+    /* HERO – full-width background IMAGE */
+
+    .hero {
+      position: relative;
+      color: #f9fafb;
+      padding: 24px 16px 30px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(182, 184, 189, 0.88),
+          rgba(15, 23, 42, 0.82)
+        ),
+        url("https://www.shutterstock.com/shutterstock/photos/2469384445/display_1500/stock-photo-car-incident-protective-and-car-insurance-policy-examining-insurance-2469384445.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    .hero-inner {
+      position: relative;
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      z-index: 1;
+    }
+
+    .hero-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .hero-logo {
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-phone {
+      text-align: right;
+    }
+
+    .hero-phone span {
+      font-size: 11px;
+      opacity: 0.9;
+    }
+
+    .hero-phone b {
+      display: block;
+      font-size: 14px;
+    }
+
+    .hero-main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .hero-copy h1 {
+      font-size: 24px;
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 8px;
+      text-shadow: 0 12px 28px rgba(0, 0, 0, 0.75);
+    }
+
+    .hero-copy p {
+      font-size: 13px;
+      color: #e5fdf4;
+      max-width: 540px;
+      margin-bottom: 10px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+      font-size: 11px;
+    }
+
+    .hero-badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(209, 250, 229, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .btn-hero {
+      border: none;
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      background: var(--cta);
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 12px 35px rgba(5, 150, 105, 0.9);
+    }
+
+    .btn-hero:hover {
+      background: var(--cta-dark);
+    }
+
+    .hero-actions small {
+      font-size: 11px;
+      opacity: 0.95;
+    }
+
+    .hero-sub-tagline {
+      font-size: 11px;
+      color: #bfdbfe;
+      margin-top: 4px;
+    }
+
+    .hero-quiz-col {
+      /* wraps quiz in hero for layout & spacing */
+    }
+
+    /* GENERIC SECTION – full width with centered content */
+
+    .section {
+      width: 100%;
+      padding: 24px 16px 26px;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    .section:nth-of-type(odd):not(.hero):not(.final):not(.testimonials) {
+      background: #f9fafb;
+    }
+
+    .section-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary-dark);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+      max-width: 620px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section p {
+      font-size: 13px;
+      color: #374151;
+    }
+
+    /* QUIZ – inside hero, appealing glass card */
+
+    .quiz-card {
+      background: radial-gradient(circle at top, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+      border-radius: 16px;
+      padding: 16px 14px 18px;
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      box-shadow:
+        0 18px 55px rgba(15, 23, 42, 0.55),
+        0 0 0 1px rgba(148, 163, 184, 0.2);
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    .quiz-tagline {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #0369a1;
+      margin-bottom: 4px;
+    }
+
+    .quiz-title-small {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #0f172a;
+    }
+
+    .quiz-progress {
+      font-size: 11px;
+      color: #0369a1;
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .quiz-bar {
+      width: 100%;
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.35);
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .quiz-bar-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #22c55e, #22c55e, #0ea5e9);
+      transition: width 0.3s ease;
+    }
+
+    .quiz-question {
+      font-size: 15px;
+      font-weight: 700;
+      margin: 10px 0 8px;
+      color: #0f172a;
+    }
+
+    .quiz-hint {
+      font-size: 12px;
+      color: #047857;
+      margin-bottom: 10px;
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .quiz-option-btn {
+      border-radius: 10px;
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      background: #ffffff;
+      padding: 9px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 0.1s ease, box-shadow 0.1s ease,
+        border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .quiz-option-btn span:first-child {
+      max-width: 90%;
+    }
+
+    .quiz-option-btn span:last-child {
+      font-size: 16px;
+      opacity: 0.75;
+    }
+
+    .quiz-option-btn:hover {
+      border-color: rgba(22, 163, 74, 0.85);
+      box-shadow: 0 12px 26px rgba(34, 197, 94, 0.4);
+      transform: translateY(-1px);
+      background: #f9fafb;
+    }
+
+    .quiz-footer-text {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    .quiz-small-note {
+      margin-top: 4px;
+      font-size: 10px;
+      color: #9ca3af;
+    }
+
+    /* Congrats overlay – auto after last question */
+
+    .quiz-congrats {
+      position: absolute;
+      inset: 10px;
+      border-radius: 14px;
+      border: 2px solid #22c55e;
+      background: radial-gradient(circle at top, #bbf7d0 0, #ecfdf5 40%, #f9fafb 100%);
+      box-shadow:
+        0 0 0 3px rgba(16, 185, 129, 0.5),
+        0 22px 45px rgba(21, 128, 61, 0.6);
+      padding: 14px 14px 16px;
+      display: none;
+      animation: popIn 0.35s ease-out forwards;
+    }
+
+    .quiz-congrats.visible {
+      display: block;
+    }
+
+    .quiz-congrats-title {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: #14532d;
+    }
+
+    .quiz-congrats-sub {
+      font-size: 12px;
+      color: #166534;
+      margin-bottom: 8px;
+    }
+
+    .quiz-congrats-points {
+      font-size: 12px;
+      color: #1f2937;
+    }
+
+    .quiz-congrats-points li {
+      margin-left: 18px;
+      margin-bottom: 4px;
+    }
+
+    .quiz-congrats-cta {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: none;
+      background: #16a34a;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(22, 163, 74, 0.7);
+    }
+
+    .quiz-congrats-cta span:last-child {
+      font-size: 15px;
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* 3 EASY STEPS SECTION */
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .step-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .step-icon-wrap {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4px;
+    }
+
+    .step-icon-inner {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #0f4a71;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 32px;
+    }
+
+    .step-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .step-desc {
+      font-size: 12px;
+      color: #6b7280;
+      max-width: 240px;
+      margin: 0 auto;
+    }
+
+    /* ABOUT SECTION */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr;
+      gap: 18px;
+      margin-top: 14px;
+    }
+
+    .about-card {
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 14px 14px 16px;
+      border: 1px solid var(--border);
+    }
+
+    .about-card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .about-card p {
+      font-size: 13px;
+      color: #4b5563;
+      margin-bottom: 6px;
+    }
+
+    .about-card ul {
+      padding-left: 18px;
+      font-size: 13px;
+      color: #4b5563;
+    }
+
+    .about-card ul li {
+      margin-bottom: 4px;
+    }
+
+    .about-side-img {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.35);
+    }
+
+    /* ACHIEVEMENTS – icon row like screenshot */
+
+    .achievements-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      text-align: center;
+    }
+
+    .achievement-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ach-icon-wrap {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2px;
+    }
+
+    .ach-icon-inner {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #0f4a71;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 32px;
+    }
+
+    .achievement-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    /* TESTIMONIALS – full width law-style */
+
+    .testimonials {
+      background: #f3f4f6;
+    }
+
+    .test-grid {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .test-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 12px 12px 14px;
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .test-card::before {
+      content: "“";
+      position: absolute;
+      top: -18px;
+      right: 12px;
+      font-size: 60px;
+      color: rgba(209, 213, 219, 0.7);
+      font-family: Georgia, serif;
+    }
+
+    .test-name {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .test-meta {
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+
+    .test-text {
+      font-size: 13px;
+      color: #374151;
+    }
+
+    /* FOOTER / FINAL SECTION */
+
+    .final {
+      background: #022c22;
+      color: #e5fdf4;
+      text-align: center;
+    }
+
+    .final-inner p {
+      font-size: 12px;
+      color: #a7f3d0;
+      margin-bottom: 10px;
+    }
+
+    .btn-final {
+      border-radius: 999px;
+      border: none;
+      padding: 9px 18px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: var(--cta);
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(16, 185, 129, 0.7);
+    }
+
+    .btn-final:hover {
+      background: var(--cta-dark);
+    }
+
+    .footer {
+      background: #020617;
+      color: #9ca3af;
+      padding: 12px 16px 16px;
+      font-size: 10px;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .footer-links a {
+      color: #e5e7eb;
+      text-decoration: underline;
+    }
+
+    /* DESKTOP */
+
+    @media (min-width: 900px) {
+      .hero {
+        padding: 32px 40px 40px;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-inner {
+        gap: 24px;
+      }
+
+      .hero-main {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.95fr);
+        align-items: stretch;
+      }
+
+      .hero-copy h1 {
+        font-size: 34px;
+      }
+
+      .hero-copy p {
+        font-size: 14px;
+      }
+
+      .quiz-card {
+        margin: 0;
+      }
+
+      .section {
+        padding: 30px 40px 34px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1.2fr 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .achievements-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .test-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .final {
+        padding: 20px 40px 24px;
+        text-align: center;
+      }
+
+      .final-inner {
+        max-width: 620px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <!-- TOP BAR -->
+    <div class="bar-top">
+      <span>Injured in a Recent Motor Vehicle Accident?</span>
+      <small>Free case review · No upfront fees</small>
+    </div>
+
+    <!-- HERO WITH BACKGROUND IMAGE + QUIZ -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-header">
+          <div class="hero-logo">MVA Relief Network</div>
+          <div class="hero-phone">
+            <span>24/7 Accident Help Line</span>
+            <b>1-800-555-0215</b>
+          </div>
+        </div>
+
+        <div class="hero-main">
+          <!-- LEFT: COPY -->
+          <div class="hero-copy">
+            <h1>Affordable Help After a Motor Vehicle Accident.</h1>
+            <p>
+              Connect with licensed MVA attorneys and claim specialists who can
+              review your crash, injuries, and medical bills and help you
+              understand the compensation you may qualify for.
+            </p>
+
+            <div class="hero-badges">
+              <div class="hero-badge">No upfront costs for evaluation</div>
+              <div class="hero-badge">Available in most U.S. states</div>
+              <div class="hero-badge">Thousands of MVA cases reviewed</div>
+            </div>
+
+            <div class="hero-actions">
+              <button id="startQuizBtn" class="btn-hero">
+                Start My 2-Question Check
+              </button>
+              <small>Quick MVA quiz · Takes under 30 seconds.</small>
+            </div>
+
+            <p class="hero-sub-tagline">
+              Answer two short questions on the right to see if your accident
+              may qualify for a free case review.
+            </p>
+          </div>
+
+          <!-- RIGHT: QUIZ CARD -->
+          <div class="hero-quiz-col">
+            <div class="quiz-card" id="quizCard">
+              <div class="quiz-tagline">Quick MVA Quiz</div>
+              <div class="quiz-title-small">See if your accident may qualify</div>
+
+              <div class="quiz-progress">
+                <span id="quizStepLabel">Question 1 of 2</span>
+                <span id="quizStepHint">Just a few seconds</span>
+              </div>
+              <div class="quiz-bar">
+                <div class="quiz-bar-fill" id="quizBarFill"></div>
+              </div>
+
+              <div class="quiz-content" id="quizContent">
+                <div class="quiz-question" id="quizQuestion">
+                  Were you injured or are you feeling any new pain since the accident?
+                </div>
+                <div class="quiz-hint" id="quizHint">
+                  This includes neck or back pain, headaches, stiffness, dizziness, or soreness.
+                </div>
+
+                <div class="quiz-options" id="quizOptions">
+                  <!-- buttons injected via JS -->
+                </div>
+
+                <p class="quiz-footer-text">
+                  Your answers help match you with the right type of MVA help in
+                  your state. This quiz is free and does not impact your claim.
+                </p>
+                <p class="quiz-small-note">
+                  We won’t ask for your Social Security number or credit card in this quiz.
+                </p>
+              </div>
+
+              <!-- CONGRATS OVERLAY (auto after last click) -->
+              <div class="quiz-congrats" id="quizCongrats">
+                <div class="quiz-congrats-title">Great news – you may qualify.</div>
+                <div class="quiz-congrats-sub">
+                  Based on your answers, it looks like your motor vehicle accident
+                  could meet the basic criteria for a free case review.
+                </div>
+                <ul class="quiz-congrats-points">
+                  <li>You’ll be connected with an MVA-focused professional.</li>
+                  <li>They can explain potential coverage for medical bills, pain
+                    and suffering, and lost wages.</li>
+                  <li>No obligation to proceed after your free evaluation.</li>
+                </ul>
+                <button class="quiz-congrats-cta" onclick="scrollToFinalCTA()">
+                  <span>Get My Free MVA Case Review</span>
+                  <span>➜</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 EASY STEPS SECTION -->
+    <section class="section" id="steps">
+      <div class="section-inner">
+        <h2 class="section-title">3 Easy Steps to Get Accident Help</h2>
+        <p class="section-subtitle">
+          A simple process to get your motor vehicle accident reviewed by people who understand MVA claims.
+        </p>
+
+        <div class="steps-grid">
+          <div class="step-item">
+            <div class="step-icon-wrap">
+              <div class="step-icon-inner">📍</div>
+            </div>
+            <div class="step-title">Tell Us Where the Crash Happened</div>
+            <div class="step-desc">
+              Share your state and a few basic details so we can match you with MVA-focused help in your area.
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-icon-wrap">
+              <div class="step-icon-inner">📝</div>
+            </div>
+            <div class="step-title">Answer a Few Quick Questions</div>
+            <div class="step-desc">
+              Use the 2-question MVA quiz to let us know about injuries, treatment, and time away from work.
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-icon-wrap">
+              <div class="step-icon-inner">✅</div>
+            </div>
+            <div class="step-title">Get a Free Case Review</div>
+            <div class="step-desc">
+              If your answers qualify, you’ll be connected with an MVA professional to review your claim options.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+      <div class="section-inner">
+        <div class="section-eyebrow">About the Network</div>
+        <h2 class="section-title">We Guide You Through the After-Crash Chaos</h2>
+        <p class="section-subtitle">
+          One moment you’re driving. The next moment your car is damaged, your
+          body hurts, and your phone is full of claim numbers and bills. Our
+          job is to make the next steps clearer.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>What We Do</h3>
+            <p>
+              MVA Relief Network is a free matching service that connects people
+              injured in motor vehicle accidents with law firms and claim
+              professionals who focus on auto-injury cases.
+            </p>
+            <p>
+              We help you:
+            </p>
+            <ul>
+              <li>Understand what your claim may truly be worth.</li>
+              <li>Review medical bills, repair costs, and lost income.</li>
+              <li>Explore options before signing any quick settlement.</li>
+            </ul>
+            <p style="margin-top:6px;">
+              You are always in control. After your free case review, you decide
+              if you want to move forward.
+            </p>
+          </div>
+
+          <div class="about-side-img">
+            <img
+              src="https://www.shutterstock.com/shutterstock/photos/2469384445/display_1500/stock-photo-car-incident-protective-and-car-insurance-policy-examining-insurance-2469384445.jpg"
+              alt="Professional explaining MVA rights"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION – icon row -->
+    <section class="section" id="achievements">
+      <div class="section-inner">
+        <h2 class="section-title">Achievements</h2>
+        <p class="section-subtitle">
+          Why so many drivers and passengers trust us after a motor vehicle accident.
+        </p>
+
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="ach-icon-wrap">
+              <div class="ach-icon-inner">➕</div>
+            </div>
+            <div class="achievement-text">
+              Thousands of accident evaluations completed
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="ach-icon-wrap">
+              <div class="ach-icon-inner">✔️</div>
+            </div>
+            <div class="achievement-text">
+              MVA-focused law firms and claim professionals
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="ach-icon-wrap">
+              <div class="ach-icon-inner">👍</div>
+            </div>
+            <div class="achievement-text">
+              Fast initial eligibility checks with no obligation
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section testimonials" id="testimonials">
+      <div class="section-inner">
+        <div class="section-eyebrow">Testimonials</div>
+        <h2 class="section-title">What Other Accident Victims Are Saying</h2>
+        <p class="section-subtitle">
+          Names and details are changed for privacy, but the stories and impact
+          are 100% real.
+        </p>
+
+        <div class="test-grid">
+          <article class="test-card">
+            <div class="test-name">“Sarah W.” · Rear-End Collision</div>
+            <div class="test-meta">Fort Lauderdale, FL</div>
+            <p class="test-text">
+              “The insurance company kept pushing a quick check. After my review
+              through MVA Relief, I learned my neck injury was worth far more
+              than what I was being offered.”
+            </p>
+          </article>
+
+          <article class="test-card">
+            <div class="test-name">“James P.” · Rideshare Passenger</div>
+            <div class="test-meta">Dallas, TX</div>
+            <p class="test-text">
+              “I was in an Uber when we were hit. I had no clue whose insurance
+              should pay. The team walked me through my options and handled all
+              the confusing parts.”
+            </p>
+          </article>
+
+          <article class="test-card">
+            <div class="test-name">“Maria &amp; Luis” · Family Crash</div>
+            <div class="test-meta">Los Angeles, CA</div>
+            <p class="test-text">
+              “Our car was totaled and both of us missed work. The case review
+              helped us understand we didn’t have to accept the first offer the
+              adjuster gave us.”
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA / WRAP-UP -->
+    <section class="section final" id="finalCTA">
+      <div class="section-inner final-inner">
+        <h2 class="section-title" style="color:#bbf7d0;">
+          Get the Right Help After Your Motor Vehicle Accident
+        </h2>
+        <p>
+          You don’t have to guess what your MVA case might be worth. Get a
+          fast, free review from people who handle accidents every day and
+          understand the pressure you’re under.
+        </p>
+        <button class="btn-final">
+          Start My Free MVA Case Review
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER LEGAL -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>
+          MVA Relief Network is a matching service that connects individuals
+          involved in motor vehicle accidents with law firms or claim
+          professionals. We do not provide legal advice, and no attorney-client
+          relationship is formed by using this site. Results are not guaranteed
+          and may vary. This is an advertisement for services.
+        </p>
+        <div class="footer-links">
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Do Not Sell My Info</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // QUIZ LOGIC – auto prompt to congrats part
+    const quizData = [
+      {
+        question:
+          "Were you injured or are you feeling any new pain since the accident?",
+        hint:
+          "This includes neck or back pain, headaches, stiffness, dizziness, or soreness.",
+        options: [
+          "Yes, I have pain or injuries",
+          "No physical pain, mostly vehicle damage"
+        ]
+      },
+      {
+        question:
+          "Did you seek or are you planning to seek medical treatment for this accident?",
+        hint:
+          "Emergency room, urgent care, primary doctor, chiropractor, or other treatment.",
+        options: [
+          "Yes, I have seen (or will see) a doctor",
+          "Not yet / I am unsure"
+        ]
+      }
+    ];
+
+    let currentQuestion = 0;
+    let quizComplete = false;
+
+    const quizCard = document.getElementById("quizCard");
+    const quizQuestionEl = document.getElementById("quizQuestion");
+    const quizHintEl = document.getElementById("quizHint");
+    const quizOptionsEl = document.getElementById("quizOptions");
+    const quizStepLabel = document.getElementById("quizStepLabel");
+    const quizStepHint = document.getElementById("quizStepHint");
+    const quizBarFill = document.getElementById("quizBarFill");
+    const quizCongrats = document.getElementById("quizCongrats");
+
+    function renderQuestion() {
+      const data = quizData[currentQuestion];
+      quizQuestionEl.textContent = data.question;
+      quizHintEl.textContent = data.hint;
+      quizStepLabel.textContent = `Question ${currentQuestion + 1} of ${
+        quizData.length
+      }`;
+      quizStepHint.textContent =
+        currentQuestion === 0 ? "Just a few seconds" : "Almost done";
+
+      const percentage = (currentQuestion / quizData.length) * 100;
+      quizBarFill.style.width = percentage + "%";
+
+      quizOptionsEl.innerHTML = "";
+      data.options.forEach((opt) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "quiz-option-btn";
+        btn.innerHTML = `<span>${opt}</span><span>➜</span>`;
+        btn.addEventListener("click", handleOptionClick);
+        quizOptionsEl.appendChild(btn);
+      });
+    }
+
+    function showCongrats() {
+      quizCongrats.classList.add("visible");
+      quizCard.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    function handleOptionClick() {
+      if (quizComplete) return;
+
+      if (currentQuestion < quizData.length - 1) {
+        currentQuestion += 1;
+        renderQuestion();
+      } else {
+        quizComplete = true;
+        quizBarFill.style.width = "100%";
+
+        // small delay then auto show highlighted congrats overlay
+        setTimeout(showCongrats, 300);
+      }
+    }
+
+    function scrollToFinalCTA() {
+      const el = document.getElementById("finalCTA");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    // Initialize quiz
+    renderQuestion();
+
+    // HERO CTA scroll to quiz card (on same hero)
+    document
+      .getElementById("startQuizBtn")
+      .addEventListener("click", function () {
+        quizCard.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Tazim Najmi — Pay ₹70,000 (The Realm Awaits)</title>
+  <meta name="description" content="A sarcastic, funny landing page for Tazim Najmi to pay ₹70,000." />
+  <style>
+    :root{
+      --bg0:#07070a;
+      --bg1:#0b0b12;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --stroke: rgba(255,255,255,.12);
+      --text:#f4f1ff;
+      --muted: rgba(244,241,255,.7);
+      --gold:#f5d46a;
+      --ice:#8fe7ff;
+      --lava:#ff6a4a;
+      --good:#4cff9d;
+      --shadow: 0 24px 60px rgba(0,0,0,.55);
+      --r: 22px;
+      --max: 1040px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 600px at 20% 10%, rgba(143,231,255,.12), transparent 60%),
+        radial-gradient(1000px 600px at 80% 0%, rgba(245,212,106,.12), transparent 55%),
+        radial-gradient(1100px 700px at 70% 80%, rgba(255,106,74,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+    }
+
+    /* subtle animated “strings” */
+    .strings{
+      position:fixed; inset:0;
+      pointer-events:none;
+      opacity:.35;
+      filter: blur(.2px);
+      mix-blend-mode: screen;
+    }
+    .strings:before, .strings:after{
+      content:"";
+      position:absolute; inset:-20%;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(255,255,255,.00) 0px,
+          rgba(255,255,255,.00) 44px,
+          rgba(143,231,255,.10) 45px,
+          rgba(245,212,106,.10) 46px,
+          rgba(255,255,255,.00) 47px,
+          rgba(255,255,255,.00) 92px
+        );
+      transform: rotate(-8deg);
+      animation: drift 12s linear infinite;
+    }
+    .strings:after{
+      transform: rotate(10deg);
+      opacity:.55;
+      animation-duration: 18s;
+    }
+    @keyframes drift{
+      from{ translate: 0 0; }
+      to{ translate: 120px 0; }
+    }
+
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding: 22px 18px 64px}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px;
+      padding: 10px 12px;
+      border:1px solid var(--stroke);
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      min-width: 0;
+    }
+    .sigil{
+      width:38px; height:38px; border-radius: 12px;
+      display:grid; place-items:center;
+      border:1px solid var(--stroke);
+      background:
+        radial-gradient(12px 12px at 30% 30%, rgba(245,212,106,.45), transparent 60%),
+        radial-gradient(16px 16px at 70% 70%, rgba(143,231,255,.38), transparent 60%),
+        rgba(255,255,255,.04);
+      box-shadow: 0 12px 26px rgba(0,0,0,.35);
+    }
+    .sigil svg{opacity:.95}
+    .brand .t1{
+      font-weight: 850;
+      letter-spacing:.2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .brand .t2{
+      font-size:12px;
+      color:var(--muted);
+      margin-top:2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .pill{
+      display:flex; align-items:center; gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+      color: rgba(244,241,255,.82);
+      font-size: 13px;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:99px;
+      background: var(--gold);
+      box-shadow: 0 0 18px rgba(245,212,106,.6);
+    }
+
+    .hero{
+      margin-top:18px;
+      border:1px solid var(--stroke);
+      border-radius: calc(var(--r) + 6px);
+      background:
+        radial-gradient(900px 420px at 15% 20%, rgba(245,212,106,.16), transparent 60%),
+        radial-gradient(900px 420px at 85% 30%, rgba(143,231,255,.14), transparent 62%),
+        rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: linear-gradient(90deg,
+        rgba(245,212,106,.0),
+        rgba(245,212,106,.14),
+        rgba(143,231,255,.14),
+        rgba(255,106,74,.10),
+        rgba(245,212,106,.0)
+      );
+      filter: blur(18px);
+      opacity:.8;
+      transform: translateX(-40%);
+      animation: shine 3.8s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes shine{
+      0%{ transform: translateX(-60%); opacity:.45;}
+      50%{ transform: translateX(20%); opacity:.9;}
+      100%{ transform: translateX(70%); opacity:.45;}
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:18px;
+      padding: 18px;
+    }
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    .hcopy{
+      padding: 14px 14px 12px;
+      border-radius: var(--r);
+      border:1px solid var(--stroke);
+      background: rgba(0,0,0,.18);
+      backdrop-filter: blur(10px);
+    }
+    .kicker{
+      display:flex; flex-wrap:wrap; gap:10px; align-items:center;
+      color: rgba(244,241,255,.86);
+      font-size: 13px;
+      letter-spacing:.35px;
+      margin-bottom: 10px;
+    }
+    .tag{
+      padding: 6px 10px;
+      border-radius: 999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+    }
+    h1{
+      font-size: clamp(28px, 3.2vw, 44px);
+      line-height: 1.06;
+      margin: 8px 0 10px;
+      letter-spacing: -0.5px;
+    }
+    .sub{
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+      margin: 0 0 14px;
+    }
+    .amount{
+      display:inline-flex; align-items:baseline; gap:10px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      border:1px solid rgba(245,212,106,.35);
+      background: linear-gradient(180deg, rgba(245,212,106,.14), rgba(255,255,255,.03));
+      box-shadow: 0 18px 40px rgba(0,0,0,.25);
+      margin: 8px 0 16px;
+    }
+    .amount .big{
+      font-weight: 900;
+      font-size: clamp(24px, 2.5vw, 34px);
+      color: var(--gold);
+      letter-spacing: -0.4px;
+    }
+    .amount .small{
+      font-size: 13px;
+      color: rgba(244,241,255,.78);
+      letter-spacing:.25px;
+    }
+
+    .ctaRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top: 10px;
+    }
+    .btn{
+      position:relative;
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing:.2px;
+      cursor:pointer;
+      user-select:none;
+      transition: transform .12s ease, background .2s ease, border-color .2s ease;
+      overflow:hidden;
+      min-width: 210px;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); }
+    .btn:active{ transform: translateY(0px) scale(.99); }
+    .btn.primary{
+      border-color: rgba(245,212,106,.42);
+      background: linear-gradient(180deg, rgba(245,212,106,.18), rgba(255,255,255,.04));
+    }
+    .btn.danger{
+      border-color: rgba(255,106,74,.35);
+      background: linear-gradient(180deg, rgba(255,106,74,.14), rgba(255,255,255,.04));
+    }
+    .btn .shine{
+      position:absolute; inset:-80px -120px auto auto;
+      width: 180px; height: 180px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.32), transparent 65%);
+      transform: rotate(25deg);
+      filter: blur(2px);
+      opacity:.9;
+      animation: btnshine 2.4s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes btnshine{
+      0%{ transform: translateX(-240px) rotate(25deg); opacity:.25; }
+      45%{ opacity:.95; }
+      100%{ transform: translateX(240px) rotate(25deg); opacity:.25; }
+    }
+    .btn .ico{
+      width:18px; height:18px; opacity:.95;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,.35));
+    }
+
+    .panel{
+      border-radius: var(--r);
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.045);
+      overflow:hidden;
+      position:relative;
+    }
+    .panel .ph{
+      padding: 14px 14px 10px;
+      display:flex; justify-content:space-between; align-items:center;
+      gap:10px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.14);
+    }
+    .panel .ph .ttl{
+      font-weight: 850;
+      letter-spacing:.2px;
+      display:flex; align-items:center; gap:10px;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+      color: rgba(244,241,255,.78);
+      white-space:nowrap;
+    }
+    .panel .pb{
+      padding: 14px;
+    }
+
+    .scoreWrap{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .scoreCard{
+      padding: 14px;
+      border-radius: 18px;
+      border:1px solid rgba(143,231,255,.24);
+      background:
+        radial-gradient(420px 240px at 20% 20%, rgba(143,231,255,.18), transparent 60%),
+        rgba(255,255,255,.04);
+    }
+    .scoreTop{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
+    }
+    .scoreNum{
+      font-weight: 950;
+      font-size: 44px;
+      letter-spacing:-1px;
+      line-height:1;
+      color: var(--ice);
+    }
+    .scoreTxt{
+      color: var(--muted);
+      font-size: 13px;
+      line-height:1.45;
+      margin-top: 6px;
+    }
+    .bar{
+      height: 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.22);
+      overflow:hidden;
+      margin-top: 12px;
+      position:relative;
+    }
+    .fill{
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(143,231,255,.9), rgba(245,212,106,.9));
+      box-shadow: 0 0 28px rgba(143,231,255,.35);
+      transition: width .6s ease;
+    }
+    .bar:after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
+      transform: translateX(-60%);
+      animation: shimmer 2.6s ease-in-out infinite;
+      opacity:.7;
+      pointer-events:none;
+    }
+    @keyframes shimmer{
+      0%{ transform: translateX(-60%); }
+      100%{ transform: translateX(120%); }
+    }
+
+    .list{
+      display:grid; gap:10px;
+      margin-top: 12px;
+    }
+    .row{
+      display:flex; align-items:flex-start; gap:10px;
+      padding: 10px 10px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.14);
+    }
+    .mark{
+      width: 28px; height: 28px; border-radius: 12px;
+      display:grid; place-items:center;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      flex: 0 0 auto;
+    }
+    .row b{display:block; font-size: 13px; letter-spacing:.1px}
+    .row span{display:block; color: var(--muted); font-size: 12.5px; line-height: 1.35; margin-top: 2px}
+
+    .section{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 920px){ .section{grid-template-columns:1fr} }
+
+    .card{
+      border-radius: var(--r);
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 18px 44px rgba(0,0,0,.26);
+      overflow:hidden;
+    }
+    .card .ch{
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.12);
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+    }
+    .card .ch .t{font-weight: 900; letter-spacing:.2px}
+    .card .cb{padding: 12px 14px 14px}
+    .card p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .chess{
+      margin-top: 10px;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.10);
+      overflow:hidden;
+      background: rgba(0,0,0,.14);
+    }
+    .board{
+      display:grid;
+      grid-template-columns: repeat(8, 1fr);
+      aspect-ratio: 8 / 5;
+      min-height: 140px;
+    }
+    .sq{position:relative}
+    .sq:nth-child(odd){background: rgba(255,255,255,.035)}
+    .sq:nth-child(even){background: rgba(255,255,255,.07)}
+    .piece{
+      position:absolute; inset:0;
+      display:grid; place-items:center;
+      font-size: 18px;
+      opacity:.9;
+      text-shadow: 0 12px 20px rgba(0,0,0,.45);
+      user-select:none;
+    }
+    .foot{
+      margin-top: 18px;
+      text-align:center;
+      color: rgba(244,241,255,.58);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .tiny{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px dashed rgba(255,255,255,.18);
+      background: rgba(255,255,255,.03);
+      margin-top: 10px;
+    }
+
+    /* modal */
+    .modal{
+      position:fixed; inset:0;
+      display:none;
+      align-items:center; justify-content:center;
+      padding: 18px;
+      background: rgba(0,0,0,.62);
+      backdrop-filter: blur(10px);
+      z-index: 50;
+    }
+    .modal.open{display:flex}
+    .sheet{
+      width:min(760px, 100%);
+      border-radius: 26px;
+      border: 1px solid rgba(255,255,255,.14);
+      background:
+        radial-gradient(900px 420px at 20% 0%, rgba(245,212,106,.14), transparent 60%),
+        radial-gradient(900px 420px at 80% 20%, rgba(143,231,255,.14), transparent 65%),
+        rgba(15,15,22,.88);
+      box-shadow: 0 40px 90px rgba(0,0,0,.65);
+      overflow:hidden;
+    }
+    .sheetH{
+      padding: 14px 16px;
+      border-bottom:1px solid rgba(255,255,255,.10);
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .sheetH b{font-weight: 950; letter-spacing:.2px}
+    .x{
+      width: 40px; height: 40px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      cursor:pointer;
+      display:grid; place-items:center;
+      transition: transform .12s ease, background .2s ease;
+      user-select:none;
+    }
+    .x:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); }
+    .sheetB{ padding: 14px 16px 16px; }
+    .codebox{
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.22);
+      padding: 12px;
+      overflow:auto;
+      color: rgba(244,241,255,.92);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 13px;
+      line-height:1.5;
+    }
+    .sheetB p{margin: 0 0 10px; color: var(--muted); line-height:1.55; font-size: 13px;}
+    .sheetBtns{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 12px;
+    }
+    .mini{
+      min-width: 180px;
+      padding: 11px 12px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      cursor:pointer;
+      font-weight: 850;
+      letter-spacing:.2px;
+    }
+
+    /* toast */
+    .toast{
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      padding: 12px 14px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(10px);
+      color: rgba(244,241,255,.9);
+      box-shadow: 0 18px 50px rgba(0,0,0,.55);
+      display:none;
+      z-index: 60;
+      font-size: 13px;
+    }
+    .toast.show{display:block; animation: pop .2s ease-out}
+    @keyframes pop{from{transform:translateX(-50%) translateY(6px); opacity:.2}to{transform:translateX(-50%) translateY(0); opacity:1}}
+  </style>
+</head>
+
+<body>
+  <div class="strings"></div>
+
+  <div class="wrap">
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="brand">
+        <div class="sigil" aria-hidden="true">
+          <!-- guitar + crown-ish glyph -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M14.6 3.5c.6.2 1 .8.9 1.5l-.4 2.1c.9.2 1.7.7 2.4 1.4 1.7 1.7 1.8 4.4.2 6.2l-1.2 1.4c-.6.7-1.4 1.1-2.3 1.1-1 0-2-.4-2.7-1.1l-1.2-1.2c-.4.3-.9.6-1.5.7l-2 .4c-.7.1-1.3-.3-1.5-.9-.2-.6.1-1.3.7-1.6l1.6-.8c-.1-.8.2-1.7.9-2.4l4.9-4.9c.6-.6 1.4-.9 2.2-.9l.4-2c.1-.7.8-1.1 1.6-.9Z" stroke="rgba(244,241,255,.92)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.8 10.2l2.2-2.2M18.5 11.9l2.2-2.2" stroke="rgba(245,212,106,.95)" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div style="min-width:0">
+          <div class="t1">House Najmi of the Unpaid Coin</div>
+          <div class="t2">Guitar • Thrones • Chess • and one legendary ₹70,000</div>
+        </div>
+      </div>
+
+      <div class="pill" title="Status">
+        <span class="dot"></span>
+        <span>Debt: Active</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero" role="region" aria-label="Tazim Pay Page">
+      <div class="grid">
+        <div class="hcopy">
+          <div class="kicker">
+            <span class="tag">To: <b>Tazim Najmi</b></span>
+            <span class="tag">Codename: <b>T-A-A-Z-W-M</b></span>
+            <span class="tag">Tone: <b>Maximum Sarcasm</b></span>
+          </div>
+
+          <h1>Pay ₹70,000, my dear brother.<br/>The realm is tired.</h1>
+          <p class="sub">
+            This is a gentle reminder brought to you by:
+            <b> House Raghib</b>, the <i>Rightful Heir of “Where’s My Money?”</i>.
+            <br/>Please proceed before the dragons start charging late fees.
+          </p>
+
+          <div class="amount" aria-label="Amount due">
+            <div class="big">₹70,000</div>
+            <div class="small">Due since: <span id="dueSince">the beginning of time</span> • Interest: <b>emotional</b></div>
+          </div>
+
+          <div class="ctaRow">
+            <button class="btn primary" id="btnPay" type="button">
+              <span class="shine" aria-hidden="true"></span>
+              <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2l2.2 5.2L20 8l-4 3.6 1.2 5.9L12 15.8 6.8 17.5 8 11.6 4 8l5.8-.8L12 2Z" stroke="rgba(245,212,106,.95)" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+              <span>Pay Now (Stop The Shame)</span>
+            </button>
+
+            <button class="btn" id="btnExcuse" type="button">
+              <span class="shine" aria-hidden="true"></span>
+              <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 22s7-4.4 7-11V6l-7-3-7 3v5c0 6.6 7 11 7 11Z" stroke="rgba(143,231,255,.95)" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M9.5 12.2l1.8 1.8 3.4-4" stroke="rgba(143,231,255,.95)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Generate Royal Excuse</span>
+            </button>
+
+            <button class="btn danger" id="btnTrial" type="button">
+              <span class="shine" aria-hidden="true"></span>
+              <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 7h10l-1 14H8L7 7Z" stroke="rgba(255,106,74,.95)" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M9 7V5a3 3 0 0 1 6 0v2" stroke="rgba(255,106,74,.95)" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+              <span>Start The Trial (Chess Court)</span>
+            </button>
+          </div>
+
+          <div class="tiny" style="justify-content:center">
+            <span style="opacity:.85">🎸</span>
+            <span>Fun Fact:</span>
+            <b id="funFact">A guitar has 6 strings, but your excuses have unlimited.</b>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="ph">
+            <div class="ttl">
+              <span style="opacity:.9">♟️</span>
+              <span>Debt Meter</span>
+            </div>
+            <div class="badge" id="meterBadge">Calculating honor…</div>
+          </div>
+          <div class="pb">
+            <div class="scoreWrap">
+              <div class="scoreCard">
+                <div class="scoreTop">
+                  <div>
+                    <div class="scoreNum"><span id="score">0</span><span style="font-size:16px; opacity:.8">/100</span></div>
+                    <div class="scoreTxt" id="scoreTxt">Measuring “Will Pay Today” energy…</div>
+                  </div>
+                  <div class="badge" id="rank">Rank: Squire</div>
+                </div>
+                <div class="bar" aria-label="Progress">
+                  <div class="fill" id="fill"></div>
+                </div>
+
+                <div class="list" style="margin-top:12px">
+                  <div class="row">
+                    <div class="mark">🎸</div>
+                    <div>
+                      <b>Guitar Oath</b>
+                      <span>“By the power of chords, I shall transfer.”</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="mark">🐉</div>
+                    <div>
+                      <b>Throne Clause</b>
+                      <span>Dragons accept only <b>instant payment</b>. No “kal karunga”.</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="mark">♟️</div>
+                    <div>
+                      <b>Chess Rule</b>
+                      <span>If you stall, it’s a blunder. If you pay, it’s checkmate.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chess">
+                <div style="padding:10px 12px; border-bottom:1px solid rgba(255,255,255,.08); display:flex; justify-content:space-between; align-items:center; gap:10px; background: rgba(0,0,0,.14);">
+                  <b style="letter-spacing:.2px">Mini Board</b>
+                  <span class="badge" id="boardMsg">Your move, Tazim.</span>
+                </div>
+                <div class="board" aria-label="Chess board">
+                  <!-- 40 squares (8x5) for compact board -->
+                  <div class="sq"><div class="piece">♜</div></div><div class="sq"></div><div class="sq"></div><div class="sq"></div><div class="sq"></div><div class="sq"></div><div class="sq"></div><div class="sq"><div class="piece">♚</div></div>
+                  <div class="sq"></div><div class="sq"><div class="piece">♟</div></div><div class="sq"></div><div class="sq"></div><div class="sq"></div><div class="sq"></div><div class="sq"><div class="piece">♟</div></div><div class="sq"></div>
+                  <div class="sq"></div><div class="sq"></div><div class="sq"></div><div class="sq"><div class="piece">💰</div></div><div class="sq"></div><div class="sq"></div><div class="sq"></div><div class="sq"></div>
+                  <div class="sq"></div><div class="sq"></div><div class="sq"><div class="piece">🤝</div></div><div class="sq"></div><div class="sq"></div><div class="sq"><div class="piece">📲</div></div><div class="sq"></div><div class="sq"></div>
+                  <div class="sq"><div class="piece">👑</div></div><div class="sq"></div><div class="sq"></div><div class="sq"></div><div class="sq"></div><div class="sq"></div><div class="sq"></div><div class="sq"><div class="piece">🎸</div></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- extra section cards -->
+      <div class="section" style="padding: 0 18px 18px;">
+        <div class="card">
+          <div class="ch">
+            <div class="t">📜 The Royal Ledger</div>
+            <span class="badge" id="ledger">Entry #70000</span>
+          </div>
+          <div class="cb">
+            <p>
+              Dear <b>Tazim</b>, your outstanding balance is not a “vibe”. It is a
+              <b>historical event</b>. Scholars will write:
+              “In the year of our Wi-Fi, he said ‘just 2 days’ and vanished.”
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="ch">
+            <div class="t">🐺 House Motto</div>
+            <span class="badge">GoT Mode</span>
+          </div>
+          <div class="cb">
+            <p>
+              <b>Winter is coming</b>… and so is my reminder.
+              Pay the ₹70,000 before I rename you to
+              <i>“Tazim ‘Where’s-the-Transfer’ Najmi.”</i>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="ch">
+            <div class="t">🎸 Guitar Penalty System</div>
+            <span class="badge" id="penalty">0 riffs issued</span>
+          </div>
+          <div class="cb">
+            <p>
+              Every hour without payment unlocks a new performance:
+              <b>“Stairway to Transfer”</b>, <b>“Sweet Child O’ Rupees”</b>,
+              and the classic <b>“Nothing Else Matters (Except ₹70k)”</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">
+      Built with love, sarcasm, and absolutely no patience.
+      <br/>
+      <span style="opacity:.85">Tip:</span> You can edit the UPI/Bank details inside the script section.
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="sheet" role="dialog" aria-modal="true" aria-label="Payment Instructions">
+      <div class="sheetH">
+        <b id="modalTitle">Payment Portal</b>
+        <div class="x" id="closeModal" aria-label="Close">✕</div>
+      </div>
+      <div class="sheetB">
+        <p id="modalDesc">
+          Choose your method. Preferably the one that ends in “paid”.
+        </p>
+
+        <div class="codebox" id="codebox">
+UPI: yourupi@bank
+Name: Raghib Najmi
+Amount: ₹70,000
+Note: "T-A-A-Z-W-M settlement"
+        </div>
+
+        <div class="sheetBtns">
+          <button class="mini" id="copyBtn" type="button">Copy Details</button>
+          <button class="mini" id="whatsBtn" type="button">Share on WhatsApp</button>
+          <button class="mini" id="closeBtn2" type="button">I Will Pay (I Swear)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied.</div>
+
+  <script>
+    // ==========================
+    // EDIT THESE DETAILS
+    // ==========================
+    const PAYMENT = {
+      name: "Raghib Najmi",
+      amount: "₹70,000",
+      upi: "yourupi@bank", // <-- change this
+      note: "T-A-A-Z-E-E-M settlement"
+    };
+
+    // UI refs
+    const scoreEl = document.getElementById("score");
+    const fillEl = document.getElementById("fill");
+    const scoreTxt = document.getElementById("scoreTxt");
+    const meterBadge = document.getElementById("meterBadge");
+    const rankEl = document.getElementById("rank");
+    const funFact = document.getElementById("funFact");
+    const penaltyEl = document.getElementById("penalty");
+    const boardMsg = document.getElementById("boardMsg");
+    const ledger = document.getElementById("ledger");
+    const dueSince = document.getElementById("dueSince");
+
+    const modal = document.getElementById("modal");
+    const closeModal = document.getElementById("closeModal");
+    const closeBtn2 = document.getElementById("closeBtn2");
+    const codebox = document.getElementById("codebox");
+    const copyBtn = document.getElementById("copyBtn");
+    const whatsBtn = document.getElementById("whatsBtn");
+    const toast = document.getElementById("toast");
+
+    const btnPay = document.getElementById("btnPay");
+    const btnExcuse = document.getElementById("btnExcuse");
+    const btnTrial = document.getElementById("btnTrial");
+
+    // fun content
+    const EXCUSES = [
+      "I was about to pay, but my UPI needed emotional support.",
+      "The dragons ate my bank app.",
+      "I moved the money like a chess knight. It got lost in L-shape.",
+      "My guitar strings snapped—so did my commitment.",
+      "I paid… in my imagination. Same thing, right?",
+      "I was waiting for the ‘best time’ (spoiler: it’s now).",
+      "I almost transferred… then remembered I like chaos."
+    ];
+
+    const FUN_FACTS = [
+      "A guitar has 6 strings, but your excuses have unlimited.",
+      "In chess, delaying is called a blunder. In family, it’s called ‘Tazim’.",
+      "GoT fact: Debts are paid. Otherwise… the North remembers.",
+      "Checkmate is temporary. ₹70k pending is eternal.",
+      "A riff lasts 4 seconds. Your payment delay is a whole season."
+    ];
+
+    const RANKS = [
+      {min: 0,  label: "Rank: Squire", msg: "Still warming up the transfer button…"},
+      {min: 26, label: "Rank: Knight",  msg: "Okay… some honor detected. Continue."},
+      {min: 51, label: "Rank: Lord",    msg: "Impressive. Almost responsible."},
+      {min: 76, label: "Rank: King",    msg: "Legendary. Now finish it. Pay."}
+    ];
+
+    // date-ish joke
+    (function setDueSince(){
+      const options = [
+        "the previous era",
+        "the first episode of Season 1",
+        "the day chess was invented",
+        "when guitars were young",
+        "yesterday (emotionally)"
+      ];
+      dueSince.textContent = options[Math.floor(Math.random() * options.length)];
+      ledger.textContent = "Entry #" + (70000 + Math.floor(Math.random()*999));
+    })();
+
+    // animated score to 81 (slow)
+    const TARGET = 81;
+    let score = 0;
+    let penalties = 0;
+
+    function setRank(n){
+      let r = RANKS[0];
+      for(const item of RANKS){
+        if(n >= item.min) r = item;
+      }
+      rankEl.textContent = r.label;
+      scoreTxt.textContent = r.msg;
+    }
+
+    function updateUI(n){
+      scoreEl.textContent = n;
+      fillEl.style.width = n + "%";
+      setRank(n);
+
+      // badge text
+      if(n < 20) meterBadge.textContent = "Detecting conscience…";
+      else if(n < 50) meterBadge.textContent = "Tracking excuses in real-time…";
+      else if(n < 80) meterBadge.textContent = "Honor levels rising… suspicious.";
+      else meterBadge.textContent = "81% ready to pay. 19% drama pending.";
+    }
+
+    function startScore(){
+      const interval = setInterval(() => {
+        // slow-ish increments
+        const step = (score < 40) ? 1 : (score < 70 ? 1 : 1);
+        score = Math.min(TARGET, score + step);
+
+        updateUI(score);
+
+        // chess message changes
+        if(score === 22) boardMsg.textContent = "Pawn to Pay4.";
+        if(score === 44) boardMsg.textContent = "Knight to UPI7.";
+        if(score === 66) boardMsg.textContent = "Queen takes ‘Excuses’.";
+        if(score === 81) boardMsg.textContent = "CHECKMATE: Pay ₹70,000.";
+
+        if(score >= TARGET){
+          clearInterval(interval);
+          funFact.textContent = "Congratulations. You have reached 81% ‘almost paid’. Now do the last 19% in UPI.";
+        }
+      }, 120); // speed
+    }
+    startScore();
+
+    // modal helpers
+    function openModal(title, desc){
+      document.getElementById("modalTitle").textContent = title;
+      document.getElementById("modalDesc").textContent = desc;
+
+      codebox.textContent =
+`UPI: ${PAYMENT.upi}
+Name: ${PAYMENT.name}
+Amount: ${PAYMENT.amount}
+Note: "${PAYMENT.note}"`;
+
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+    }
+    function closeIt(){
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    // toast
+    let toastTimer = null;
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"), 1400);
+    }
+
+    // actions
+    btnPay.addEventListener("click", () => {
+      openModal("Payment Portal", "Pick a method. Preferably the one that ends this saga.");
+    });
+
+    btnExcuse.addEventListener("click", () => {
+      const excuse = EXCUSES[Math.floor(Math.random()*EXCUSES.length)];
+      const fact = FUN_FACTS[Math.floor(Math.random()*FUN_FACTS.length)];
+      funFact.textContent = "Royal Excuse: “" + excuse + "”";
+      showToast("Excuse generated. Shame updated.");
+
+      // tiny penalty counter
+      penalties++;
+      penaltyEl.textContent = penalties + (penalties === 1 ? " riff issued" : " riffs issued");
+      if(penalties === 1) boardMsg.textContent = "Warning: Excuse Gambit played.";
+      if(penalties >= 3) boardMsg.textContent = "Repeated excuses detected. Deploy the dragons.";
+      if(penalties >= 5) funFact.textContent = fact;
+    });
+
+    btnTrial.addEventListener("click", () => {
+      const roast =
+        "Charges: 1) Excessive delay. 2) Weaponized ‘kal’. 3) Crimes against brotherhood.\n\nSentence: Pay ₹70,000 immediately, plus one sincere apology and a chocolate.";
+      openModal("Chess Court — The Trial", "Verdict is already decided. Scroll for the royal order.");
+      codebox.textContent = roast;
+    });
+
+    closeModal.addEventListener("click", closeIt);
+    closeBtn2.addEventListener("click", () => {
+      showToast("Oath accepted. Now pay.");
+      closeIt();
+    });
+    modal.addEventListener("click", (e) => {
+      if(e.target === modal) closeIt();
+    });
+
+    copyBtn.addEventListener("click", async () => {
+      try{
+        await navigator.clipboard.writeText(codebox.textContent.trim());
+        showToast("Copied. Go pay now.");
+      }catch(err){
+        // fallback
+        const ta = document.createElement("textarea");
+        ta.value = codebox.textContent.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        showToast("Copied (fallback).");
+      }
+    });
+
+    whatsBtn.addEventListener("click", () => {
+      const text = encodeURIComponent(
+        `Tazim Najmi (T-A-A-Z-W-M),\n\nKindly pay ${PAYMENT.amount}.\nUPI: ${PAYMENT.upi}\nName: ${PAYMENT.name}\nNote: ${PAYMENT.note}\n\nThis message is sponsored by House Najmi & the North Remembering™.`
+      );
+      // opens WhatsApp Web / app (if available)
+      window.open(`https://wa.me/?text=${text}`, "_blank");
+    });
+
+    // keyboard escape
+    window.addEventListener("keydown", (e) => {
+      if(e.key === "Escape") closeIt();
+    });
+  </script>
+</body>
+</html>
