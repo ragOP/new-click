@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Click Venture — Digital Marketing Experts</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/62fbc0200a.js" crossorigin="anonymous"></script>
+
+    <style>
+      /* =========================================================
+        PURE WHITE MODE — FULL PAGE (NO GREY BANDS)
+        ✅ Mobile looks same as before
+        ✅ Desktop FIX: Snapshot images NEVER cut (object-fit: contain)
+        ✅ Snapshot media has NO square bordered frame
+        ✅ Includes missing sections: Process Timeline, Testimonials, Contact Form
+      ========================================================= */
+
+      :root {
+        --brand: #007bff;
+
+        --ink: #0f172a;
+        --ink-soft: #334155;
+        --muted: #64748b;
+
+        --bg: #ffffff;
+        --surface: #ffffff;
+        --line: rgba(0, 0, 0, 0.08);
+
+        --radius-xl: 28px;
+        --radius: 16px;
+
+        --shadow-lg: 0 18px 60px rgba(15, 23, 42, 0.12);
+        --shadow-sm: 0 12px 34px rgba(15, 23, 42, 0.08);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+        background: #fff !important;
+        color: var(--ink);
+        overflow-x: hidden;
+      }
+
+      /* kill any accidental background layers */
+      .bg-wrap,
+      .blob {
+        display: none !important;
+      }
+
+      .container {
+        width: min(1200px, 92vw);
+        margin: 0 auto;
+      }
+
+      /* ---------------- Header ---------------- */
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: #fff !important;
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 14px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 900;
+        color: var(--brand);
+        letter-spacing: 0.2px;
+        min-width: 180px;
+      }
+      .brand img {
+        height: 28px;
+        width: auto;
+        display: block;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 22px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+      .nav-links a {
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 800;
+        opacity: 0.92;
+        position: relative;
+        padding-bottom: 2px;
+      }
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--brand), #3f95ff);
+        transition: width 0.25s ease;
+      }
+      .nav-links a:hover {
+        color: var(--brand);
+      }
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      /* ---------------- Scroll Progress Bar ---------------- */
+      .scroll-bar {
+        position: fixed;
+        inset: 0 0 auto 0;
+        height: 3px;
+        z-index: 60;
+        pointer-events: none;
+        background: transparent;
+      }
+      .scroll-bar::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: var(--progress, 0%);
+        background: linear-gradient(90deg, #22c1ff, #007bff, #4f46e5);
+        box-shadow: 0 0 14px rgba(37, 99, 235, 0.65);
+        border-radius: 0 999px 999px 0;
+      }
+
+      /* ---------------- Floating “Now viewing” pill ---------------- */
+      .tour-indicator {
+        position: fixed;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%) translateX(40px);
+        z-index: 55;
+
+        padding: 8px 14px;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        background: rgba(15, 23, 42, 0.92);
+        color: #e5e7eb;
+
+        box-shadow: 0 18px 60px rgba(15, 23, 42, 0.45);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+      }
+      .tour-indicator::before {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: inherit;
+        border: 1px solid rgba(59, 130, 246, 0.45);
+        box-shadow: 0 0 22px rgba(59, 130, 246, 0.55);
+        opacity: 0.8;
+        animation: tourPulse 2.4s ease-in-out infinite;
+      }
+      @keyframes tourPulse {
+        0% {
+          opacity: 0.2;
+          transform: scale(0.98);
+        }
+        50% {
+          opacity: 0.85;
+          transform: scale(1.03);
+        }
+        100% {
+          opacity: 0.2;
+          transform: scale(0.98);
+        }
+      }
+      .tour-indicator.is-visible {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+        pointer-events: auto;
+      }
+      .tour-indicator-dot {
+        width: 9px;
+        height: 32px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, var(--brand), #3f95ff);
+        box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.35);
+      }
+      .tour-indicator-label {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .tour-indicator-kicker {
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        opacity: 0.7;
+      }
+      .tour-indicator-title {
+        font-size: 0.85rem;
+        font-weight: 800;
+      }
+      @media (max-width: 720px) {
+        .tour-indicator {
+          display: none;
+        }
+      }
+
+      /* ---------------- Hero ---------------- */
+      .hero {
+        padding: 88px 0 56px;
+        background: #fff !important;
+      }
+      .hero-surface {
+        border-radius: 32px;
+        padding: 64px;
+        background: #fff !important;
+        border: 1px solid var(--line);
+        transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.25, 1), border-color 0.35s ease;
+      }
+      .hero:hover .hero-surface,
+      .hero.is-active-tour .hero-surface {
+        transform: translateY(-2px);
+        border-color: rgba(0, 123, 255, 0.35);
+      }
+
+      .shimmer {
+        font-weight: 900;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        font-size: clamp(34px, 6vw, 64px);
+        background: linear-gradient(90deg, var(--brand) 20%, #3f95ff 40%, #7ab5ff 60%, var(--brand) 80%);
+        background-size: 250% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: shimmer 4.2s ease-in-out infinite;
+      }
+      @keyframes shimmer {
+        0% {
+          background-position: 0% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+      .hero p {
+        max-width: 720px;
+        color: var(--ink-soft);
+        font-size: 18px;
+        margin: 18px 0 28px;
+      }
+
+      /* CTA button */
+      .btn {
+        appearance: none;
+        border: none;
+        cursor: pointer;
+        font-weight: 900;
+        padding: 14px 22px;
+        border-radius: 14px;
+        color: #fff;
+        background: linear-gradient(#0e7bff, #0069e6);
+        box-shadow: 0 10px 26px rgba(37, 99, 235, 0.28);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+      }
+      .btn::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        transform: translateX(-100%);
+        animation: btnshine 3.3s ease-in-out infinite;
+      }
+      @keyframes btnshine {
+        15% {
+          transform: translateX(-100%);
+        }
+        45% {
+          transform: translateX(120%);
+        }
+        100% {
+          transform: translateX(120%);
+        }
+      }
+      .btn:hover {
+        transform: translateY(-1px) scale(1.03);
+        box-shadow: 0 14px 32px rgba(37, 99, 235, 0.35);
+        filter: saturate(1.1);
+      }
+
+      /* ---------------- Sections base ---------------- */
+      .section {
+        margin: 52px 0;
+        background: #fff !important;
+      }
+      .section h2 {
+        font-size: clamp(26px, 3.2vw, 40px);
+        margin: 0 0 12px;
+        color: var(--brand);
+        letter-spacing: -0.02em;
+      }
+      .lead {
+        color: var(--ink-soft);
+      }
+
+      /* ---------------- Cards grid ---------------- */
+      .grid {
+        display: grid;
+        gap: 22px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      @media (max-width: 980px) {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card {
+        border-radius: 18px;
+        padding: 24px;
+        background: #fff !important;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.25s cubic-bezier(0.22, 0.8, 0.25, 1), box-shadow 0.25s cubic-bezier(0.22, 0.8, 0.25, 1),
+          border-color 0.25s ease, filter 0.25s ease;
+      }
+      .card:hover {
+        transform: translateY(-6px) scale(1.01);
+        border-color: rgba(0, 123, 255, 0.35);
+        box-shadow: 0 18px 46px rgba(15, 23, 42, 0.14);
+      }
+      .card h3 {
+        margin: 6px 0 8px;
+        color: var(--ink);
+        letter-spacing: -0.01em;
+      }
+      .card p {
+        margin: 0;
+        color: var(--ink-soft);
+      }
+
+      /* ---------------- Metric strip ---------------- */
+      .metric-strip {
+        margin: 44px 0;
+        border-radius: 999px;
+        padding: 12px 18px;
+        background: #fff !important;
+        border: 1px solid var(--line);
+        box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+        overflow: hidden;
+      }
+      .metric-pill {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+        font-weight: 700;
+      }
+      .metric-pill b {
+        font-size: 1.2rem;
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .metric-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--brand);
+        box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.12);
+      }
+      @media (max-width: 640px) {
+        .metric-strip {
+          border-radius: 20px;
+          padding: 12px 14px;
+        }
+      }
+
+      /* ---------------- Focus (Our Focus) ---------------- */
+      .focus-surface {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 28px;
+        padding: 40px;
+        border-radius: 24px;
+        background: #fff !important;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-lg);
+        transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.25, 1), box-shadow 0.35s ease;
+      }
+      @media (max-width: 980px) {
+        .focus-surface {
+          grid-template-columns: 1fr;
+          padding: 28px;
+        }
+      }
+      .focus-title {
+        font-size: clamp(26px, 3.2vw, 40px);
+        margin: 0 0 10px;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        color: var(--brand);
+      }
+      .focus-sub {
+        max-width: 60ch;
+        color: var(--ink-soft);
+        margin: 0;
+      }
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-weight: 900;
+        font-size: 0.82rem;
+        background: #fff !important;
+        color: var(--ink);
+        border: 1px solid var(--line);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      }
+      .pill svg {
+        width: 14px;
+        height: 14px;
+      }
+
+      .steps {
+        display: grid;
+        gap: 12px;
+        margin-top: 18px;
+      }
+      .step {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 12px;
+        align-items: start;
+        padding: 12px;
+        border-radius: 14px;
+        background: #fff !important;
+        border: 1px solid var(--line);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .step:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.1);
+      }
+      .dot {
+        width: 28px;
+        height: 28px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        font-weight: 900;
+        background: linear-gradient(180deg, #3f95ff, var(--brand));
+        color: #fff;
+      }
+
+      .metrics {
+        min-height: 340px;
+        border-radius: 20px;
+        padding: 22px;
+        background: #fff !important;
+        color: var(--ink);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.25, 1), box-shadow 0.35s ease;
+      }
+      .metrics:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 48px rgba(15, 23, 42, 0.14);
+      }
+      .metrics h3 {
+        margin: 0 0 14px;
+        font-weight: 900;
+        color: var(--brand);
+        letter-spacing: -0.02em;
+      }
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      .kpi {
+        border-radius: 14px;
+        padding: 14px;
+        background: #fff !important;
+        border: 1px solid var(--line);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .kpi b {
+        display: block;
+        font-size: 1.35rem;
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .kpi small {
+        color: var(--ink-soft);
+        font-weight: 700;
+      }
+      .kpi:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.1);
+      }
+
+      /* ---------------- PERFORMANCE SNAPSHOTS ---------------- */
+      .snaps-shell {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      .snap-row {
+        display: flex;
+        align-items: stretch;
+        gap: 22px;
+        padding: 22px;
+        border-radius: 26px;
+        background: #fff !important;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.25, 1), box-shadow 0.35s ease;
+      }
+      .snap-row:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 48px rgba(15, 23, 42, 0.14);
+      }
+      .snap-row--reverse .snap-copy {
+        order: 2;
+      }
+      .snap-row--reverse .snap-media {
+        order: 1;
+      }
+
+      .snap-copy {
+        flex: 1.15;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+      }
+      .snap-kicker {
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--brand);
+        opacity: 0.95;
+      }
+      .snap-title {
+        font-size: 1.15rem;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        color: var(--ink);
+      }
+      .snap-body {
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+        margin: 0;
+        line-height: 1.55;
+      }
+      .snap-metrics {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .snap-pill {
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 900;
+        background: #fff !important;
+        border: 1px solid var(--line);
+        color: var(--ink);
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+      }
+
+      /* ✅ IMPORTANT FIX (Desktop + Mobile):
+         - NO borders/frames on image container
+         - NO cutting: object-fit: contain on ALL sizes
+         - aspect-ratio keeps stable box without cropping */
+      .snap-media {
+        flex: 1;
+        min-width: 0;
+        position: relative;
+        border-radius: 18px;
+        overflow: hidden;
+
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+
+        aspect-ratio: 16 / 9;
+        height: auto; /* let aspect-ratio drive height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .snap-img-main {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* ✅ never cut */
+        object-position: center;
+        transform: none !important;
+        background: transparent;
+      }
+
+      /* on smaller screens, stack layout and keep full image visible */
+      @media (max-width: 900px) {
+        .snap-row {
+          flex-direction: column;
+          padding: 18px;
+        }
+        .snap-row--reverse .snap-copy {
+          order: 1;
+        }
+        .snap-row--reverse .snap-media {
+          order: 2;
+        }
+        .snap-media {
+          aspect-ratio: 16 / 10;
+          border-radius: 16px;
+        }
+      }
+
+      /* ---------------- Banner (dark) ---------------- */
+      .snap-banner {
+        margin-top: 4px;
+        border-radius: 26px;
+        overflow: hidden;
+        min-height: 210px;
+        background: #020617;
+        box-shadow: 0 18px 46px rgba(15, 23, 42, 0.22);
+        position: relative;
+        transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.25, 1), box-shadow 0.35s ease, filter 0.35s ease;
+      }
+      .snap-banner:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 26px 70px rgba(15, 23, 42, 0.32);
+        filter: saturate(1.06);
+      }
+      .snap-banner-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .snap-banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.9)),
+          radial-gradient(600px 260px at 10% 0%, rgba(0, 123, 255, 0.32), transparent 70%);
+        z-index: 1;
+      }
+      .snap-banner-inner {
+        position: relative;
+        z-index: 2;
+        padding: 18px 22px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 18px;
+        color: #e5f0ff;
+      }
+      .snap-banner-copy {
+        max-width: 520px;
+        min-width: 0;
+      }
+      .snap-banner-kicker {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 800;
+        opacity: 0.82;
+      }
+      .snap-banner-title {
+        font-size: 1.15rem;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+      }
+      .snap-banner-body {
+        font-size: 0.9rem;
+        opacity: 0.92;
+        margin: 10px 0 12px;
+        line-height: 1.45;
+      }
+      .snap-banner-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .snap-banner-pill {
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(226, 232, 240, 0.5);
+        font-size: 0.78rem;
+        font-weight: 800;
+        backdrop-filter: blur(8px);
+      }
+      .snap-banner-stat {
+        text-align: right;
+        font-size: 0.8rem;
+        flex: 0 0 auto;
+      }
+      .snap-banner-stat b {
+        display: block;
+        font-size: 1.25rem;
+        color: #facc15;
+        font-weight: 900;
+      }
+      @media (max-width: 900px) {
+        .snap-banner-inner {
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-end;
+          padding: 16px 16px 18px;
+        }
+        .snap-banner-stat {
+          text-align: left;
+        }
+      }
+
+      /* ---------------- Products ---------------- */
+      .products .prod-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+      }
+      .prod-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .chip {
+        user-select: none;
+        cursor: pointer;
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-weight: 900;
+        font-size: 0.85rem;
+        color: var(--ink);
+        background: #fff !important;
+        border: 1px solid var(--line);
+        transition: 0.25s;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      }
+      .chip:hover {
+        transform: translateY(-1px);
+        border-color: rgba(0, 123, 255, 0.45);
+        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12);
+      }
+      .chip.is-active {
+        color: #fff;
+        background: var(--brand) !important;
+        border-color: var(--brand);
+        box-shadow: 0 10px 26px rgba(37, 99, 235, 0.4);
+      }
+
+      .prod-grid {
+        --cols: 3;
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+        margin-top: 18px;
+      }
+      @media (max-width: 980px) {
+        .prod-grid {
+          --cols: 2;
+        }
+      }
+      @media (max-width: 640px) {
+        .prod-grid {
+          --cols: 1;
+        }
+      }
+
+      .prod {
+        border-radius: 18px;
+        padding: 22px;
+        background: #fff !important;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+        transform-style: preserve-3d;
+        transition: transform 0.25s cubic-bezier(0.22, 0.8, 0.25, 1), box-shadow 0.25s ease, filter 0.25s ease;
+        overflow: hidden;
+        position: relative;
+      }
+      .prod[data-tilt="1"]:hover {
+        transform: perspective(800px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-4px);
+        box-shadow: 0 18px 48px rgba(15, 23, 42, 0.14);
+        filter: saturate(1.03);
+      }
+      .prod .shine {
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: radial-gradient(600px 200px at var(--mx, 50%) var(--my, 50%), rgba(0, 123, 255, 0.12), transparent 60%);
+        opacity: 0;
+        transition: opacity 0.25s;
+        pointer-events: none;
+      }
+      .prod:hover .shine {
+        opacity: 1;
+      }
+      .prod h3 {
+        margin: 0 0 6px;
+        font-size: 1.15rem;
+        color: var(--ink);
+        letter-spacing: -0.01em;
+      }
+      .prod p {
+        margin: 6px 0 12px;
+        color: var(--ink-soft);
+      }
+      .sep {
+        height: 1px;
+        background: var(--line);
+        margin: 12px 0;
+      }
+      .prod-tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .t {
+        font-size: 0.74rem;
+        font-weight: 900;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: #fff !important;
+        color: var(--ink);
+      }
+      .t.dark {
+        background: var(--brand) !important;
+        color: #fff;
+        border-color: var(--brand);
+      }
+      [hidden] {
+        display: none !important;
+      }
+
+      /* ---------------- Timeline (NEW) ---------------- */
+      .timeline {
+        border-radius: 24px;
+        padding: 26px 22px;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+        background: #fff !important;
+      }
+      .timeline-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 14px;
+        margin-top: 14px;
+      }
+      @media (max-width: 980px) {
+        .timeline-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .tl {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 16px;
+        background: #fff !important;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .tl:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12);
+      }
+      .tl-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .tl-badge {
+        font-weight: 900;
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--brand);
+      }
+      .tl-days {
+        font-weight: 900;
+        color: var(--ink);
+        opacity: 0.9;
+        font-size: 0.9rem;
+      }
+      .tl h3 {
+        margin: 10px 0 6px;
+        letter-spacing: -0.01em;
+      }
+      .tl p {
+        margin: 0;
+        color: var(--ink-soft);
+      }
+
+      /* ---------------- Testimonials (NEW) ---------------- */
+      .testimonials {
+        border-radius: 24px;
+        padding: 26px 22px;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+        background: #fff !important;
+      }
+      .quote-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 14px;
+      }
+      @media (max-width: 980px) {
+        .quote-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .q {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 16px;
+        background: #fff !important;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .q:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12);
+      }
+      .q p {
+        margin: 0;
+        color: var(--ink-soft);
+        line-height: 1.55;
+        font-weight: 600;
+      }
+      .q .by {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        color: var(--muted);
+        font-weight: 800;
+        font-size: 0.9rem;
+      }
+      .q .stars {
+        color: var(--brand);
+        letter-spacing: 2px;
+      }
+
+      /* ---------------- FAQ ---------------- */
+      .faq {
+        border-radius: 24px;
+        padding: 24px 20px;
+        background: #fff !important;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+      }
+      .faq-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .faq-title {
+        font-size: 1.2rem;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        color: var(--ink);
+      }
+      .faq-sub {
+        font-size: 0.9rem;
+        color: var(--ink-soft);
+        font-weight: 700;
+        margin: 0;
+      }
+      .faq-list {
+        margin-top: 16px;
+        border-radius: 18px;
+        background: #fff !important;
+        border: 1px solid var(--line);
+        overflow: hidden;
+      }
+      .faq-item + .faq-item {
+        border-top: 1px solid var(--line);
+      }
+      .faq-item button {
+        width: 100%;
+        text-align: left;
+        border: none;
+        background: transparent;
+        padding: 14px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        font-family: inherit;
+        cursor: pointer;
+      }
+      .faq-q {
+        font-size: 0.92rem;
+        font-weight: 900;
+        color: var(--ink);
+      }
+      .faq-toggle {
+        width: 22px;
+        height: 22px;
+        border-radius: 999px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        color: var(--brand);
+        background: #fff !important;
+        font-weight: 900;
+      }
+      .faq-a {
+        padding: 0 16px 14px;
+        font-size: 0.88rem;
+        color: var(--ink-soft);
+        display: none;
+        font-weight: 650;
+        line-height: 1.5;
+      }
+      .faq-item.is-open .faq-a {
+        display: block;
+      }
+      .faq-item.is-open .faq-toggle {
+        background: var(--brand) !important;
+        color: #fff;
+        border-color: var(--brand);
+      }
+
+      /* ---------------- CTA band ---------------- */
+      .cta {
+        margin: 44px 0 10px;
+        border-radius: 20px;
+        padding: 28px 24px;
+        background: #fff !important;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        transition: transform 0.3s cubic-bezier(0.22, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.22, 0.8, 0.25, 1);
+      }
+      .cta:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 48px rgba(15, 23, 42, 0.14);
+      }
+
+      /* ---------------- Contact (NEW) ---------------- */
+      .contact {
+        border-radius: 24px;
+        padding: 26px 22px;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+        background: #fff !important;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 16px;
+        margin-top: 14px;
+      }
+      @media (max-width: 980px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .contact-card {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 16px;
+        background: #fff !important;
+      }
+      .contact-card h3 {
+        margin: 0 0 8px;
+        letter-spacing: -0.01em;
+      }
+      .contact-card p {
+        margin: 0;
+        color: var(--ink-soft);
+        font-weight: 650;
+        line-height: 1.55;
+      }
+      .form {
+        display: grid;
+        gap: 10px;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      @media (max-width: 520px) {
+        .row {
+          grid-template-columns: 1fr;
+        }
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px 12px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: #fff;
+        font: inherit;
+        outline: none;
+        transition: box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+      textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+      input:focus,
+      textarea:focus {
+        border-color: rgba(0, 123, 255, 0.45);
+        box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.12);
+      }
+
+      /* ---------------- Footer ---------------- */
+      .footer {
+        margin: 40px 0 60px;
+        padding: 20px 18px;
+        border-radius: 16px;
+        color: var(--ink-soft);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        border: 1px solid var(--line);
+        background: #fff !important;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.25s ease, transform 0.25s ease;
+      }
+      .footer:hover {
+        box-shadow: 0 12px 34px rgba(15, 23, 42, 0.12);
+        transform: translateY(-2px);
+      }
+      .footer a {
+        color: var(--brand);
+        text-decoration: none;
+        font-weight: 900;
+      }
+
+      /* ---------------- Reveal animations ---------------- */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px) scale(0.98);
+        filter: blur(10px);
+      }
+      .reveal.show {
+        animation: revealUp 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      }
+      @keyframes revealUp {
+        0% {
+          opacity: 0;
+          transform: translateY(40px) scale(0.98);
+          filter: blur(10px);
+        }
+        60% {
+          opacity: 1;
+          transform: translateY(-2px) scale(1.01);
+          filter: blur(0);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          filter: blur(0);
+        }
+      }
+
+      /* ---------------- Responsive ---------------- */
+      @media (max-width: 980px) {
+        .hero {
+          padding: 72px 0 48px;
+        }
+        .hero-surface {
+          padding: 40px 32px;
+        }
+      }
+      @media (max-width: 768px) {
+        .nav {
+          flex-wrap: wrap;
+          row-gap: 8px;
+        }
+        .brand {
+          min-width: auto;
+        }
+        .nav-links {
+          width: 100%;
+          justify-content: flex-end;
+          gap: 18px;
+          font-size: 0.95rem;
+        }
+        .hero {
+          padding: 64px 0 40px;
+        }
+        .hero-surface {
+          padding: 32px 22px;
+        }
+        .hero p {
+          font-size: 16px;
+        }
+        .cta {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      @media (max-width: 480px) {
+        .nav {
+          padding: 10px 0;
+        }
+        .nav-links {
+          justify-content: flex-start;
+          gap: 14px;
+        }
+        .hero {
+          padding: 56px 0 36px;
+        }
+        .hero-surface {
+          padding: 26px 18px;
+          border-radius: 24px;
+        }
+        .section {
+          margin: 40px 0;
+        }
+        .footer {
+          margin: 32px 0 40px;
+        }
+      }
+
+      /* icon centering */
+      .card > img,
+      .prod > img {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 12px !important;
+        object-fit: contain !important;
+      }
+
+      /* tour highlight */
+      [data-tour].is-active-tour .hero-surface,
+      [data-tour].is-active-tour .snap-row,
+      [data-tour].is-active-tour .snap-banner,
+      [data-tour].is-active-tour .focus-surface,
+      [data-tour].is-active-tour .timeline,
+      [data-tour].is-active-tour .testimonials,
+      [data-tour].is-active-tour .faq,
+      [data-tour].is-active-tour .contact,
+      [data-tour].is-active-tour .cta {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 48px rgba(15, 23, 42, 0.14);
+      }
+
+      /* utility */
+      .m0 {
+        margin: 0;
+      }
+      .mt8 {
+        margin-top: 8px;
+      }
+      .mt16 {
+        margin-top: 16px;
+      }
+      .mt24 {
+        margin-top: 24px;
+      }
+      .small {
+        opacity: 0.95;
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+        font-weight: 700;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <div class="brand">
+          <img src="https://clickkk-git-main-marketcall.vercel.app/images/biglogo.jpg" alt="Click Venture Logo" width="128" height="28" />
+        </div>
+
+        <nav class="nav-links">
+          <a href="#snapshots">Snapshots</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#products">Products</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="scroll-bar" id="scrollBar"></div>
+
+    <div class="tour-indicator" id="tourIndicator">
+      <div class="tour-indicator-dot"></div>
+      <div class="tour-indicator-label">
+        <span class="tour-indicator-kicker">Now viewing</span>
+        <span class="tour-indicator-title" id="tourTitle">Welcome</span>
+      </div>
+    </div>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero" data-tour="1" data-tour-title="Welcome">
+        <div class="hero-surface reveal show">
+          <h1 class="shimmer m0">Digital Marketing<br />Experts</h1>
+          <p class="mt16">
+            Paid • Creative • SEO • Email • CRO • Social • Branding — We accelerate and scale brands using proprietary tooling and a performance-first team.
+          </p>
+          <a class="btn" href="#contact" style="margin-top: 14px">Get Started</a>
+        </div>
+      </section>
+
+      <!-- PERFORMANCE SNAPSHOTS -->
+      <section id="snapshots" class="section reveal" data-tour="2" data-tour-title="Performance views">
+        <h2 class="m0">Performance Snapshots</h2>
+        <p class="lead mt8" style="max-width: 70ch">
+          A live view into the command centers, charts, and attribution we monitor daily to keep campaigns scaling while protecting efficiency.
+        </p>
+
+        <div class="snaps-shell mt16">
+          <article class="snap-row">
+            <div class="snap-copy">
+              <div class="snap-kicker">Customer Relationship management</div>
+              <div class="snap-title">Cross-channel control room for every dollar spent.</div>
+              <p class="snap-body">
+                Our media team uses real-time dashboards that unify platform analytics, first-party data, and verified call results to track performance across all channels.
+                Daily pacing reviews let us adjust budgets proactively and optimize for maximum profit.
+              </p>
+              <div class="snap-metrics">
+                <span class="snap-pill">Live pacing views</span>
+                <span class="snap-pill">By-vertical rollups</span>
+                <span class="snap-pill">Spend / CPL guardrails</span>
+              </div>
+            </div>
+
+            <div class="snap-media" aria-label="Campaign overview image">
+              <img class="snap-img-main" src="https://www.clickvs.com/images/lap.png" alt="Campaign overview dashboard" />
+            </div>
+          </article>
+
+          <article class="snap-row snap-row--reverse">
+            <div class="snap-copy">
+              <div class="snap-kicker">Analytics &amp; Iteration</div>
+              <div class="snap-title">Channel-level performance and creative winners at a glance.</div>
+              <p class="snap-body">
+                We evaluate performance across the full funnel to find which offers, audiences, and creatives can scale. Data-driven insights help us double down on what works,
+                cut what doesn’t, and protect margins while scaling profitably.
+              </p>
+              <div class="snap-metrics">
+                <span class="snap-pill">Channel breakdowns</span>
+                <span class="snap-pill">Creative leaderboards</span>
+                <span class="snap-pill">Automatic alerts</span>
+              </div>
+            </div>
+
+            <div class="snap-media" aria-label="Channel breakdown image">
+              <img class="snap-img-main" src="https://www.clickvs.com/images/chart.png" alt="Channel breakdown chart" />
+            </div>
+          </article>
+
+          <article class="snap-row">
+            <div class="snap-copy">
+              <div class="snap-kicker">Measurement Lab</div>
+              <div class="snap-title">Deeper attribution to keep CPL and CPA on target.</div>
+              <p class="snap-body">
+                Behind these dashboards is an integrated measurement stack that connects every click, call, and revenue dollar—giving clear visibility across all touchpoints.
+                This foundation lets us expand into new markets and test new offers while keeping profitability under control.
+              </p>
+              <div class="snap-metrics">
+                <span class="snap-pill">CPL / CPA scorecards</span>
+                <span class="snap-pill">Call &amp; lead quality</span>
+                <span class="snap-pill">Bid strategy feedback</span>
+              </div>
+            </div>
+
+            <div class="snap-media" aria-label="Measurement stack image">
+              <img class="snap-img-main" src="https://www.clickvs.com/images/measure.png" alt="Measurement dashboard view" />
+            </div>
+          </article>
+
+          <div class="snap-banner">
+            <img class="snap-banner-img" src="https://www.clickvs.com/images/ny.png" alt="City media environment" />
+            <div class="snap-banner-inner">
+              <div class="snap-banner-copy">
+                <div class="snap-banner-kicker">Real-world Reach</div>
+                <div class="snap-banner-title">From dashboards to real people in real markets.</div>
+                <p class="snap-banner-body">
+                  Our funnels are designed to perform in the wild — across major metros, suburban pockets, and niche zip codes — for both English and Spanish-speaking audiences.
+                </p>
+                <div class="snap-banner-pills">
+                  <span class="snap-banner-pill">Major US metros</span>
+                  <span class="snap-banner-pill">EN &amp; ES funnels</span>
+                  <span class="snap-banner-pill">Multi-vertical expansion</span>
+                </div>
+              </div>
+              <div class="snap-banner-stat">
+                <span>Tracked across verticals</span>
+                <b>9+ Figures</b>
+                <span>in attributable client revenue</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="metric-strip reveal">
+        <div class="metric-pill"><span class="metric-dot"></span><span><b>500K+</b> monthly leads touched by our funnels</span></div>
+        <div class="metric-pill"><span class="metric-dot"></span><span><b>45+</b> specialists across media, creative, and CRO</span></div>
+        <div class="metric-pill"><span class="metric-dot"></span><span><b>15+</b> active verticals across insurance, legal, and finance</span></div>
+      </section>
+
+      <!-- ABOUT / FOCUS -->
+      <section id="about" class="section reveal" data-tour="3" data-tour-title="Our focus">
+        <div class="focus-surface">
+          <div>
+            <h2 class="focus-title m0">Our Focus</h2>
+            <p class="focus-sub mt8">
+              We engineer the full journey — from the first impression to conversion — so every click feels intuitive and every handoff is seamless.
+              The result: higher intent, cleaner calls, and compounding revenue lift.
+            </p>
+
+            <div class="pill-row">
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Acquisition
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                Experience
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12a8 8 0 1016 0 8 8 0 10-16 0zm4 0h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                Conversion
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M3 12a9 9 0 1115.5 6.36L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                Retention
+              </span>
+            </div>
+
+            <div class="steps">
+              <div class="step">
+                <div class="dot">1</div>
+                <div><b>Reduce friction.</b> Optimize every touchpoint so users move forward faster.</div>
+              </div>
+              <div class="step">
+                <div class="dot">2</div>
+                <div><b>Align teams.</b> Media + creative + CRO work as one system, not silos.</div>
+              </div>
+              <div class="step">
+                <div class="dot">3</div>
+                <div><b>Instrument outcomes.</b> Daily KPIs drive decisions and scaling.</div>
+              </div>
+            </div>
+
+            <p class="mt16 small">
+              We optimize the user experience for all consumers engaging with our funnels, driving the highest-intent leads and inbound calls for each vertical.
+            </p>
+          </div>
+
+          <aside class="metrics">
+            <h3>Impact at a Glance</h3>
+            <div class="metric-grid">
+              <div class="kpi"><b>+38%</b><small>Lift in CVR after UX streamlining</small></div>
+              <div class="kpi"><b>-27%</b><small>Lower CPA via creative iteration</small></div>
+              <div class="kpi"><b>~2.3×</b><small>ROAS improvement MoM</small></div>
+              <div class="kpi"><b>+19%</b><small>Increase in qualified call rate</small></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section reveal" data-tour="4" data-tour-title="Services">
+        <h2 class="m0">Integrated Growth Framework</h2>
+        <p class="lead mt8" style="max-width: 72ch">
+          End-to-end performance execution: strategy, media buying, creative testing, CRO, and reporting—tied together by measurement.
+        </p>
+
+        <div class="grid mt16">
+          <article class="card">
+            <img
+              src="./icon1.png"
+              alt="Icon"
+              style="
+                width: 68px;
+                height: 68px;
+                padding: 10px;
+                border-radius: 14px;
+                box-shadow: 0 10px 26px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+              "
+            />
+            <h3 class="m0">Drive Impact with Integrated Strategy</h3>
+            <p class="mt8">
+              A seamless process from planning to execution and analysis. Every channel supports the same goal: profitable growth.
+            </p>
+          </article>
+
+          <article class="card">
+            <img
+              src="./icon2.png"
+              alt="Icon"
+              style="
+                width: 68px;
+                height: 68px;
+                padding: 10px;
+                border-radius: 14px;
+                box-shadow: 0 10px 26px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+              "
+            />
+            <h3 class="m0">Scale Revenue with Precise Targeting</h3>
+            <p class="mt8">We prioritize audience targeting to drive the most qualified leads while keeping CPAs low.</p>
+          </article>
+
+          <article class="card">
+            <img
+              src="./icon3.png"
+              alt="Icon"
+              style="
+                width: 68px;
+                height: 68px;
+                padding: 10px;
+                border-radius: 14px;
+                box-shadow: 0 10px 26px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+              "
+            />
+            <h3 class="m0">Measure Results with Custom Trackers</h3>
+            <p class="mt8">Daily KPI monitoring + alerts so we can move fast and keep quality high.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section id="products" class="section products reveal" data-tour="5" data-tour-title="Products">
+        <div class="prod-head">
+          <h2 class="m0">Our Core Products</h2>
+
+          <div class="prod-chips" id="prodChips">
+            <button class="chip is-active" data-filter="all" type="button">All</button>
+            <button class="chip" data-filter="insurance" type="button">Insurance</button>
+            <button class="chip" data-filter="legal" type="button">Legal</button>
+            <button class="chip" data-filter="finance" type="button">Finance</button>
+            <button class="chip" data-filter="home" type="button">Home</button>
+            <button class="chip" data-filter="commerce" type="button">Commerce</button>
+          </div>
+        </div>
+
+        <div class="prod-grid" id="prodGrid">
+          <article class="prod" data-cat="insurance" data-tilt="1">
+            <div class="shine"></div>
+            <img
+              src="./icon7.png"
+              alt="Icon"
+              style="
+                width: 68px;
+                height: 68px;
+                padding: 10px;
+                border-radius: 14px;
+                box-shadow: 0 10px 26px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+              "
+            />
+            <h3 class="m0">Medicare</h3>
+            <p>Health insurance for people 65+ and qualified individuals with disabilities.</p>
+            <div class="sep"></div>
+            <div class="prod-tags"><span class="t dark">Insurance</span><span class="t">AEP/OEP</span><span class="t">EN/ES</span></div>
+          </article>
+
+          <article class="prod" data-cat="legal" data-tilt="1">
+            <div class="shine"></div>
+            <img
+              src="./icon10.png"
+              alt="Icon"
+              style="
+                width: 68px;
+                height: 68px;
+                padding: 10px;
+                border-radius: 14px;
+                box-shadow: 0 10px 26px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+              "
+            />
+            <h3 class="m0">Personal Injury</h3>
+            <p>Connects qualified claimants to top-tier attorneys for motor-vehicle and other injuries.</p>
+            <div class="sep"></div>
+            <div class="prod-tags"><span class="t dark">Legal</span><span class="t">MVA</span><span class="t">Intake</span></div>
+          </article>
+
+          <article class="prod" data-cat="insurance" data-tilt="1">
+            <div class="shine"></div>
+            <img
+              src="./icon6.png"
+              alt="Icon"
+              style="
+                width: 68px;
+                height: 68px;
+                padding: 10px;
+                border-radius: 14px;
+                box-shadow: 0 10px 26px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+              "
+            />
+            <h3 class="m0">Final Expense</h3>
+            <p>Life insurance designed to cover end-of-life costs and protect families.</p>
+            <div class="sep"></div>
+            <div class="prod-tags"><span class="t dark">Insurance</span><span class="t">Low CPA</span><span class="t">Nationwide</span></div>
+          </article>
+
+          <article class="prod" data-cat="home" data-tilt="1">
+            <div class="shine"></div>
+            <img
+              src="./icon11.png"
+              alt="Icon"
+              style="
+                width: 68px;
+                height: 68px;
+                padding: 10px;
+                border-radius: 14px;
+                box-shadow: 0 10px 26px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+              "
+            />
+            <h3 class="m0">Home Services</h3>
+            <p>Windows, gutters, solar, roofing, and bath remodeling funnels tuned for local markets.</p>
+            <div class="sep"></div>
+            <div class="prod-tags"><span class="t dark">Home</span><span class="t">Geo Target</span><span class="t">HV</span></div>
+          </article>
+
+          <article class="prod" data-cat="finance" data-tilt="1">
+            <div class="shine"></div>
+            <img
+              src="./icon13.png"
+              alt="Icon"
+              style="
+                width: 68px;
+                height: 68px;
+                padding: 10px;
+                border-radius: 14px;
+                box-shadow: 0 10px 26px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+              "
+            />
+            <h3 class="m0">Debt Settlement</h3>
+            <p>Reduce payments on credit cards, loans, and medical bills through vetted partners.</p>
+            <div class="sep"></div>
+            <div class="prod-tags"><span class="t dark">Finance</span><span class="t">High Intent</span><span class="t">Pre-Qual</span></div>
+          </article>
+
+          <article class="prod" data-cat="insurance" data-tilt="1">
+            <div class="shine"></div>
+            <img
+              src="./auto.png"
+              alt="Icon"
+              style="
+                width: 68px;
+                height: 68px;
+                padding: 10px;
+                border-radius: 14px;
+                box-shadow: 0 10px 26px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+              "
+            />
+            <h3 class="m0">Auto Insurance</h3>
+            <p>Helps drivers discover competitive rates from leading carriers.</p>
+            <div class="sep"></div>
+            <div class="prod-tags"><span class="t dark">Insurance</span><span class="t">Rate Check</span><span class="t">Multi-State</span></div>
+          </article>
+
+          <article class="prod" data-cat="finance" data-tilt="1">
+            <div class="shine"></div>
+            <img
+              src="./debt.png"
+              alt="Icon"
+              style="
+                width: 68px;
+                height: 68px;
+                padding: 10px;
+                border-radius: 14px;
+                box-shadow: 0 10px 26px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+              "
+            />
+            <h3 class="m0">Personal Loans</h3>
+            <p>Links consumers to flexible financing for diverse expenses.</p>
+            <div class="sep"></div>
+            <div class="prod-tags"><span class="t dark">Finance</span><span class="t">Soft Pull</span><span class="t">Fast Flow</span></div>
+          </article>
+
+          <article class="prod" data-cat="insurance" data-tilt="1">
+            <div class="shine"></div>
+            <img
+              src="./life.png"
+              alt="Icon"
+              style="
+                width: 68px;
+                height: 68px;
+                padding: 10px;
+                border-radius: 14px;
+                box-shadow: 0 10px 26px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+              "
+            />
+            <h3 class="m0">Life Insurance</h3>
+            <p>Protect loved ones with tailored coverage options and quick eligibility paths.</p>
+            <div class="sep"></div>
+            <div class="prod-tags"><span class="t dark">Insurance</span><span class="t">Term/Whole</span><span class="t">EN/ES</span></div>
+          </article>
+
+          <article class="prod" data-cat="commerce" data-tilt="1">
+            <div class="shine"></div>
+            <img
+              src="./icon1.png"
+              alt="Icon"
+              style="
+                width: 68px;
+                height: 68px;
+                padding: 10px;
+                border-radius: 14px;
+                box-shadow: 0 10px 26px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+              "
+            />
+            <h3 class="m0">E-commerce</h3>
+            <p>Performance funnels that connect shoppers with products for personal and business needs.</p>
+            <div class="sep"></div>
+            <div class="prod-tags"><span class="t dark">Commerce</span><span class="t">CRO</span><span class="t">A/B</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROCESS TIMELINE (NEW) -->
+      <section id="process" class="section reveal" data-tour="6" data-tour-title="Process">
+        <div class="timeline">
+          <h2 class="m0">How We Launch & Scale</h2>
+          <p class="lead mt8" style="max-width: 72ch">
+            A structured rollout that keeps quality tight while moving fast. This is how we avoid “random testing” and build compounding gains.
+          </p>
+
+          <div class="timeline-grid">
+            <div class="tl">
+              <div class="tl-top">
+                <span class="tl-badge">Phase 01</span>
+                <span class="tl-days">Days 1–7</span>
+              </div>
+              <h3 class="m0 mt8">Audit + Tracking Map</h3>
+              <p class="mt8">
+                Align KPIs, define success thresholds, connect analytics + call outcomes, and set performance guardrails.
+              </p>
+            </div>
+
+            <div class="tl">
+              <div class="tl-top">
+                <span class="tl-badge">Phase 02</span>
+                <span class="tl-days">Days 8–21</span>
+              </div>
+              <h3 class="m0 mt8">Creative System + CRO</h3>
+              <p class="mt8">
+                Rapid creative production + controlled tests. We improve conversion before increasing spend aggressively.
+              </p>
+            </div>
+
+            <div class="tl">
+              <div class="tl-top">
+                <span class="tl-badge">Phase 03</span>
+                <span class="tl-days">Day 22+</span>
+              </div>
+              <h3 class="m0 mt8">Scale With Protection</h3>
+              <p class="mt8">
+                Scale winning combinations, expand markets/languages, and keep CPL/CPA within target via daily monitoring.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS (NEW) -->
+ 
+      <!-- FAQ -->
+      <section class="section reveal" data-tour="8" data-tour-title="FAQs">
+        <div class="faq">
+          <div class="faq-head">
+            <div class="faq-title">Questions teams usually ask us first</div>
+            <p class="faq-sub">How we plug in, how fast we move, and what to expect.</p>
+          </div>
+
+          <div class="faq-list" id="faqList">
+            <div class="faq-item">
+              <button type="button"><span class="faq-q">How quickly can you launch a new vertical or offer?</span><span class="faq-toggle">+</span></button>
+              <div class="faq-a">For most categories, we can move from alignment to first spend within 1–2 weeks, depending on compliance, routing, and creative approvals on your side.</div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button"><span class="faq-q">Do you handle both lead forms and inbound calls?</span><span class="faq-toggle">+</span></button>
+              <div class="faq-a">Yes. We support lead-only and direct inbound structures. The optimization logic is tuned to your preferred economics.</div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button"><span class="faq-q">How do you report performance back to us?</span><span class="faq-toggle">+</span></button>
+              <div class="faq-a">You get access to live dashboards plus a consistent cadence of summary reports and action plans so your internal team always knows what’s happening.</div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button"><span class="faq-q">Can you work with our existing tracking and CRM setup?</span><span class="faq-toggle">+</span></button>
+              <div class="faq-a">We integrate with most leading CRMs, call tracking platforms, and analytics stacks. During onboarding, we map attribution and data flows so nothing breaks.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta reveal" data-tour="9" data-tour-title="Next steps">
+        <h3 class="m0" style="font-size: clamp(18px, 2.4vw, 26px); font-weight: 900; letter-spacing: -0.02em">
+          Ready to talk?
+        </h3>
+        <a href="#contact" class="btn" style="white-space: nowrap">Get In Touch</a>
+      </section>
+
+      <!-- CONTACT (NEW) -->
+      <section id="contact" class="section reveal" data-tour="10" data-tour-title="Contact">
+        <div class="contact">
+          <h2 class="m0">Contact</h2>
+          <p class="lead mt8" style="max-width: 72ch">
+            Tell us what you’re running (vertical, geo, goals). We’ll reply with a clear next-step plan.
+          </p>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3 class="m0">What to include</h3>
+              <p class="mt8">• Vertical(s) + target geo</p>
+              <p class="mt8">• Main KPI (CPA/CPL/ROAS)</p>
+              <p class="mt8">• Current volume + target scale</p>
+              <p class="mt8">• Tracking stack (if any)</p>
+              <p class="mt16 small">This form is UI-only. Hook it to your backend/email later.</p>
+            </div>
+
+            <form class="contact-card form" onsubmit="event.preventDefault(); alert('Submitted (demo). Connect this form to your backend.');">
+              <div class="row">
+                <input type="text" name="name" placeholder="Your name" required />
+                <input type="email" name="email" placeholder="Email address" required />
+              </div>
+              <div class="row">
+                <input type="text" name="company" placeholder="Company / Brand" />
+                <input type="text" name="vertical" placeholder="Vertical (Insurance / Legal / Finance...)" />
+              </div>
+              <textarea name="message" placeholder="Tell us what you're trying to scale..." required></textarea>
+              <button class="btn" type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer reveal">
+        <div>© 2025 Click Venture. All Rights Reserved.</div>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap">
+          <a href="#snapshots">Snapshots</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#products">Products</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // ---------------- Reveal animations ----------------
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("show");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // ---------------- FAQ accordion ----------------
+      document.querySelectorAll(".faq-item button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.parentElement;
+          const open = item.classList.contains("is-open");
+          document.querySelectorAll(".faq-item").forEach((i) => i.classList.remove("is-open"));
+          if (!open) item.classList.add("is-open");
+        });
+      });
+
+      // ---------------- Scroll tour ----------------
+      const tourSections = Array.from(document.querySelectorAll("[data-tour]"));
+      const tourIndicator = document.getElementById("tourIndicator");
+      const tourTitleEl = document.getElementById("tourTitle");
+
+      function updateTour() {
+        const center = window.innerHeight / 2;
+        let best = null;
+        let bestDist = Infinity;
+
+        tourSections.forEach((sec) => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+          const mid = rect.top + rect.height / 2;
+          const dist = Math.abs(mid - center);
+          if (dist < bestDist) {
+            bestDist = dist;
+            best = sec;
+          }
+        });
+
+        if (best) {
+          tourIndicator.classList.add("is-visible");
+          tourTitleEl.textContent = best.dataset.tourTitle || "";
+          tourSections.forEach((s) => s.classList.toggle("is-active-tour", s === best));
+        } else {
+          tourIndicator.classList.remove("is-visible");
+          tourSections.forEach((s) => s.classList.remove("is-active-tour"));
+        }
+      }
+
+      // ---------------- Scroll progress bar ----------------
+      const scrollBar = document.getElementById("scrollBar");
+      function updateScrollBar() {
+        const doc = document.documentElement;
+        const max = doc.scrollHeight - doc.clientHeight;
+        const val = max > 0 ? (doc.scrollTop / max) * 100 : 0;
+        scrollBar.style.setProperty("--progress", val + "%");
+      }
+
+      window.addEventListener("scroll", () => {
+        window.requestAnimationFrame(() => {
+          updateTour();
+          updateScrollBar();
+        });
+      });
+
+      window.addEventListener("load", () => {
+        updateTour();
+        updateScrollBar();
+      });
+
+      // ---------------- Products filter ----------------
+      const chips = document.querySelectorAll("#prodChips .chip");
+      const cards = document.querySelectorAll("#prodGrid .prod");
+      chips.forEach((c) => {
+        c.addEventListener("click", () => {
+          chips.forEach((x) => x.classList.remove("is-active"));
+          c.classList.add("is-active");
+          const f = c.dataset.filter;
+          cards.forEach((card) => {
+            const cat = card.dataset.cat;
+            card.hidden = f !== "all" && cat !== f;
+          });
+        });
+      });
+
+      // ---------------- Tilt effect ----------------
+      document.querySelectorAll('.prod[data-tilt="1"]').forEach((el) => {
+        function onMove(e) {
+          const r = el.getBoundingClientRect();
+          const x = e.clientX - r.left;
+          const y = e.clientY - r.top;
+          const mx = (x / r.width) * 100;
+          const my = (y / r.height) * 100;
+          const ry = ((x - r.width / 2) / r.width) * 10;
+          const rx = -((y - r.height / 2) / r.height) * 10;
+          el.style.setProperty("--mx", mx + "%");
+          el.style.setProperty("--my", my + "%");
+          el.style.setProperty("--ry", ry + "deg");
+          el.style.setProperty("--rx", rx + "deg");
+        }
+        function onLeave() {
+          el.style.setProperty("--mx", "50%");
+          el.style.setProperty("--my", "50%");
+          el.style.setProperty("--ry", "0deg");
+          el.style.setProperty("--rx", "0deg");
+        }
+        el.addEventListener("mousemove", onMove);
+        el.addEventListener("mouseleave", onLeave);
+      });
+    </script>
+  </body>
+</html>
