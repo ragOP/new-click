@@ -43,6 +43,18 @@
       color: #ffffff;
       font-weight: 700;
     }
+    .cv-watermark {
+      position: absolute;
+      left: 50%;
+      top: 22%;
+      width: min(1080px, 125%);
+      height: auto;
+      transform: translate(-50%, -50%);
+      opacity: 0.34;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
     @media (max-width: 760px) {
       .cv-nav-links { display: none !important; }
       .cv-section {
@@ -83,11 +95,12 @@
 </header>
 
 
-<section id="top" class="cv-section" style="box-sizing: border-box; padding: 112px 40px 96px; background: #ffffff">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px">
+<section id="top" class="cv-section" style="box-sizing: border-box; padding: 112px 40px 96px; background: #ffffff; position: relative; overflow: hidden;">
+  <img class="cv-watermark" src="images/logo-watermark.png" alt="" aria-hidden="true">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; position: relative; z-index: 1;">
     <div style="display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border: 1px solid #E2E7F1; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">
       <span style="width: 8px; height: 8px; border-radius: 999px; background: #007bff"></span>
-      <span>Miami · Performance marketing &amp; lead generation</span>
+      <span>Performance marketing &amp; lead generation</span>
     </div>
     <h1 style="margin: 0; max-width: 1000px; font-size: clamp(44px, 6.2vw, 86px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 800">Performance marketing, engineered end to end.</h1>
     <p style="margin: 0; max-width: 680px; font-size: 20px; line-height: 1.55; color: #46526D">Paid media, creative, CRO and measurement under one roof. We accelerate and scale brands with proprietary tooling and a performance-first team.</p>
@@ -109,7 +122,7 @@
   </div>
 
   
-  <div aria-hidden="true" style="max-width: 1200px; margin: 80px auto 0; box-sizing: border-box; padding: 12px; border-radius: 28px; background: #F3F6FC; border: 1px solid #E2E7F1">
+  <div aria-hidden="true" style="max-width: 1200px; margin: 80px auto 0; box-sizing: border-box; padding: 12px; border-radius: 28px; background: #F3F6FC; border: 1px solid #E2E7F1; position: relative; z-index: 1;">
     <div style="background: #ffffff; border-radius: 18px; border: 1px solid #E2E7F1; overflow: hidden">
       <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 14px 22px; border-bottom: 1px solid #E2E7F1">
         <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5A6681">
@@ -187,7 +200,7 @@
         <span style="font-size: 15px; line-height: 1.5; color: #46526D">monthly leads touched by our funnels</span>
       </div>
       <div style="display: flex; flex-direction: column; gap: 10px">
-        <span style="font-size: 60px; font-weight: 800; letter-spacing: -0.04em; line-height: 1">45+</span>
+        <span style="font-size: 60px; font-weight: 800; letter-spacing: -0.04em; line-height: 1">90+</span>
         <span style="font-size: 15px; line-height: 1.5; color: #46526D">specialists across media, creative and CRO</span>
       </div>
       <div style="display: flex; flex-direction: column; gap: 10px">
