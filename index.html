@@ -46,20 +46,46 @@
       font-weight: 700;
     }
     .cv-prod { overflow: hidden; }
+    .cv-prod.is-hidden { display: none !important; }
     .cv-photo {
+      position: relative;
       display: block;
       margin: -28px -28px 0;
       height: 190px;
       overflow: hidden;
+      cursor: pointer;
+      background: #e8eef8;
     }
     .cv-photo img {
+      position: absolute;
+      inset: 0;
       width: 100%;
-      height: 190px;
+      height: 100%;
       object-fit: cover;
-      display: block;
-      transition: transform 0.35s ease;
+      opacity: 0;
+      transition: opacity 0.45s ease;
     }
-    .cv-photo:hover img { transform: scale(1.04); }
+    .cv-photo img.is-on { opacity: 1; }
+    .cv-dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 10px;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+    }
+    .cv-dots button {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      cursor: pointer;
+    }
+    .cv-dots button.is-on { background: #007bff; }
     @media (max-width: 760px) {
       .cv-nav-links { display: none !important; }
       .cv-section {
@@ -419,9 +445,20 @@
     <div id="prodGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
 
       <article class="cv-prod" data-cat="insurance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <a class="cv-photo" href="#contact" aria-label="Auto Insurance">
-          <img src="images/verticals/auto-insurance.jpg" alt="Auto Insurance">
-        </a>
+                <div class="cv-photo" data-slideshow aria-label="Auto Insurance photos">
+          <img class="is-on" src="images/verticals/auto-insurance/1-6817008.jpg" alt="Auto Insurance">
+          <img src="images/verticals/auto-insurance/2-6271668.jpg" alt="">
+          <img src="images/verticals/auto-insurance/3-7669214.jpg" alt="">
+          <img src="images/verticals/auto-insurance/4-4930676.jpg" alt="">
+          <img src="images/verticals/auto-insurance/5-18002501.jpg" alt="">
+          <div class="cv-dots">
+          <button type="button" class="is-on" aria-label="Photo 1"></button>
+          <button type="button" aria-label="Photo 2"></button>
+          <button type="button" aria-label="Photo 3"></button>
+          <button type="button" aria-label="Photo 4"></button>
+          <button type="button" aria-label="Photo 5"></button>
+          </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: flex-end">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Insurance</span>
         </div>
@@ -430,9 +467,22 @@
       </article>
 
       <article class="cv-prod" data-cat="home" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <a class="cv-photo" href="#contact" aria-label="Home Warranty">
-          <img src="images/verticals/home-warranty.jpg" alt="Home Warranty">
-        </a>
+                <div class="cv-photo" data-slideshow aria-label="Home Warranty photos">
+          <img class="is-on" src="images/verticals/home-warranty/1-32497161.jpg" alt="Home Warranty">
+          <img src="images/verticals/home-warranty/2-32497160.jpg" alt="">
+          <img src="images/verticals/home-warranty/3-7859953.jpg" alt="">
+          <img src="images/verticals/home-warranty/4-29226620.jpg" alt="">
+          <img src="images/verticals/home-warranty/5-20500461.jpg" alt="">
+          <img src="images/verticals/home-warranty/6-32497162.jpg" alt="">
+          <div class="cv-dots">
+          <button type="button" class="is-on" aria-label="Photo 1"></button>
+          <button type="button" aria-label="Photo 2"></button>
+          <button type="button" aria-label="Photo 3"></button>
+          <button type="button" aria-label="Photo 4"></button>
+          <button type="button" aria-label="Photo 5"></button>
+          <button type="button" aria-label="Photo 6"></button>
+          </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: flex-end">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Home</span>
         </div>
@@ -441,9 +491,20 @@
       </article>
 
       <article class="cv-prod" data-cat="insurance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <a class="cv-photo" href="#contact" aria-label="Home Insurance">
-          <img src="images/verticals/home-insurance.jpg" alt="Home Insurance">
-        </a>
+                <div class="cv-photo" data-slideshow aria-label="Home Insurance photos">
+          <img class="is-on" src="images/verticals/home-insurance/1-8583638.jpg" alt="Home Insurance">
+          <img src="images/verticals/home-insurance/2-5728209.jpg" alt="">
+          <img src="images/verticals/home-insurance/3-7579042.jpg" alt="">
+          <img src="images/verticals/home-insurance/4-28490242.jpg" alt="">
+          <img src="images/verticals/home-insurance/5-30332492.jpg" alt="">
+          <div class="cv-dots">
+          <button type="button" class="is-on" aria-label="Photo 1"></button>
+          <button type="button" aria-label="Photo 2"></button>
+          <button type="button" aria-label="Photo 3"></button>
+          <button type="button" aria-label="Photo 4"></button>
+          <button type="button" aria-label="Photo 5"></button>
+          </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: flex-end">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Insurance</span>
         </div>
@@ -452,9 +513,20 @@
       </article>
 
       <article class="cv-prod" data-cat="insurance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <a class="cv-photo" href="#contact" aria-label="Life Insurance">
-          <img src="images/verticals/life-insurance.jpg" alt="Life Insurance">
-        </a>
+                <div class="cv-photo" data-slideshow aria-label="Life Insurance photos">
+          <img class="is-on" src="images/verticals/life-insurance/1-6393028.jpg" alt="Life Insurance">
+          <img src="images/verticals/life-insurance/2-8944022.jpg" alt="">
+          <img src="images/verticals/life-insurance/3-11145071.jpg" alt="">
+          <img src="images/verticals/life-insurance/4-3042436.jpg" alt="">
+          <img src="images/verticals/life-insurance/5-7086012.jpg" alt="">
+          <div class="cv-dots">
+          <button type="button" class="is-on" aria-label="Photo 1"></button>
+          <button type="button" aria-label="Photo 2"></button>
+          <button type="button" aria-label="Photo 3"></button>
+          <button type="button" aria-label="Photo 4"></button>
+          <button type="button" aria-label="Photo 5"></button>
+          </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: flex-end">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Insurance</span>
         </div>
@@ -463,9 +535,20 @@
       </article>
 
       <article class="cv-prod" data-cat="home" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <a class="cv-photo" href="#contact" aria-label="Timeshare">
-          <img src="images/verticals/timeshare.jpg" alt="Timeshare">
-        </a>
+                <div class="cv-photo" data-slideshow aria-label="Timeshare photos">
+          <img class="is-on" src="images/verticals/timeshare/1-14025912.jpg" alt="Timeshare">
+          <img src="images/verticals/timeshare/2-9400920.jpg" alt="">
+          <img src="images/verticals/timeshare/3-1662549.jpg" alt="">
+          <img src="images/verticals/timeshare/4-38376507.jpg" alt="">
+          <img src="images/verticals/timeshare/5-3155666.jpg" alt="">
+          <div class="cv-dots">
+          <button type="button" class="is-on" aria-label="Photo 1"></button>
+          <button type="button" aria-label="Photo 2"></button>
+          <button type="button" aria-label="Photo 3"></button>
+          <button type="button" aria-label="Photo 4"></button>
+          <button type="button" aria-label="Photo 5"></button>
+          </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: flex-end">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Home</span>
         </div>
@@ -474,9 +557,22 @@
       </article>
 
       <article class="cv-prod" data-cat="insurance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <a class="cv-photo" href="#contact" aria-label="Pet Insurance — CPL">
-          <img src="images/verticals/pet-insurance.jpg" alt="Pet Insurance — CPL">
-        </a>
+                <div class="cv-photo" data-slideshow aria-label="Pet Insurance — CPL photos">
+          <img class="is-on" src="images/verticals/pet-insurance/1-6578806.jpg" alt="Pet Insurance — CPL">
+          <img src="images/verticals/pet-insurance/2-4453160.jpg" alt="">
+          <img src="images/verticals/pet-insurance/3-6001382.jpg" alt="">
+          <img src="images/verticals/pet-insurance/4-8434594.jpg" alt="">
+          <img src="images/verticals/pet-insurance/5-6235231.jpg" alt="">
+          <img src="images/verticals/pet-insurance/6-7468980.jpg" alt="">
+          <div class="cv-dots">
+          <button type="button" class="is-on" aria-label="Photo 1"></button>
+          <button type="button" aria-label="Photo 2"></button>
+          <button type="button" aria-label="Photo 3"></button>
+          <button type="button" aria-label="Photo 4"></button>
+          <button type="button" aria-label="Photo 5"></button>
+          <button type="button" aria-label="Photo 6"></button>
+          </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: flex-end">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Insurance</span>
         </div>
@@ -485,9 +581,20 @@
       </article>
 
       <article class="cv-prod" data-cat="finance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <a class="cv-photo" href="#contact" aria-label="Debt">
-          <img src="images/verticals/debt.jpg" alt="Debt">
-        </a>
+                <div class="cv-photo" data-slideshow aria-label="Debt photos">
+          <img class="is-on" src="images/verticals/debt/1-5900074.jpg" alt="Debt">
+          <img src="images/verticals/debt/2-6578403.jpg" alt="">
+          <img src="images/verticals/debt/3-6963927.jpg" alt="">
+          <img src="images/verticals/debt/4-920382.jpg" alt="">
+          <img src="images/verticals/debt/5-6694533.jpg" alt="">
+          <div class="cv-dots">
+          <button type="button" class="is-on" aria-label="Photo 1"></button>
+          <button type="button" aria-label="Photo 2"></button>
+          <button type="button" aria-label="Photo 3"></button>
+          <button type="button" aria-label="Photo 4"></button>
+          <button type="button" aria-label="Photo 5"></button>
+          </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: flex-end">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Finance</span>
         </div>
@@ -496,9 +603,20 @@
       </article>
 
       <article class="cv-prod" data-cat="finance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <a class="cv-photo" href="#contact" aria-label="Loans">
-          <img src="images/verticals/loans.jpg" alt="Loans">
-        </a>
+                <div class="cv-photo" data-slideshow aria-label="Loans photos">
+          <img class="is-on" src="images/verticals/loans/1-4308022.jpg" alt="Loans">
+          <img src="images/verticals/loans/2-4246045.jpg" alt="">
+          <img src="images/verticals/loans/3-9869396.jpg" alt="">
+          <img src="images/verticals/loans/4-6517092.jpg" alt="">
+          <img src="images/verticals/loans/5-36730435.jpg" alt="">
+          <div class="cv-dots">
+          <button type="button" class="is-on" aria-label="Photo 1"></button>
+          <button type="button" aria-label="Photo 2"></button>
+          <button type="button" aria-label="Photo 3"></button>
+          <button type="button" aria-label="Photo 4"></button>
+          <button type="button" aria-label="Photo 5"></button>
+          </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: flex-end">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Finance</span>
         </div>
@@ -507,9 +625,20 @@
       </article>
 
       <article class="cv-prod" data-cat="insurance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <a class="cv-photo" href="#contact" aria-label="Final Expense">
-          <img src="images/verticals/final-expense.jpg" alt="Final Expense">
-        </a>
+                <div class="cv-photo" data-slideshow aria-label="Final Expense photos">
+          <img class="is-on" src="images/verticals/final-expense/1-8796067.jpg" alt="Final Expense">
+          <img src="images/verticals/final-expense/2-3768131.jpg" alt="">
+          <img src="images/verticals/final-expense/3-4148965.jpg" alt="">
+          <img src="images/verticals/final-expense/4-8064882.jpg" alt="">
+          <img src="images/verticals/final-expense/5-7530829.jpg" alt="">
+          <div class="cv-dots">
+          <button type="button" class="is-on" aria-label="Photo 1"></button>
+          <button type="button" aria-label="Photo 2"></button>
+          <button type="button" aria-label="Photo 3"></button>
+          <button type="button" aria-label="Photo 4"></button>
+          <button type="button" aria-label="Photo 5"></button>
+          </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: flex-end">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Insurance</span>
         </div>
@@ -518,9 +647,22 @@
       </article>
 
       <article class="cv-prod" data-cat="insurance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <a class="cv-photo" href="#contact" aria-label="Medicare">
-          <img src="images/verticals/medicare.jpg" alt="Medicare">
-        </a>
+                <div class="cv-photo" data-slideshow aria-label="Medicare photos">
+          <img class="is-on" src="images/verticals/medicare/1-39192358.jpg" alt="Medicare">
+          <img src="images/verticals/medicare/2-7477702.jpg" alt="">
+          <img src="images/verticals/medicare/3-6667704.jpg" alt="">
+          <img src="images/verticals/medicare/4-7345460.jpg" alt="">
+          <img src="images/verticals/medicare/5-8972259.jpg" alt="">
+          <img src="images/verticals/medicare/6-9710820.jpg" alt="">
+          <div class="cv-dots">
+          <button type="button" class="is-on" aria-label="Photo 1"></button>
+          <button type="button" aria-label="Photo 2"></button>
+          <button type="button" aria-label="Photo 3"></button>
+          <button type="button" aria-label="Photo 4"></button>
+          <button type="button" aria-label="Photo 5"></button>
+          <button type="button" aria-label="Photo 6"></button>
+          </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: flex-end">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Insurance</span>
         </div>
@@ -529,9 +671,22 @@
       </article>
 
       <article class="cv-prod" data-cat="commerce" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <a class="cv-photo" href="#contact" aria-label="Ecommerce">
-          <img src="images/verticals/ecommerce.jpg" alt="Ecommerce">
-        </a>
+                <div class="cv-photo" data-slideshow aria-label="Ecommerce photos">
+          <img class="is-on" src="images/verticals/ecommerce/1-6958419.jpg" alt="Ecommerce">
+          <img src="images/verticals/ecommerce/2-39219885.jpg" alt="">
+          <img src="images/verticals/ecommerce/3-7857532.jpg" alt="">
+          <img src="images/verticals/ecommerce/4-6169014.jpg" alt="">
+          <img src="images/verticals/ecommerce/5-12725400.jpg" alt="">
+          <img src="images/verticals/ecommerce/6-7007174.jpg" alt="">
+          <div class="cv-dots">
+          <button type="button" class="is-on" aria-label="Photo 1"></button>
+          <button type="button" aria-label="Photo 2"></button>
+          <button type="button" aria-label="Photo 3"></button>
+          <button type="button" aria-label="Photo 4"></button>
+          <button type="button" aria-label="Photo 5"></button>
+          <button type="button" aria-label="Photo 6"></button>
+          </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: flex-end">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Commerce</span>
         </div>
@@ -540,9 +695,20 @@
       </article>
 
       <article class="cv-prod" data-cat="home" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <a class="cv-photo" href="#contact" aria-label="Home Services">
-          <img src="images/verticals/home-services.jpg" alt="Home Services">
-        </a>
+                <div class="cv-photo" data-slideshow aria-label="Home Services photos">
+          <img class="is-on" src="images/verticals/home-services/1-33404248.jpg" alt="Home Services">
+          <img src="images/verticals/home-services/2-33501308.jpg" alt="">
+          <img src="images/verticals/home-services/3-5691531.jpg" alt="">
+          <img src="images/verticals/home-services/4-6124242.jpg" alt="">
+          <img src="images/verticals/home-services/5-32497161.jpg" alt="">
+          <div class="cv-dots">
+          <button type="button" class="is-on" aria-label="Photo 1"></button>
+          <button type="button" aria-label="Photo 2"></button>
+          <button type="button" aria-label="Photo 3"></button>
+          <button type="button" aria-label="Photo 4"></button>
+          <button type="button" aria-label="Photo 5"></button>
+          </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: flex-end">
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Home</span>
         </div>
@@ -722,9 +888,31 @@
       chip.classList.add("is-active");
       const filter = chip.dataset.filter;
       cards.forEach((card) => {
-        card.hidden = filter !== "all" && card.dataset.cat !== filter;
+        card.classList.toggle("is-hidden", filter !== "all" && card.dataset.cat !== filter);
       });
     });
+  });
+
+  document.querySelectorAll("[data-slideshow]").forEach((box, index) => {
+    const frames = [...box.querySelectorAll(":scope > img")];
+    const dots = [...box.querySelectorAll(".cv-dots button")];
+    let current = 0;
+    const show = (next) => {
+      current = (next + frames.length) % frames.length;
+      frames.forEach((frame, i) => frame.classList.toggle("is-on", i === current));
+      dots.forEach((dot, i) => dot.classList.toggle("is-on", i === current));
+    };
+    box.addEventListener("click", (event) => {
+      if (event.target.closest(".cv-dots")) return;
+      show(current + 1);
+    });
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", (event) => {
+        event.stopPropagation();
+        show(i);
+      });
+    });
+    setInterval(() => show(current + 1), 3800 + index * 350);
   });
 
   const form = document.querySelector(".cv-form");
