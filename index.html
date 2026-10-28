@@ -11,75 +11,17 @@
 <body>
 <x-dc>
 <helmet>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&display=swap" rel="stylesheet">
 <style>
+@keyframes cvBob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-10px) rotate(3deg)}}
+@keyframes cvFloatA{0%,100%{transform:translate(0,0) rotate(-8deg)}50%{transform:translate(6px,-12px) rotate(6deg)}}
+@keyframes cvFloatB{0%,100%{transform:translate(0,0) rotate(6deg)}50%{transform:translate(-8px,-8px) rotate(-8deg)}}
+@keyframes cvBreath{0%,100%{transform:scaleY(1)}50%{transform:scaleY(0.88)}}
+@keyframes cvPulse{0%,100%{opacity:1}50%{opacity:0.35}}
+@keyframes cvDrift{from{background-position:0 0}to{background-position:36px 36px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
 html{scroll-behavior:smooth}
 body{margin:0;background:#F7F8FC;color:#0B1430;font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 *{box-sizing:border-box}
@@ -87,10 +29,11 @@ a{color:#0B1430}
 a:hover{color:#2B4FE3}
 button,input,textarea{font-family:inherit}
 </style>
+
+
 <style id="mobile-fit">
 html, body { overflow-x: hidden; }
 img, svg, video { max-width: 100%; height: auto; }
-.menu-btn { display: none !important; }
 @media (max-width: 860px) {
   header { padding: 10px 12px !important; }
   header > div {
@@ -159,12 +102,6 @@ img, svg, video { max-width: 100%; height: auto; }
     height: 52px !important;
   }
   section[data-screen-label="Hero"] div[style*="gap:12px"] { width: 100%; }
-  section[data-screen-label="Hero"] ~ section[style*="padding:16px 24px 80px"] {
-    padding: 8px 16px 40px !important;
-  }
-  section[data-screen-label="Hero"] ~ section span[style*="font-size:58px"] {
-    font-size: 36px !important;
-  }
   #snapshots, #framework, #verticals, #faq { padding: 48px 16px !important; gap: 28px !important; }
   #focus > div, #process > div { padding: 48px 16px !important; gap: 24px !important; }
   #focus [style*="font-size:clamp(20px"] { font-size: 16px !important; gap: 8px !important; }
@@ -197,6 +134,7 @@ img, svg, video { max-width: 100%; height: auto; }
   footer nav { gap: 12px 16px !important; }
 }
 </style>
+
 </helmet>
 <div id="top" style="background:#F7F8FC;min-height:100vh;overflow-x:hidden">
 
@@ -354,11 +292,17 @@ img, svg, video { max-width: 100%; height: auto; }
 </div>
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px">
 <sc-for list="{{ verticals }}" as="v" hint-placeholder-count="8">
-<div sc-camel-on-mouse-enter="{{ v.enter }}" sc-camel-on-mouse-leave="{{ v.leave }}" style="border:1.5px solid #0B1431;border-radius:24px;overflow:hidden;background:#FFFFFF;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-4px);box-shadow:6px 6px 0 #0B1431">
-<div style="aspect-ratio:4/3;background:#DCE6FF;position:relative;overflow:hidden">
-<img src="{{ v.img }}" alt="{{ v.name }}" style="width:100%;height:100%;object-fit:cover;display:block">
-<span style="position:absolute;top:12px;left:12px;padding:5px 12px;border-radius:999px;font-size:12.5px;font-weight:600;background:#FFFFFF;color:#0B1430">{{ v.cat }}</span>
-<span style="position:absolute;bottom:12px;right:12px;padding:4px 10px;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:11.5px;background:#0A1330;color:#FFFFFE">{{ v.counter }}</span>
+<div style="border:1.5px solid #0B1431;border-radius:24px;overflow:hidden;background:#FFFFFF;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-4px);box-shadow:6px 6px 0 #0B1431">
+<div style="aspect-ratio:4/3;border-bottom:1.5px solid #0B1431;background:#0A1330;color:#FFFFFE;padding:20px;display:flex;flex-direction:column;justify-content:space-between;gap:12px;position:relative;overflow:hidden;isolation:isolate">
+<span style="position:absolute;z-index:-1;right:-18px;bottom:6px;font-family:'Material Symbols Rounded';font-size:150px;line-height:1;color:#16204A;font-variation-settings:'FILL' 1;pointer-events:none">{{ v.icon }}</span>
+<div style="display:flex;justify-content:space-between;align-items:center">
+<span style="width:46px;height:46px;border-radius:50%;border:1.5px dashed #FFD84D;display:grid;place-items:center;transform:rotate(-12deg);flex-shrink:0"><span style="width:36px;height:36px;border-radius:50%;background:#FFD84D;color:#0B1430;display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:9.5px;letter-spacing:0.05em">{{ v.stamp }}</span></span>
+<span style="display:flex;align-items:center;gap:8px"><span style="padding:4px 10px;border-radius:999px;font-size:12px;font-weight:600;background:#FFFFFF;color:#0B1430">{{ v.cat }}</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#7FD0FF;display:flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:50%;background:#3BE38A;animation:cvPulse 2.4s ease-in-out infinite"></span>LIVE</span></span>
+</div>
+<div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:24px;font-weight:800;letter-spacing:-0.035em;line-height:1.05">{{ v.model }}</span><span style="font-size:12.5px;color:#A9B3D6">{{ v.modelNote }}</span></div>
+<div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #26306A;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#A9B3D6">
+<sc-for list="{{ v.steps }}" as="st" hint-placeholder-count="3"><span style="display:flex;align-items:center;gap:8px"><span style="padding:4px 9px;border-radius:999px;background:{{ st.bg }};color:{{ st.fg }}">{{ st.label }}</span><span style="color:#5B6690">{{ st.arrow }}</span></span></sc-for>
+</div>
 </div>
 <div style="padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px">
 <h3 style="margin:0;font-size:22px;letter-spacing:-0.03em">{{ v.name }}</h3>
@@ -449,47 +393,8 @@ img, svg, video { max-width: 100%; height: auto; }
 </footer>
 </div>
 </x-dc>
-<script>
-(function(){
-  function ready(fn){
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
-    else fn();
-  }
-  ready(function(){
-    var header = document.querySelector("header > div");
-    var nav = document.getElementById("site-nav") || document.querySelector("header nav");
-    if (!header || !nav) return;
-    nav.id = "site-nav";
-    var btn = header.querySelector(".menu-btn");
-    if (!btn) {
-      btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "menu-btn";
-      btn.setAttribute("aria-controls", "site-nav");
-      header.insertBefore(btn, header.querySelector('a[href="#contact"]') || null);
-    }
-    function sync(){
-      var open = nav.classList.contains("is-open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-      btn.textContent = open ? "Close" : "Menu";
-    }
-    sync();
-    btn.addEventListener("click", function(){
-      nav.classList.toggle("is-open");
-      sync();
-    });
-    nav.addEventListener("click", function(e){
-      if (e.target.closest("a")) {
-        nav.classList.remove("is-open");
-        sync();
-      }
-    });
-  });
-})();
-</script>
-
 <script type="text/x-dc" data-dc-script="">
-const IMG = 'images/verticals/';
+const IMG = 'https://www.clickvs.com/images/verticals/';
 const V = [
   ['Auto Insurance','Insurance','Helps drivers discover competitive rates from leading carriers.','auto-insurance',['1-6817008','2-6271668','3-7669214','4-4930676','5-18002501']],
   ['Home Warranty','Home','Coverage plans that protect homeowners against the cost of repairing or replacing household systems.','home-warranty',['1-32497161','2-32497160','3-7859953','4-29226620','5-20500461','6-32497162']],
@@ -504,6 +409,35 @@ const V = [
   ['Ecommerce','Commerce','Performance funnels that connect shoppers with products for personal and business needs.','ecommerce',['1-6958419','2-39219885','3-7857532','4-6169014','5-12725400','6-7007174']],
   ['Home Services','Home','Local home-service funnels for the trades below.','home-services',['1-33404248','2-33501308','3-5691531','4-6124242','5-32497161'],['Gutters','Windows','Roofing','Siding','HVAC']]
 ];
+const ICONS = {
+  'auto-insurance':['directions_car','shield','speed'],
+  'home-warranty':['home_repair_service','handyman','verified'],
+  'home-insurance':['house','shield','umbrella'],
+  'life-insurance':['favorite','umbrella','savings'],
+  'timeshare':['beach_access','key','flight'],
+  'pet-insurance':['pets','shield','medical_services'],
+  'debt':['credit_card','trending_down','receipt_long'],
+  'loans':['account_balance','payments','percent'],
+  'final-expense':['local_florist','shield','description'],
+  'medicare':['health_and_safety','medication','calendar_month'],
+  'ecommerce':['shopping_bag','local_shipping','sell'],
+  'home-services':['roofing','hvac','window']
+};
+const MODEL = {
+  'auto-insurance':['Leads','Competitive-rate shoppers'],
+  'home-warranty':['Leads','Homeowners, system coverage'],
+  'home-insurance':['Leads','Matched to property & risk'],
+  'life-insurance':['Leads + calls','Quick eligibility paths'],
+  'timeshare':['Leads','Exit & relief owners'],
+  'pet-insurance':['Leads','Bought & optimized on CPL'],
+  'debt':['Leads','Vetted partner routing'],
+  'loans':['Leads','Flexible financing seekers'],
+  'final-expense':['Leads + calls','End-of-life coverage'],
+  'medicare':['Leads + calls','65+ and qualified individuals'],
+  'ecommerce':['Leads','Shoppers, personal & business'],
+  'home-services':['Leads','Gutters · Windows · Roofing · Siding · HVAC']
+};
+const THEMES = [['#DCE6FF','rgba(43,79,227,0.22)'],['#FFF3C2','rgba(11,20,48,0.14)'],['#D6F1FF','rgba(30,168,242,0.35)'],['#E8EDFF','rgba(43,79,227,0.18)']];
 const TABS = {
   Overview: { note: 'Headline results across active programs, reviewed every morning.' },
   Verticals: { note: 'Budget pacing per vertical with CPL guardrails switched on.', title: 'Spend pacing by vertical', tag: 'CPL guardrails on',
@@ -543,11 +477,14 @@ class Component extends DCLogic {
       bars: (T.bars||[]).map(([label,p],i) => ({label, w:p+'%', val: s.tab==='Calls' ? (i===0?'100%':p+'%') : p+'% of budget', color:BAR_COLORS[i%BAR_COLORS.length]})),
       snapshots: SNAP.map(([kicker,title,body,tags,bg]) => ({kicker,title,body,tags,bg})),
       filters: ['All','Insurance','Finance','Home','Commerce'].map(f => ({label:f, bg:f===s.filter?'#2B4FE3':'transparent', fg:f===s.filter?'#FFFFFE':'#0B1430', pick:()=>this.setState({filter:f})})),
-      verticals: V.filter(v => s.filter==='All' || v[1]===s.filter).map(([name,cat,desc,slug,imgs,trades]) => {
-        const i = s.hover===slug ? s.frame % imgs.length : 0;
-        return { name, cat, desc, img: (window.__resources && window.__resources['v_'+slug+'_'+imgs[i]]) || (IMG+slug+'/'+imgs[i]+'.jpg'), counter:(i+1)+' / '+imgs.length, trades:trades||[], hasTrades:!!trades,
-          enter:()=>{ clearInterval(this.iv); this.setState({hover:slug, frame:1}); this.iv=setInterval(()=>this.setState(st=>({frame:st.frame+1})),900); },
-          leave:()=>{ clearInterval(this.iv); this.setState({hover:null, frame:0}); } };
+      verticals: V.filter(v => s.filter==='All' || v[1]===s.filter).map(([name,cat,desc,slug,imgs,trades], i) => {
+        const ic = ICONS[slug]; const th = THEMES[V.findIndex(x=>x[3]===slug) % THEMES.length];
+        const md = MODEL[slug]; const seed = slug.length;
+        const seq = /call/i.test(md[0]) ? ['Click','Lead','Call'] : ['Click','Form','Lead'];
+        const steps = seq.map((label,j) => ({ label, arrow: j<seq.length-1 ? '→' : '', bg: j===seq.length-1 ? '#FFD84D' : '#16204A', fg: j===seq.length-1 ? '#0B1430' : '#DCE6FF' }));
+        const CODES = {'auto-insurance':'AU','home-warranty':'HW','home-insurance':'HI','life-insurance':'LI','timeshare':'TS','pet-insurance':'PT','debt':'DB','loans':'LN','final-expense':'FE','medicare':'MC','ecommerce':'EC','home-services':'HS'};
+        const n = V.findIndex(x=>x[3]===slug)+1;
+        return { name, cat, desc, icon:ic[0], code:CODES[slug], stamp:({Insurance:'INS',Finance:'FIN',Home:'HOME',Commerce:'COM'})[cat], num:(n<10?'0':'')+n+' / 12', model:md[0], modelNote:md[1], steps, trades:trades||[], hasTrades:!!trades };
       }),
       faqs: FAQ.map(([q,a],i) => ({q,a,open:s.faq===i,icon:s.faq===i?'−':'+',bg:s.faq===i?'#D6F1FF':'#FFFFFF',toggle:()=>this.setState({faq:s.faq===i?-1:i})})),
       sent: s.sent, notSent: !s.sent, send: () => this.setState({sent:true})
