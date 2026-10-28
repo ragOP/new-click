@@ -1,928 +1,560 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Click Ventures — Digital Marketing Experts</title>
-  <link rel="icon" href="favicon.ico" sizes="32x32">
-  <link rel="icon" type="image/png" href="favicons/10-cropped-favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="favicons/10-cropped-favicon-192x192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="favicons/10-cropped-favicon-180x180.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --brand: #007bff;
-      --brand-light: #3f95ff;
-    }
-    body {
-      margin: 0;
-      background: #ffffff;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: #0A1230; text-decoration: none; }
-    a:hover { color: var(--brand); }
-    input, textarea, button { font-family: inherit; }
-    input::placeholder, textarea::placeholder { color: #8A94A8; }
-    input:focus, textarea:focus { outline: 2px solid var(--brand); outline-offset: 2px; }
-    .cv-btn:hover { opacity: .88; }
-    .cv-footer a:hover { color: #ffffff; }
-    .cv-chip {
-      height: 44px;
-      padding: 0 18px;
-      border-radius: 999px;
-      border: 1px solid #D5DCE8;
-      background: #ffffff;
-      color: #0A1230;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .cv-chip.is-active {
-      border-color: var(--brand);
-      background: var(--brand);
-      color: #ffffff;
-      font-weight: 700;
-    }
-    .cv-prod { overflow: hidden; }
-    .cv-prod.is-hidden { display: none !important; }
-    .cv-photo {
-      position: relative;
-      display: block;
-      margin: -28px -28px 0;
-      height: 190px;
-      overflow: hidden;
-      cursor: pointer;
-      background: #e8eef8;
-    }
-    .cv-photo img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 0.45s ease;
-    }
-    .cv-photo img.is-on { opacity: 1; }
-    .cv-dots {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 10px;
-      z-index: 2;
-      display: flex;
-      justify-content: center;
-      gap: 6px;
-    }
-    .cv-dots button {
-      width: 8px;
-      height: 8px;
-      padding: 0;
-      border: 0;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.72);
-      cursor: pointer;
-    }
-    .cv-dots button.is-on { background: #007bff; }
-    @media (max-width: 760px) {
-      .cv-nav-links { display: none !important; }
-      .cv-section {
-        padding-top: 72px !important;
-        padding-bottom: 72px !important;
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-      }
-      .cv-side {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-      }
-      .cv-hide-sm { display: none !important; }
-      .cv-form { padding: 24px !important; }
-      .cv-cta { padding: 32px 24px !important; }
-    }
-  </style>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Click Ventures — Digital Marketing Experts</title>
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" href="favicons/10-cropped-favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="favicons/10-cropped-favicon-180x180.png">
+<script src="js/dc.js"></script>
 </head>
 <body>
-<div style="font-family: 'Manrope', system-ui, sans-serif; color: #0A1230; background: #ffffff; width: 100%; box-sizing: border-box; display: flex; flex-direction: column" data-canvas-width="1440" data-canvas-height="6900" data-document-role="page" data-label="Homepage">
+<x-dc>
+<helmet>
 
 
-<header class="cv-side" style="box-sizing: border-box; padding: 0 40px; border-bottom: 1px solid #E2E7F1; background: #ffffff; position: sticky; top: 0; z-index: 40;">
-  <nav aria-label="Primary" style="max-width: 1200px; margin: 0 auto; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
-    <a href="#top" style="display: flex; align-items: center">
-      <img src="images/biglogo.jpg" alt="Click Ventures" style="height: 40px; width: auto; display: block">
-    </a>
-    <div class="cv-nav-links" style="display: flex; align-items: center; gap: 32px; font-size: 14px; font-weight: 600">
-      <a href="#snapshots">Snapshots</a>
-      <a href="#focus">About</a>
-      <a href="#framework">Services</a>
-      <a href="#verticals">Verticals</a>
-      <a href="#process">Process</a>
-      <a href="#faq">FAQ</a>
-    </div>
-    <a class="cv-btn" href="#contact" style="display: inline-flex; align-items: center; height: 44px; padding: 0 20px; border-radius: 999px; background: #007bff; color: #ffffff; font-weight: 700; font-size: 14px">Get started</a>
-  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F7F8FC;color:#0B1430;font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#0B1430}
+a:hover{color:#2B4FE3}
+button,input,textarea{font-family:inherit}
+</style>
+<style id="mobile-fit">
+html, body { overflow-x: hidden; }
+img, svg, video { max-width: 100%; height: auto; }
+.menu-btn { display: none !important; }
+@media (max-width: 860px) {
+  header { padding: 10px 12px !important; }
+  header > div {
+    display: grid !important;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "logo cta" "nav nav";
+    height: auto !important;
+    min-height: 0 !important;
+    align-items: center !important;
+    border-radius: 20px !important;
+    padding: 12px !important;
+    gap: 10px 12px !important;
+    overflow: visible !important;
+  }
+  header > div > a[href="#top"] { grid-area: logo; }
+  header img { height: 24px !important; width: auto !important; }
+  header nav#site-nav,
+  header nav {
+    display: flex !important;
+    grid-area: nav;
+    position: static !important;
+    width: 100% !important;
+    flex: none !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;
+    padding: 0 !important;
+    background: none;
+    border: 0;
+    box-shadow: none;
+  }
+  header nav a {
+    display: inline-flex !important;
+    align-items: center;
+    min-height: 34px;
+    padding: 0 10px !important;
+    border-radius: 999px;
+    background: #F7F8FC;
+    font-size: 13px !important;
+    text-decoration: none;
+  }
+  header > div > a[href="#contact"] {
+    grid-area: cta;
+    height: 40px !important;
+    padding: 0 14px !important;
+    font-size: 14px !important;
+  }
+  h1 {
+    font-size: clamp(32px, 11vw, 44px) !important;
+    letter-spacing: -0.045em !important;
+    max-width: 100% !important;
+    overflow-wrap: anywhere;
+  }
+  h1 span { display: inline !important; transform: none !important; padding: 0 0.12em !important; }
+  h2 { font-size: clamp(28px, 8.4vw, 40px) !important; overflow-wrap: anywhere; }
+  h3 { font-size: clamp(20px, 6vw, 26px) !important; }
+  section[data-screen-label="Hero"] {
+    padding: 24px 16px 16px !important;
+    gap: 22px !important;
+  }
+  section[data-screen-label="Hero"] > div:first-child { gap: 18px !important; }
+  section[data-screen-label="Hero"] p { font-size: 16px !important; max-width: 100% !important; }
+  section[data-screen-label="Hero"] a {
+    justify-content: center !important;
+    width: 100% !important;
+    height: 52px !important;
+  }
+  section[data-screen-label="Hero"] div[style*="gap:12px"] { width: 100%; }
+  section[data-screen-label="Hero"] ~ section[style*="padding:16px 24px 80px"] {
+    padding: 8px 16px 40px !important;
+  }
+  section[data-screen-label="Hero"] ~ section span[style*="font-size:58px"] {
+    font-size: 36px !important;
+  }
+  #snapshots, #framework, #verticals, #faq { padding: 48px 16px !important; gap: 28px !important; }
+  #focus > div, #process > div { padding: 48px 16px !important; gap: 24px !important; }
+  #focus [style*="font-size:clamp(20px"] { font-size: 16px !important; gap: 8px !important; }
+  #focus [style*="font-size:clamp(20px"] > span[style*="padding:12px"] { padding: 8px 12px !important; }
+  #verticals > div:first-child, #framework > div:first-child { align-items: stretch !important; }
+  #verticals div:has(> button) {
+    width: 100% !important;
+    border-radius: 18px !important;
+    flex-wrap: wrap !important;
+    overflow: visible !important;
+  }
+  #verticals button { flex: 0 0 auto; }
+  #contact { padding: 0 16px 56px !important; }
+  #contact > div {
+    gap: 24px !important;
+    border-radius: 22px !important;
+    padding: 22px 16px !important;
+  }
+  #faq { gap: 24px !important; }
+  #faq button {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    align-items: center !important;
+    gap: 12px !important;
+    font-size: 16px !important;
+    padding: 16px !important;
+  }
+  #process [style*="translateY"] { transform: none !important; }
+  footer > div { padding: 32px 16px 24px !important; }
+  footer nav { gap: 12px 16px !important; }
+}
+</style>
+</helmet>
+<div id="top" style="background:#F7F8FC;min-height:100vh;overflow-x:hidden">
+
+<header style="position:sticky;top:0;z-index:30;padding:14px 20px">
+<div style="max-width:1280px;margin:0 auto;height:64px;padding:0 10px 0 18px;display:flex;align-items:center;gap:24px;background:#FFFFFF;border:1.5px solid #0B1431;border-radius:999px">
+<a href="#top" style="display:flex;align-items:center"><img src="images/biglogo.jpg" alt="Click Ventures" style="height:30px;display:block"></a>
+<nav id="site-nav" style="display:flex;gap:22px;flex:1;justify-content:center;flex-wrap:wrap;font-size:15px;font-weight:500">
+<a href="#snapshots" style="text-decoration:none">Snapshots</a>
+<a href="#focus" style="text-decoration:none">About</a>
+<a href="#framework" style="text-decoration:none">Services</a>
+<a href="#verticals" style="text-decoration:none">Verticals</a>
+<a href="#process" style="text-decoration:none">Process</a>
+<a href="#faq" style="text-decoration:none">FAQ</a>
+</nav>
+<a href="#contact" style="height:44px;padding:0 22px;display:flex;align-items:center;border-radius:999px;background:#2B4FE3;color:#FFFFFE;text-decoration:none;font-weight:600;font-size:15px" style-hover="background:#0A1330;color:#FFFFFE">Get started</a>
+</div>
 </header>
 
-
-<section id="top" class="cv-section" style="box-sizing: border-box; padding: 112px 40px 96px; background: #ffffff">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px">
-    <div style="display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border: 1px solid #E2E7F1; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">
-      <span style="width: 8px; height: 8px; border-radius: 999px; background: #007bff"></span>
-      <span>Performance marketing &amp; lead generation</span>
-    </div>
-    <h1 style="margin: 0; max-width: 1000px; font-size: clamp(44px, 6.2vw, 86px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 800">Performance marketing, engineered end to end.</h1>
-    <p style="margin: 0; max-width: 680px; font-size: 20px; line-height: 1.55; color: #46526D">Paid media, creative, CRO and measurement under one roof. We accelerate and scale brands with proprietary tooling and a performance-first team.</p>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px">
-      <a class="cv-btn" href="#contact" style="display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 26px; border-radius: 999px; background: #007bff; color: #ffffff; font-weight: 700; font-size: 16px">Get started
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
-      </a>
-      <a class="cv-btn" href="#process" style="display: inline-flex; align-items: center; height: 54px; padding: 0 26px; border-radius: 999px; border: 1px solid #D5DCE8; background: #ffffff; color: #0A1230; font-weight: 700; font-size: 16px">See how we work</a>
-    </div>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 12px">
-      <span style="padding: 7px 14px; border-radius: 999px; background: #F3F6FC; font-size: 13px; font-weight: 600; color: #46526D">Paid</span>
-      <span style="padding: 7px 14px; border-radius: 999px; background: #F3F6FC; font-size: 13px; font-weight: 600; color: #46526D">Creative</span>
-      <span style="padding: 7px 14px; border-radius: 999px; background: #F3F6FC; font-size: 13px; font-weight: 600; color: #46526D">SEO</span>
-      <span style="padding: 7px 14px; border-radius: 999px; background: #F3F6FC; font-size: 13px; font-weight: 600; color: #46526D">Email</span>
-      <span style="padding: 7px 14px; border-radius: 999px; background: #F3F6FC; font-size: 13px; font-weight: 600; color: #46526D">CRO</span>
-      <span style="padding: 7px 14px; border-radius: 999px; background: #F3F6FC; font-size: 13px; font-weight: 600; color: #46526D">Social</span>
-      <span style="padding: 7px 14px; border-radius: 999px; background: #F3F6FC; font-size: 13px; font-weight: 600; color: #46526D">Branding</span>
-    </div>
-  </div>
-
-  
-  <div aria-hidden="true" style="max-width: 1200px; margin: 80px auto 0; box-sizing: border-box; padding: 12px; border-radius: 28px; background: #F3F6FC; border: 1px solid #E2E7F1">
-    <div style="background: #ffffff; border-radius: 18px; border: 1px solid #E2E7F1; overflow: hidden">
-      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 14px 22px; border-bottom: 1px solid #E2E7F1">
-        <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5A6681">
-          <span style="width: 8px; height: 8px; border-radius: 999px; background: #007bff"></span>
-          <span>Command center</span>
-        </div>
-        <div class="cv-hide-sm" style="display: flex; gap: 6px; font-size: 13px; font-weight: 600">
-          <span style="padding: 6px 14px; border-radius: 999px; background: #007bff; color: #ffffff">Overview</span>
-          <span style="padding: 6px 14px; border-radius: 999px; color: #5A6681">Verticals</span>
-          <span style="padding: 6px 14px; border-radius: 999px; color: #5A6681">Creative</span>
-          <span style="padding: 6px 14px; border-radius: 999px; color: #5A6681">Calls</span>
-        </div>
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5A6681">Daily pacing review</div>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: #E2E7F1; border-bottom: 1px solid #E2E7F1">
-        <div style="background: #ffffff; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #5A6681">Conversion rate</span>
-          <span style="font-size: 34px; font-weight: 800; letter-spacing: -0.03em; line-height: 1">+38%</span>
-          <span style="font-size: 13px; color: #5A6681">Lift after UX streamlining</span>
-        </div>
-        <div style="background: #ffffff; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #5A6681">Cost per acquisition</span>
-          <span style="font-size: 34px; font-weight: 800; letter-spacing: -0.03em; line-height: 1">−27%</span>
-          <span style="font-size: 13px; color: #5A6681">Lower via creative iteration</span>
-        </div>
-        <div style="background: #ffffff; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #5A6681">ROAS</span>
-          <span style="font-size: 34px; font-weight: 800; letter-spacing: -0.03em; line-height: 1">~2.3×</span>
-          <span style="font-size: 13px; color: #5A6681">Improvement month over month</span>
-        </div>
-        <div style="background: #ffffff; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #5A6681">Qualified call rate</span>
-          <span style="font-size: 34px; font-weight: 800; letter-spacing: -0.03em; line-height: 1">+19%</span>
-          <span style="font-size: 13px; color: #5A6681">Increase in qualified calls</span>
-        </div>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1px; background: #E2E7F1">
-        <div style="background: #ffffff; padding: 24px; display: flex; flex-direction: column; gap: 16px">
-          <div style="display: flex; justify-content: space-between; align-items: center">
-            <span style="font-size: 14px; font-weight: 700">Spend pacing by vertical</span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5A6681">CPL guardrails on</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 14px"><span style="width: 132px; font-size: 13px; font-weight: 600; color: #46526D">Medicare</span><div style="flex: 1; height: 10px; border-radius: 999px; background: #EDF1F8"><div style="width: 78%; height: 10px; border-radius: 999px; background: #007bff"></div></div></div>
-          <div style="display: flex; align-items: center; gap: 14px"><span style="width: 132px; font-size: 13px; font-weight: 600; color: #46526D">Auto Insurance</span><div style="flex: 1; height: 10px; border-radius: 999px; background: #EDF1F8"><div style="width: 64%; height: 10px; border-radius: 999px; background: #007bff"></div></div></div>
-          <div style="display: flex; align-items: center; gap: 14px"><span style="width: 132px; font-size: 13px; font-weight: 600; color: #46526D">Final Expense</span><div style="flex: 1; height: 10px; border-radius: 999px; background: #EDF1F8"><div style="width: 52%; height: 10px; border-radius: 999px; background: #007bff"></div></div></div>
-          <div style="display: flex; align-items: center; gap: 14px"><span style="width: 132px; font-size: 13px; font-weight: 600; color: #46526D">Home Services</span><div style="flex: 1; height: 10px; border-radius: 999px; background: #EDF1F8"><div style="width: 41%; height: 10px; border-radius: 999px; background: #007bff"></div></div></div>
-          <div style="display: flex; align-items: center; gap: 14px"><span style="width: 132px; font-size: 13px; font-weight: 600; color: #46526D">Debt</span><div style="flex: 1; height: 10px; border-radius: 999px; background: #EDF1F8"><div style="width: 33%; height: 10px; border-radius: 999px; background: #007bff"></div></div></div>
-        </div>
-        <div style="background: #ffffff; padding: 24px; display: flex; flex-direction: column; gap: 16px">
-          <div style="display: flex; justify-content: space-between; align-items: center">
-            <span style="font-size: 14px; font-weight: 700">Click → call → revenue</span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5A6681">Full-funnel attribution</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 14px"><span style="width: 132px; font-size: 13px; font-weight: 600; color: #46526D">Clicks</span><div style="flex: 1; height: 26px; border-radius: 8px; background: #EDF1F8"><div style="width: 100%; height: 26px; border-radius: 8px; background: linear-gradient(90deg, #3f95ff 0%, #007bff 100%)"></div></div></div>
-          <div style="display: flex; align-items: center; gap: 14px"><span style="width: 132px; font-size: 13px; font-weight: 600; color: #46526D">Leads</span><div style="flex: 1; height: 26px; border-radius: 8px; background: #EDF1F8"><div style="width: 72%; height: 26px; border-radius: 8px; background: linear-gradient(90deg, #3f95ff 0%, #007bff 100%)"></div></div></div>
-          <div style="display: flex; align-items: center; gap: 14px"><span style="width: 132px; font-size: 13px; font-weight: 600; color: #46526D">Qualified calls</span><div style="flex: 1; height: 26px; border-radius: 8px; background: #EDF1F8"><div style="width: 46%; height: 26px; border-radius: 8px; background: linear-gradient(90deg, #3f95ff 0%, #007bff 100%)"></div></div></div>
-          <div style="display: flex; align-items: center; gap: 14px"><span style="width: 132px; font-size: 13px; font-weight: 600; color: #46526D">Revenue</span><div style="flex: 1; height: 26px; border-radius: 8px; background: #EDF1F8"><div style="width: 30%; height: 26px; border-radius: 8px; background: linear-gradient(90deg, #3f95ff 0%, #007bff 100%)"></div></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="cv-side" style="box-sizing: border-box; padding: 0 40px 112px; background: #ffffff">
-  <div style="max-width: 1200px; margin: 0 auto; border-top: 1px solid #E2E7F1; padding-top: 48px; display: flex; flex-direction: column; gap: 36px">
-    <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Tracked across verticals</span>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px">
-      <div style="display: flex; flex-direction: column; gap: 10px">
-        <span style="font-size: 60px; font-weight: 800; letter-spacing: -0.04em; line-height: 1">9+</span>
-        <span style="font-size: 15px; line-height: 1.5; color: #46526D">figures in attributable client revenue</span>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px">
-        <span style="font-size: 60px; font-weight: 800; letter-spacing: -0.04em; line-height: 1">500K+</span>
-        <span style="font-size: 15px; line-height: 1.5; color: #46526D">monthly leads touched by our funnels</span>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px">
-        <span style="font-size: 60px; font-weight: 800; letter-spacing: -0.04em; line-height: 1">90+</span>
-        <span style="font-size: 15px; line-height: 1.5; color: #46526D">specialists across media, creative and CRO</span>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px">
-        <span style="font-size: 60px; font-weight: 800; letter-spacing: -0.04em; line-height: 1">15+</span>
-        <span style="font-size: 15px; line-height: 1.5; color: #46526D">active verticals across insurance, finance and home</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section id="snapshots" class="cv-section" style="box-sizing: border-box; padding: 112px 40px; background: #F3F6FC">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
-    <div style="display: flex; flex-direction: column; gap: 18px; max-width: 760px">
-      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Performance snapshots</span>
-      <h2 style="margin: 0; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 800">The command center behind every campaign.</h2>
-      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #46526D">A live view into the dashboards, charts and attribution we monitor daily to keep campaigns scaling while protecting efficiency.</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 20px">
-
-      <article style="background: #ffffff; border: 1px solid #E2E7F1; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
-        <div style="display: flex; align-items: center; gap: 12px">
-          <span style="width: 44px; height: 44px; border-radius: 12px; background: #007bff; color: #ffffff; display: inline-flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></span>
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5A6681">Control room</span>
-        </div>
-        <h3 style="margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 800">Cross-channel control room for every dollar spent.</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #46526D">Real-time dashboards unify platform analytics, first-party data and verified call results across every channel. Daily pacing reviews let us adjust budgets proactively and optimize for maximum profit.</p>
-        <div aria-hidden="true" style="display: flex; flex-direction: column; gap: 10px; padding: 18px; border-radius: 14px; background: #F3F6FC">
-          <div style="display: flex; align-items: center; gap: 12px"><span style="width: 90px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5A6681">Pacing</span><div style="flex: 1; height: 8px; border-radius: 999px; background: #E2E7F1"><div style="width: 82%; height: 8px; border-radius: 999px; background: #0A1230"></div></div></div>
-          <div style="display: flex; align-items: center; gap: 12px"><span style="width: 90px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5A6681">Budget</span><div style="flex: 1; height: 8px; border-radius: 999px; background: #E2E7F1"><div style="width: 66%; height: 8px; border-radius: 999px; background: #0A1230"></div></div></div>
-          <div style="display: flex; align-items: center; gap: 12px"><span style="width: 90px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5A6681">CPL target</span><div style="flex: 1; height: 8px; border-radius: 999px; background: #E2E7F1"><div style="width: 48%; height: 8px; border-radius: 999px; background: #007bff"></div></div></div>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px">
-          <span style="padding: 6px 12px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 13px; font-weight: 600; color: #46526D">Live pacing views</span>
-          <span style="padding: 6px 12px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 13px; font-weight: 600; color: #46526D">By-vertical rollups</span>
-          <span style="padding: 6px 12px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 13px; font-weight: 600; color: #46526D">Spend / CPL guardrails</span>
-        </div>
-      </article>
-
-      <article style="background: #ffffff; border: 1px solid #E2E7F1; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
-        <div style="display: flex; align-items: center; gap: 12px">
-          <span style="width: 44px; height: 44px; border-radius: 12px; background: #007bff; color: #ffffff; display: inline-flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"></path><path d="M6 17v-6"></path><path d="M12 17V5"></path><path d="M18 17v-8"></path></svg></span>
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5A6681">Analytics &amp; iteration</span>
-        </div>
-        <h3 style="margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 800">Channel-level performance and creative winners at a glance.</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #46526D">We evaluate the full funnel to find which offers, audiences and creatives can scale — doubling down on what works, cutting what doesn't, and protecting margins while scaling profitably.</p>
-        <div aria-hidden="true" style="display: flex; flex-direction: column; gap: 10px; padding: 18px; border-radius: 14px; background: #F3F6FC">
-          <div style="display: flex; align-items: center; gap: 12px"><span style="width: 90px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5A6681">Paid social</span><div style="flex: 1; height: 8px; border-radius: 999px; background: #E2E7F1"><div style="width: 88%; height: 8px; border-radius: 999px; background: #007bff"></div></div></div>
-          <div style="display: flex; align-items: center; gap: 12px"><span style="width: 90px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5A6681">Search</span><div style="flex: 1; height: 8px; border-radius: 999px; background: #E2E7F1"><div style="width: 61%; height: 8px; border-radius: 999px; background: #0A1230"></div></div></div>
-          <div style="display: flex; align-items: center; gap: 12px"><span style="width: 90px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5A6681">Native</span><div style="flex: 1; height: 8px; border-radius: 999px; background: #E2E7F1"><div style="width: 37%; height: 8px; border-radius: 999px; background: #0A1230"></div></div></div>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px">
-          <span style="padding: 6px 12px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 13px; font-weight: 600; color: #46526D">Channel breakdowns</span>
-          <span style="padding: 6px 12px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 13px; font-weight: 600; color: #46526D">Creative leaderboards</span>
-          <span style="padding: 6px 12px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 13px; font-weight: 600; color: #46526D">Automatic alerts</span>
-        </div>
-      </article>
-
-      <article style="background: #ffffff; border: 1px solid #E2E7F1; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
-        <div style="display: flex; align-items: center; gap: 12px">
-          <span style="width: 44px; height: 44px; border-radius: 12px; background: #007bff; color: #ffffff; display: inline-flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span>
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5A6681">Measurement lab</span>
-        </div>
-        <h3 style="margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 800">Deeper attribution to keep CPL and CPA on target.</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #46526D">An integrated measurement stack connects every click, call and revenue dollar — clear visibility across every touchpoint, so we can expand into new markets and test new offers with profitability under control.</p>
-        <div aria-hidden="true" style="display: flex; align-items: center; gap: 0; padding: 22px 18px; border-radius: 14px; background: #F3F6FC">
-          <span style="padding: 8px 14px; border-radius: 999px; background: #0A1230; color: #ffffff; font-size: 12px; font-weight: 700">Click</span>
-          <span style="flex: 1; height: 2px; background: #C5CEDF"></span>
-          <span style="padding: 8px 14px; border-radius: 999px; background: #0A1230; color: #ffffff; font-size: 12px; font-weight: 700">Call</span>
-          <span style="flex: 1; height: 2px; background: #C5CEDF"></span>
-          <span style="padding: 8px 14px; border-radius: 999px; background: #007bff; color: #ffffff; font-size: 12px; font-weight: 700">Revenue</span>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px">
-          <span style="padding: 6px 12px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 13px; font-weight: 600; color: #46526D">CPL / CPA scorecards</span>
-          <span style="padding: 6px 12px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 13px; font-weight: 600; color: #46526D">Call &amp; lead quality</span>
-          <span style="padding: 6px 12px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 13px; font-weight: 600; color: #46526D">Bid strategy feedback</span>
-        </div>
-      </article>
-
-      <article style="background: #ffffff; border: 1px solid #E2E7F1; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
-        <div style="display: flex; align-items: center; gap: 12px">
-          <span style="width: 44px; height: 44px; border-radius: 12px; background: #007bff; color: #ffffff; display: inline-flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"></path><circle cx="12" cy="11" r="2"></circle></svg></span>
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5A6681">Real-world reach</span>
-        </div>
-        <h3 style="margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 800">From dashboards to real people in real markets.</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #46526D">Our funnels are built to perform in the wild — across major metros, suburban pockets and niche zip codes — for both English- and Spanish-speaking audiences.</p>
-        <div aria-hidden="true" style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 14px; background: #F3F6FC">
-          <div style="display: flex; gap: 6px; height: 14px">
-            <span style="flex: 5; border-radius: 999px; background: #0A1230"></span>
-            <span style="flex: 3; border-radius: 999px; background: #6B7A99"></span>
-            <span style="flex: 2; border-radius: 999px; background: #007bff"></span>
-          </div>
-          <div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5A6681">
-            <span>Major metros</span><span>Suburban</span><span>Niche zips</span>
-          </div>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px">
-          <span style="padding: 6px 12px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 13px; font-weight: 600; color: #46526D">Major US metros</span>
-          <span style="padding: 6px 12px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 13px; font-weight: 600; color: #46526D">EN &amp; ES funnels</span>
-          <span style="padding: 6px 12px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 13px; font-weight: 600; color: #46526D">Multi-vertical expansion</span>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-
-<section id="focus" class="cv-section" style="box-sizing: border-box; padding: 112px 40px; background: #ffffff">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start">
-    <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
-      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Our focus</span>
-      <h2 style="margin: 0; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 800">We engineer the full journey — from first impression to conversion.</h2>
-      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #46526D">Every click feels intuitive and every handoff is seamless. The result: higher intent, cleaner calls and compounding revenue lift.</p>
-      <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px">
-        <span style="display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 14px; font-weight: 700"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #007bff">01</span>Acquisition</span>
-        <span style="color: #9AA6BF; font-size: 16px">→</span>
-        <span style="display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 14px; font-weight: 700"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #007bff">02</span>Experience</span>
-        <span style="color: #9AA6BF; font-size: 16px">→</span>
-        <span style="display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 14px; font-weight: 700"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #007bff">03</span>Conversion</span>
-        <span style="color: #9AA6BF; font-size: 16px">→</span>
-        <span style="display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid #E2E7F1; border-radius: 999px; font-size: 14px; font-weight: 700"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #007bff">04</span>Retention</span>
-      </div>
-      <div style="display: flex; flex-direction: column; border-top: 1px solid #E2E7F1">
-        <div style="display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid #E2E7F1">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #007bff; padding-top: 4px; width: 28px">01</span>
-          <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #46526D"><strong style="color: #0A1230; font-weight: 800">Reduce friction.</strong> Optimize every touchpoint so users move forward faster.</p>
-        </div>
-        <div style="display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid #E2E7F1">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #007bff; padding-top: 4px; width: 28px">02</span>
-          <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #46526D"><strong style="color: #0A1230; font-weight: 800">Align teams.</strong> Media, creative and CRO work as one system, not silos.</p>
-        </div>
-        <div style="display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid #E2E7F1">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #007bff; padding-top: 4px; width: 28px">03</span>
-          <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #46526D"><strong style="color: #0A1230; font-weight: 800">Instrument outcomes.</strong> Daily KPIs drive decisions and scaling.</p>
-        </div>
-      </div>
-      <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5A6681">We optimize the experience for every consumer engaging with our funnels, driving the highest-intent leads and inbound calls for each vertical.</p>
-    </div>
-    <div style="flex: 0 1 440px; min-width: 300px; box-sizing: border-box; background: #007bff; color: #ffffff; border-radius: 26px; padding: 40px; display: flex; flex-direction: column; gap: 32px">
-      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #D6E4FF">Impact at a glance</span>
-      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px">
-        <div style="display: flex; flex-direction: column; gap: 8px">
-          <span style="font-size: 46px; font-weight: 800; letter-spacing: -0.04em; line-height: 1">+38%</span>
-          <span style="font-size: 14px; line-height: 1.45; color: #D6E4FF">Lift in CVR after UX streamlining</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 8px">
-          <span style="font-size: 46px; font-weight: 800; letter-spacing: -0.04em; line-height: 1">−27%</span>
-          <span style="font-size: 14px; line-height: 1.45; color: #D6E4FF">Lower CPA via creative iteration</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 8px">
-          <span style="font-size: 46px; font-weight: 800; letter-spacing: -0.04em; line-height: 1">~2.3×</span>
-          <span style="font-size: 14px; line-height: 1.45; color: #D6E4FF">ROAS improvement month over month</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 8px">
-          <span style="font-size: 46px; font-weight: 800; letter-spacing: -0.04em; line-height: 1">+19%</span>
-          <span style="font-size: 14px; line-height: 1.45; color: #D6E4FF">Increase in qualified call rate</span>
-        </div>
-      </div>
-      <a class="cv-btn" href="#contact" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 52px; border-radius: 999px; background: #ffffff; color: #007bff; font-weight: 700; font-size: 15px">Talk to the team
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<section id="framework" class="cv-section" style="box-sizing: border-box; padding: 112px 40px; background: #F3F6FC">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
-    <div style="display: flex; flex-direction: column; gap: 18px; max-width: 760px">
-      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Integrated growth framework</span>
-      <h2 style="margin: 0; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 800">End-to-end performance execution.</h2>
-      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #46526D">Strategy, media buying, creative testing, CRO and reporting — tied together by measurement.</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
-      <article style="background: #ffffff; border: 1px solid #E2E7F1; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
-        <img src="icon1.png" alt="" style="width: 64px; height: 64px; object-fit: contain; display: block">
-        <h3 style="margin: 0; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; font-weight: 800">Drive impact with integrated strategy</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #46526D">A seamless process from planning to execution and analysis. Every channel supports the same goal: profitable growth.</p>
-      </article>
-      <article style="background: #ffffff; border: 1px solid #E2E7F1; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
-        <img src="icon2.png" alt="" style="width: 64px; height: 64px; object-fit: contain; display: block">
-        <h3 style="margin: 0; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; font-weight: 800">Scale revenue with precise targeting</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #46526D">We prioritize audience targeting to drive the most qualified leads while keeping CPAs low.</p>
-      </article>
-      <article style="background: #ffffff; border: 1px solid #E2E7F1; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
-        <img src="icon3.png" alt="" style="width: 64px; height: 64px; object-fit: contain; display: block">
-        <h3 style="margin: 0; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; font-weight: 800">Measure results with custom trackers</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #46526D">Daily KPI monitoring and alerts so we can move fast and keep quality high.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-<section id="verticals" class="cv-section" style="box-sizing: border-box; padding: 112px 40px; background: #ffffff">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
-      <div style="display: flex; flex-direction: column; gap: 18px; max-width: 640px">
-        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Our core products</span>
-        <h2 style="margin: 0; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 800">Verticals we run.</h2>
-        <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #46526D">Insurance, finance, home and commerce — each with funnels tuned to the economics of the category.</p>
-      </div>
-      <div id="prodChips" style="display: flex; flex-wrap: wrap; gap: 8px">
-        <button type="button" class="cv-chip is-active" data-filter="all">All</button>
-        <button type="button" class="cv-chip" data-filter="insurance">Insurance</button>
-        <button type="button" class="cv-chip" data-filter="finance">Finance</button>
-        <button type="button" class="cv-chip" data-filter="home">Home</button>
-        <button type="button" class="cv-chip" data-filter="commerce">Commerce</button>
-      </div>
-    </div>
-    <div id="prodGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
-
-      <article class="cv-prod" data-cat="insurance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-                <div class="cv-photo" data-slideshow aria-label="Auto Insurance photos">
-          <img class="is-on" src="images/verticals/auto-insurance/1-6817008.jpg" alt="Auto Insurance">
-          <img src="images/verticals/auto-insurance/2-6271668.jpg" alt="">
-          <img src="images/verticals/auto-insurance/3-7669214.jpg" alt="">
-          <img src="images/verticals/auto-insurance/4-4930676.jpg" alt="">
-          <img src="images/verticals/auto-insurance/5-18002501.jpg" alt="">
-          <div class="cv-dots">
-          <button type="button" class="is-on" aria-label="Photo 1"></button>
-          <button type="button" aria-label="Photo 2"></button>
-          <button type="button" aria-label="Photo 3"></button>
-          <button type="button" aria-label="Photo 4"></button>
-          <button type="button" aria-label="Photo 5"></button>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Insurance</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 800">Auto Insurance</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #46526D">Helps drivers discover competitive rates from leading carriers.</p>
-      </article>
-
-      <article class="cv-prod" data-cat="home" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-                <div class="cv-photo" data-slideshow aria-label="Home Warranty photos">
-          <img class="is-on" src="images/verticals/home-warranty/1-32497161.jpg" alt="Home Warranty">
-          <img src="images/verticals/home-warranty/2-32497160.jpg" alt="">
-          <img src="images/verticals/home-warranty/3-7859953.jpg" alt="">
-          <img src="images/verticals/home-warranty/4-29226620.jpg" alt="">
-          <img src="images/verticals/home-warranty/5-20500461.jpg" alt="">
-          <img src="images/verticals/home-warranty/6-32497162.jpg" alt="">
-          <div class="cv-dots">
-          <button type="button" class="is-on" aria-label="Photo 1"></button>
-          <button type="button" aria-label="Photo 2"></button>
-          <button type="button" aria-label="Photo 3"></button>
-          <button type="button" aria-label="Photo 4"></button>
-          <button type="button" aria-label="Photo 5"></button>
-          <button type="button" aria-label="Photo 6"></button>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Home</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 800">Home Warranty</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #46526D">Coverage plans that protect homeowners against the cost of repairing or replacing household systems.</p>
-      </article>
-
-      <article class="cv-prod" data-cat="insurance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-                <div class="cv-photo" data-slideshow aria-label="Home Insurance photos">
-          <img class="is-on" src="images/verticals/home-insurance/1-8583638.jpg" alt="Home Insurance">
-          <img src="images/verticals/home-insurance/2-5728209.jpg" alt="">
-          <img src="images/verticals/home-insurance/3-7579042.jpg" alt="">
-          <img src="images/verticals/home-insurance/4-28490242.jpg" alt="">
-          <img src="images/verticals/home-insurance/5-30332492.jpg" alt="">
-          <div class="cv-dots">
-          <button type="button" class="is-on" aria-label="Photo 1"></button>
-          <button type="button" aria-label="Photo 2"></button>
-          <button type="button" aria-label="Photo 3"></button>
-          <button type="button" aria-label="Photo 4"></button>
-          <button type="button" aria-label="Photo 5"></button>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Insurance</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 800">Home Insurance</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #46526D">Homeowner policies that match coverage to the property, location and risk.</p>
-      </article>
-
-      <article class="cv-prod" data-cat="insurance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-                <div class="cv-photo" data-slideshow aria-label="Life Insurance photos">
-          <img class="is-on" src="images/verticals/life-insurance/1-6393028.jpg" alt="Life Insurance">
-          <img src="images/verticals/life-insurance/2-8944022.jpg" alt="">
-          <img src="images/verticals/life-insurance/3-11145071.jpg" alt="">
-          <img src="images/verticals/life-insurance/4-3042436.jpg" alt="">
-          <img src="images/verticals/life-insurance/5-7086012.jpg" alt="">
-          <div class="cv-dots">
-          <button type="button" class="is-on" aria-label="Photo 1"></button>
-          <button type="button" aria-label="Photo 2"></button>
-          <button type="button" aria-label="Photo 3"></button>
-          <button type="button" aria-label="Photo 4"></button>
-          <button type="button" aria-label="Photo 5"></button>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Insurance</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 800">Life Insurance</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #46526D">Protect loved ones with tailored coverage options and quick eligibility paths.</p>
-      </article>
-
-      <article class="cv-prod" data-cat="home" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-                <div class="cv-photo" data-slideshow aria-label="Timeshare photos">
-          <img class="is-on" src="images/verticals/timeshare/1-14025912.jpg" alt="Timeshare">
-          <img src="images/verticals/timeshare/2-9400920.jpg" alt="">
-          <img src="images/verticals/timeshare/3-1662549.jpg" alt="">
-          <img src="images/verticals/timeshare/4-38376507.jpg" alt="">
-          <img src="images/verticals/timeshare/5-3155666.jpg" alt="">
-          <div class="cv-dots">
-          <button type="button" class="is-on" aria-label="Photo 1"></button>
-          <button type="button" aria-label="Photo 2"></button>
-          <button type="button" aria-label="Photo 3"></button>
-          <button type="button" aria-label="Photo 4"></button>
-          <button type="button" aria-label="Photo 5"></button>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Home</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 800">Timeshare</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #46526D">Funnels for timeshare owners looking at exit, relief and related options.</p>
-      </article>
-
-      <article class="cv-prod" data-cat="insurance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-                <div class="cv-photo" data-slideshow aria-label="Pet Insurance — CPL photos">
-          <img class="is-on" src="images/verticals/pet-insurance/1-6578806.jpg" alt="Pet Insurance — CPL">
-          <img src="images/verticals/pet-insurance/2-4453160.jpg" alt="">
-          <img src="images/verticals/pet-insurance/3-6001382.jpg" alt="">
-          <img src="images/verticals/pet-insurance/4-8434594.jpg" alt="">
-          <img src="images/verticals/pet-insurance/5-6235231.jpg" alt="">
-          <img src="images/verticals/pet-insurance/6-7468980.jpg" alt="">
-          <div class="cv-dots">
-          <button type="button" class="is-on" aria-label="Photo 1"></button>
-          <button type="button" aria-label="Photo 2"></button>
-          <button type="button" aria-label="Photo 3"></button>
-          <button type="button" aria-label="Photo 4"></button>
-          <button type="button" aria-label="Photo 5"></button>
-          <button type="button" aria-label="Photo 6"></button>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Insurance</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 800">Pet Insurance — CPL</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #46526D">Pet coverage campaigns bought and optimized on a cost-per-lead basis.</p>
-      </article>
-
-      <article class="cv-prod" data-cat="finance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-                <div class="cv-photo" data-slideshow aria-label="Debt photos">
-          <img class="is-on" src="images/verticals/debt/1-5900074.jpg" alt="Debt">
-          <img src="images/verticals/debt/2-6578403.jpg" alt="">
-          <img src="images/verticals/debt/3-6963927.jpg" alt="">
-          <img src="images/verticals/debt/4-920382.jpg" alt="">
-          <img src="images/verticals/debt/5-6694533.jpg" alt="">
-          <div class="cv-dots">
-          <button type="button" class="is-on" aria-label="Photo 1"></button>
-          <button type="button" aria-label="Photo 2"></button>
-          <button type="button" aria-label="Photo 3"></button>
-          <button type="button" aria-label="Photo 4"></button>
-          <button type="button" aria-label="Photo 5"></button>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Finance</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 800">Debt</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #46526D">Reduce payments on credit cards, loans and medical bills through vetted partners.</p>
-      </article>
-
-      <article class="cv-prod" data-cat="finance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-                <div class="cv-photo" data-slideshow aria-label="Loans photos">
-          <img class="is-on" src="images/verticals/loans/1-4308022.jpg" alt="Loans">
-          <img src="images/verticals/loans/2-4246045.jpg" alt="">
-          <img src="images/verticals/loans/3-9869396.jpg" alt="">
-          <img src="images/verticals/loans/4-6517092.jpg" alt="">
-          <img src="images/verticals/loans/5-36730435.jpg" alt="">
-          <div class="cv-dots">
-          <button type="button" class="is-on" aria-label="Photo 1"></button>
-          <button type="button" aria-label="Photo 2"></button>
-          <button type="button" aria-label="Photo 3"></button>
-          <button type="button" aria-label="Photo 4"></button>
-          <button type="button" aria-label="Photo 5"></button>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Finance</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 800">Loans</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #46526D">Links consumers to flexible financing for diverse expenses.</p>
-      </article>
-
-      <article class="cv-prod" data-cat="insurance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-                <div class="cv-photo" data-slideshow aria-label="Final Expense photos">
-          <img class="is-on" src="images/verticals/final-expense/1-8796067.jpg" alt="Final Expense">
-          <img src="images/verticals/final-expense/2-3768131.jpg" alt="">
-          <img src="images/verticals/final-expense/3-4148965.jpg" alt="">
-          <img src="images/verticals/final-expense/4-8064882.jpg" alt="">
-          <img src="images/verticals/final-expense/5-7530829.jpg" alt="">
-          <div class="cv-dots">
-          <button type="button" class="is-on" aria-label="Photo 1"></button>
-          <button type="button" aria-label="Photo 2"></button>
-          <button type="button" aria-label="Photo 3"></button>
-          <button type="button" aria-label="Photo 4"></button>
-          <button type="button" aria-label="Photo 5"></button>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Insurance</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 800">Final Expense</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #46526D">Life insurance designed to cover end-of-life costs and protect families.</p>
-      </article>
-
-      <article class="cv-prod" data-cat="insurance" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-                <div class="cv-photo" data-slideshow aria-label="Medicare photos">
-          <img class="is-on" src="images/verticals/medicare/1-39192358.jpg" alt="Medicare">
-          <img src="images/verticals/medicare/2-7477702.jpg" alt="">
-          <img src="images/verticals/medicare/3-6667704.jpg" alt="">
-          <img src="images/verticals/medicare/4-7345460.jpg" alt="">
-          <img src="images/verticals/medicare/5-8972259.jpg" alt="">
-          <img src="images/verticals/medicare/6-9710820.jpg" alt="">
-          <div class="cv-dots">
-          <button type="button" class="is-on" aria-label="Photo 1"></button>
-          <button type="button" aria-label="Photo 2"></button>
-          <button type="button" aria-label="Photo 3"></button>
-          <button type="button" aria-label="Photo 4"></button>
-          <button type="button" aria-label="Photo 5"></button>
-          <button type="button" aria-label="Photo 6"></button>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Insurance</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 800">Medicare</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #46526D">Health insurance for people 65+ and qualified individuals with disabilities.</p>
-      </article>
-
-      <article class="cv-prod" data-cat="commerce" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-                <div class="cv-photo" data-slideshow aria-label="Ecommerce photos">
-          <img class="is-on" src="images/verticals/ecommerce/1-6958419.jpg" alt="Ecommerce">
-          <img src="images/verticals/ecommerce/2-39219885.jpg" alt="">
-          <img src="images/verticals/ecommerce/3-7857532.jpg" alt="">
-          <img src="images/verticals/ecommerce/4-6169014.jpg" alt="">
-          <img src="images/verticals/ecommerce/5-12725400.jpg" alt="">
-          <img src="images/verticals/ecommerce/6-7007174.jpg" alt="">
-          <div class="cv-dots">
-          <button type="button" class="is-on" aria-label="Photo 1"></button>
-          <button type="button" aria-label="Photo 2"></button>
-          <button type="button" aria-label="Photo 3"></button>
-          <button type="button" aria-label="Photo 4"></button>
-          <button type="button" aria-label="Photo 5"></button>
-          <button type="button" aria-label="Photo 6"></button>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Commerce</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 800">Ecommerce</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #46526D">Performance funnels that connect shoppers with products for personal and business needs.</p>
-      </article>
-
-      <article class="cv-prod" data-cat="home" style="border: 1px solid #E2E7F1; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-                <div class="cv-photo" data-slideshow aria-label="Home Services photos">
-          <img class="is-on" src="images/verticals/home-services/1-33404248.jpg" alt="Home Services">
-          <img src="images/verticals/home-services/2-33501308.jpg" alt="">
-          <img src="images/verticals/home-services/3-5691531.jpg" alt="">
-          <img src="images/verticals/home-services/4-6124242.jpg" alt="">
-          <img src="images/verticals/home-services/5-32497161.jpg" alt="">
-          <div class="cv-dots">
-          <button type="button" class="is-on" aria-label="Photo 1"></button>
-          <button type="button" aria-label="Photo 2"></button>
-          <button type="button" aria-label="Photo 3"></button>
-          <button type="button" aria-label="Photo 4"></button>
-          <button type="button" aria-label="Photo 5"></button>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Home</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 800">Home Services</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #46526D">Local home-service funnels for the trades below.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto">
-          <span style="padding: 5px 10px; border-radius: 999px; background: #F3F6FC; font-size: 12px; font-weight: 600; color: #46526D">Gutters</span>
-          <span style="padding: 5px 10px; border-radius: 999px; background: #F3F6FC; font-size: 12px; font-weight: 600; color: #46526D">Windows</span>
-          <span style="padding: 5px 10px; border-radius: 999px; background: #F3F6FC; font-size: 12px; font-weight: 600; color: #46526D">Roofing</span>
-          <span style="padding: 5px 10px; border-radius: 999px; background: #F3F6FC; font-size: 12px; font-weight: 600; color: #46526D">Siding</span>
-          <span style="padding: 5px 10px; border-radius: 999px; background: #F3F6FC; font-size: 12px; font-weight: 600; color: #46526D">HVAC</span>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-
-<section id="process" class="cv-section" style="box-sizing: border-box; padding: 112px 40px; background: #06102A; color: #ffffff">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
-    <div style="display: flex; flex-direction: column; gap: 18px; max-width: 760px">
-      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #7ab5ff">How we launch &amp; scale</span>
-      <h2 style="margin: 0; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 800">A structured rollout that keeps quality tight while moving fast.</h2>
-      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #A9B4D0">This is how we avoid random testing and build compounding gains.</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
-      <article style="background: #0D1A3D; border: 1px solid #1E2C55; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
-        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px">
-          <span style="font-size: 52px; font-weight: 800; letter-spacing: -0.04em; line-height: 1; color: #7ab5ff">01</span>
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #A9B4D0">Days 1–7</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; font-weight: 800">Audit + tracking map</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #A9B4D0">Align KPIs, define success thresholds, connect analytics and call outcomes, and set performance guardrails.</p>
-      </article>
-      <article style="background: #0D1A3D; border: 1px solid #1E2C55; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
-        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px">
-          <span style="font-size: 52px; font-weight: 800; letter-spacing: -0.04em; line-height: 1; color: #7ab5ff">02</span>
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #A9B4D0">Days 8–21</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; font-weight: 800">Creative system + CRO</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #A9B4D0">Rapid creative production and controlled tests. We improve conversion before increasing spend aggressively.</p>
-      </article>
-      <article style="background: #0D1A3D; border: 1px solid #1E2C55; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
-        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px">
-          <span style="font-size: 52px; font-weight: 800; letter-spacing: -0.04em; line-height: 1; color: #7ab5ff">03</span>
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #A9B4D0">Day 22+</span>
-        </div>
-        <h3 style="margin: 0; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; font-weight: 800">Scale with protection</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #A9B4D0">Scale winning combinations, expand markets and languages, and keep CPL/CPA within target via daily monitoring.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-<section id="faq" class="cv-section" style="box-sizing: border-box; padding: 112px 40px; background: #ffffff">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start">
-    <div style="flex: 0 1 380px; min-width: 260px; display: flex; flex-direction: column; gap: 18px">
-      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">FAQ</span>
-      <h2 style="margin: 0; font-size: clamp(32px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.03em; font-weight: 800">Questions teams usually ask us first.</h2>
-      <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #46526D">How we plug in, how fast we move, and what to expect.</p>
-    </div>
-    <div style="flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid #E2E7F1">
-      <div style="display: flex; flex-direction: column; gap: 10px; padding: 28px 0; border-bottom: 1px solid #E2E7F1">
-        <h3 style="margin: 0; font-size: 20px; letter-spacing: -0.015em; font-weight: 800">How quickly can you launch a new vertical or offer?</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #46526D">For most categories, we can move from alignment to first spend within 1–2 weeks, depending on compliance, routing and creative approvals on your side.</p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px; padding: 28px 0; border-bottom: 1px solid #E2E7F1">
-        <h3 style="margin: 0; font-size: 20px; letter-spacing: -0.015em; font-weight: 800">Do you handle both lead forms and inbound calls?</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #46526D">Yes. We support lead-only and direct inbound structures. The optimization logic is tuned to your preferred economics.</p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px; padding: 28px 0; border-bottom: 1px solid #E2E7F1">
-        <h3 style="margin: 0; font-size: 20px; letter-spacing: -0.015em; font-weight: 800">How do you report performance back to us?</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #46526D">You get access to live dashboards plus a consistent cadence of summary reports and action plans, so your internal team always knows what's happening.</p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px; padding: 28px 0; border-bottom: 1px solid #E2E7F1">
-        <h3 style="margin: 0; font-size: 20px; letter-spacing: -0.015em; font-weight: 800">Can you work with our existing tracking and CRM setup?</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #46526D">We integrate with most leading CRMs, call tracking platforms and analytics stacks. During onboarding we map attribution and data flows so nothing breaks.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="cv-side" style="box-sizing: border-box; padding: 0 40px 112px; background: #ffffff">
-  <div class="cv-cta" style="max-width: 1200px; margin: 0 auto; box-sizing: border-box; background: linear-gradient(135deg, #3f95ff 0%, #007bff 100%); color: #ffffff; border-radius: 28px; padding: 64px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px">
-    <div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px">
-      <h2 style="margin: 0; font-size: clamp(34px, 4vw, 56px); line-height: 1.04; letter-spacing: -0.035em; font-weight: 800">Ready to talk?</h2>
-      <p style="margin: 0; font-size: 18px; line-height: 1.55; font-weight: 500; color: #EAF2FF">Tell us what you're running and we'll come back with a clear next-step plan.</p>
-    </div>
-    <a class="cv-btn" href="#contact" style="display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 28px; border-radius: 999px; background: #ffffff; color: #007bff; font-weight: 700; font-size: 16px">Get in touch
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
-    </a>
-  </div>
-</section>
-
-
-<section id="contact" class="cv-section" style="box-sizing: border-box; padding: 112px 40px; background: #F3F6FC">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start">
-    <div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
-      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #007bff">Contact</span>
-      <h2 style="margin: 0; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 800">Tell us what you're running.</h2>
-      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #46526D">Vertical, geo, goals. We'll reply with a clear next-step plan.</p>
-      <div style="display: flex; flex-direction: column; gap: 14px; padding: 28px; background: #ffffff; border: 1px solid #E2E7F1; border-radius: 20px">
-        <span style="font-size: 14px; font-weight: 800">What to include</span>
-        <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #46526D"><span style="width: 22px; height: 22px; border-radius: 999px; background: #007bff; color: #ffffff; display: inline-flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg></span>Vertical(s) + target geo</div>
-        <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #46526D"><span style="width: 22px; height: 22px; border-radius: 999px; background: #007bff; color: #ffffff; display: inline-flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg></span>Main KPI (CPA / CPL / ROAS)</div>
-        <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #46526D"><span style="width: 22px; height: 22px; border-radius: 999px; background: #007bff; color: #ffffff; display: inline-flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg></span>Current volume + target scale</div>
-        <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #46526D"><span style="width: 22px; height: 22px; border-radius: 999px; background: #007bff; color: #ffffff; display: inline-flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg></span>Tracking stack (if any)</div>
-      </div>
-    </div>
-    <form class="cv-form" style="flex: 1 1 520px; min-width: 0; box-sizing: border-box; background: #ffffff; border: 1px solid #E2E7F1; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; gap: 20px">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
-        <div style="display: flex; flex-direction: column; gap: 8px">
-          <label for="cv-name" style="font-size: 13px; font-weight: 700">Name</label>
-          <input id="cv-name" name="name" required type="text" placeholder="Your name" style="height: 48px; width: 100%; box-sizing: border-box; border: 1px solid #D5DCE8; border-radius: 12px; padding: 0 14px; font-size: 15px; color: #0A1230; background: #ffffff">
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 8px">
-          <label for="cv-email" style="font-size: 13px; font-weight: 700">Work email</label>
-          <input id="cv-email" name="email" required type="email" placeholder="you@company.com" style="height: 48px; width: 100%; box-sizing: border-box; border: 1px solid #D5DCE8; border-radius: 12px; padding: 0 14px; font-size: 15px; color: #0A1230; background: #ffffff">
-        </div>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
-        <div style="display: flex; flex-direction: column; gap: 8px">
-          <label for="cv-company" style="font-size: 13px; font-weight: 700">Company</label>
-          <input id="cv-company" name="company" type="text" placeholder="Company name" style="height: 48px; width: 100%; box-sizing: border-box; border: 1px solid #D5DCE8; border-radius: 12px; padding: 0 14px; font-size: 15px; color: #0A1230; background: #ffffff">
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 8px">
-          <label for="cv-vertical" style="font-size: 13px; font-weight: 700">Vertical(s) + target geo</label>
-          <input id="cv-vertical" name="vertical" type="text" placeholder="Medicare · FL, TX, CA" style="height: 48px; width: 100%; box-sizing: border-box; border: 1px solid #D5DCE8; border-radius: 12px; padding: 0 14px; font-size: 15px; color: #0A1230; background: #ffffff">
-        </div>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 8px">
-        <label for="cv-message" style="font-size: 13px; font-weight: 700">Goals, KPI and current volume</label>
-        <textarea id="cv-message" name="message" required rows="5" placeholder="Main KPI, current volume, target scale, tracking stack…" style="width: 100%; box-sizing: border-box; border: 1px solid #D5DCE8; border-radius: 12px; padding: 12px 14px; font-size: 15px; line-height: 1.5; color: #0A1230; background: #ffffff; resize: vertical"></textarea>
-      </div>
-      <button type="submit" class="cv-btn" style="height: 54px; border: 0; border-radius: 999px; background: #007bff; color: #ffffff; font-weight: 700; font-size: 16px; cursor: pointer">Send message</button>
-      <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5A6681">We typically reply within one business day.</p>
-    </form>
-  </div>
-</section>
-
-
-<footer class="cv-footer cv-side" style="box-sizing: border-box; padding: 56px 40px; background: #06102A; color: #ffffff">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 32px">
-      <div style="display: flex; flex-direction: column; gap: 16px; max-width: 360px">
-        <a href="#top" style="display: inline-flex; align-items: center; background: #ffffff; border-radius: 10px; padding: 8px 12px">
-          <img src="images/biglogo.jpg" alt="Click Ventures" style="height: 34px; width: auto; display: block">
-        </a>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #A9B4D0">Performance marketing and lead generation, engineered end to end. Miami, Florida.</p>
-      </div>
-      <div style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 14px; font-weight: 600">
-        <a href="#snapshots" style="color: #A9B4D0">Snapshots</a>
-        <a href="#focus" style="color: #A9B4D0">About</a>
-        <a href="#framework" style="color: #A9B4D0">Services</a>
-        <a href="#verticals" style="color: #A9B4D0">Verticals</a>
-        <a href="#process" style="color: #A9B4D0">Process</a>
-        <a href="#contact" style="color: #A9B4D0">Contact</a>
-      </div>
-    </div>
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-top: 28px; border-top: 1px solid #1E2C55; font-size: 13px; color: #A9B4D0">
-      <span>© 2026 Click Ventures. All rights reserved.</span>
-      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em">clickvs.com</span>
-    </div>
-  </div>
-</footer>
-
+<section data-screen-label="Hero" style="max-width:1280px;margin:0 auto;padding:56px 24px 40px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:28px;align-items:flex-start">
+<span style="font-family:'JetBrains Mono',monospace;font-size:13px;padding:7px 14px;border:1.5px solid #0B1431;border-radius:999px;background:#D6F1FF">Performance marketing &amp; lead generation</span>
+<h1 style="margin:0;font-size:clamp(52px,9vw,132px);line-height:0.9;letter-spacing:-0.055em;font-weight:800;max-width:1150px;text-wrap:balance">Performance marketing, <span style="display:inline-block;background:#2B4FE3;color:#FFFFFE;padding:0 0.18em 0.06em;border-radius:0.4em;transform:rotate(-2deg)">engineered</span> end to end.</h1>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;width:100%">
+<p style="margin:0;font-size:20px;line-height:1.45;max-width:540px;color:#4A5578;text-wrap:pretty">Paid media, creative, CRO and measurement under one roof. We accelerate and scale brands with proprietary tooling and a performance-first team.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="#contact" style="height:58px;padding:0 30px;display:flex;align-items:center;border-radius:999px;background:#FFD84D;color:#0B1430;border:1.5px solid #0B1431;text-decoration:none;font-weight:700;font-size:17px;box-shadow:4px 4px 0 #0B1431" style-hover="transform:translate(-2px,-2px);box-shadow:6px 6px 0 #0B1431;color:#0B1430">Get started</a>
+<a href="#process" style="height:58px;padding:0 30px;display:flex;align-items:center;border-radius:999px;background:#FFFFFF;color:#0B1430;border:1.5px solid #0B1431;text-decoration:none;font-weight:600;font-size:17px" style-hover="background:#0A1330;color:#FFFFFE">See how we work</a>
 </div>
+</div>
+</div>
+
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<sc-for list="{{ channels }}" as="c" hint-placeholder-count="7">
+<span style="padding:10px 20px;border-radius:999px;border:1.5px solid #0B1431;font-weight:600;font-size:17px;background:{{ c.bg }};color:{{ c.fg }};transform:rotate({{ c.rot }}deg)">{{ c.label }}</span>
+</sc-for>
+</div>
+
+<div style="background:#0A1330;color:#FFFFFE;border-radius:28px;padding:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px">
+<div style="display:flex;flex-direction:column;gap:18px;padding:12px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#7FD0FF">COMMAND CENTER</span>
+<span style="font-size:34px;font-weight:700;letter-spacing:-0.03em;line-height:1.05">Daily pacing review</span>
+<div style="display:flex;gap:6px;flex-wrap:wrap">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+<button sc-camel-on-click="{{ t.pick }}" style="height:38px;padding:0 16px;border-radius:999px;font-size:14.5px;font-weight:600;cursor:pointer;border:1.5px solid #FFFFFE;background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
+</sc-for>
+</div>
+<span style="font-size:15px;line-height:1.5;color:#A9B3D6;max-width:340px">{{ tabNote }}</span>
+</div>
+<div style="background:#16204A;border-radius:20px;padding:22px;min-height:290px;display:flex;flex-direction:column;gap:14px;justify-content:center">
+<sc-if value="{{ isOverview }}" hint-placeholder-val="{{ true }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px">
+<sc-for list="{{ metrics }}" as="m" hint-placeholder-count="4">
+<div style="background:{{ m.bg }};color:{{ m.fg }};border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:6px">
+<span style="font-size:13.5px;font-weight:500">{{ m.label }}</span>
+<span style="font-size:44px;font-weight:800;letter-spacing:-0.05em;line-height:1">{{ m.value }}</span>
+<span style="font-size:13px;opacity:0.8">{{ m.note }}</span>
+</div>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{ isBars }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;justify-content:space-between;gap:12px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#A9B3D6"><span>{{ barsTitle }}</span><span style="color:#FFD84D">{{ barsTag }}</span></div>
+<sc-for list="{{ bars }}" as="b" hint-placeholder-count="5">
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;justify-content:space-between;font-size:14.5px"><span>{{ b.label }}</span><span style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#A9B3D6">{{ b.val }}</span></div>
+<div style="height:12px;border-radius:6px;background:#26306A;overflow:hidden"><div style="height:100%;border-radius:6px;width:{{ b.w }};background:{{ b.color }};transition:width .5s"></div></div>
+</div>
+</sc-for>
+</sc-if>
+</div>
+</div>
+</section>
+
+<section style="max-width:1280px;margin:0 auto;padding:16px 24px 80px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+<div style="background:#DCE6FF;border:1.5px solid #0B1431;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px"><span style="font-size:58px;font-weight:800;letter-spacing:-0.06em;line-height:0.9">9+ figures</span><span style="font-size:16px">in attributable client revenue</span></div>
+<div style="background:#FFFFFF;border:1.5px solid #0B1431;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px"><span style="font-size:58px;font-weight:800;letter-spacing:-0.06em;line-height:0.9">500K+</span><span style="font-size:16px">monthly leads touched by our funnels</span></div>
+<div style="background:#FFD84D;border:1.5px solid #0B1431;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px"><span style="font-size:58px;font-weight:800;letter-spacing:-0.06em;line-height:0.9">90+</span><span style="font-size:16px">specialists across media, creative and CRO</span></div>
+<div style="background:#FFFFFF;border:1.5px solid #0B1431;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px"><span style="font-size:58px;font-weight:800;letter-spacing:-0.06em;line-height:0.9">15+</span><span style="font-size:16px">active verticals across insurance, finance and home</span></div>
+</div>
+</section>
+
+<section id="snapshots" data-screen-label="Snapshots" style="max-width:1280px;margin:0 auto;padding:80px 24px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:16px;max-width:820px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#2B4FE3">Performance snapshots</span>
+<h2 style="margin:0;font-size:clamp(40px,5.5vw,76px);line-height:0.95;letter-spacing:-0.05em;font-weight:800;text-wrap:balance">The command center behind every campaign.</h2>
+<p style="margin:0;font-size:18.5px;line-height:1.5;color:#4A5578;max-width:620px">A live view into the dashboards, charts and attribution we monitor daily to keep campaigns scaling while protecting efficiency.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:16px">
+<sc-for list="{{ snapshots }}" as="s" hint-placeholder-count="4">
+<div style="background:{{ s.bg }};border:1.5px solid #0B1431;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:16px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:12.5px">{{ s.kicker }}</span>
+<h3 style="margin:0;font-size:30px;line-height:1.05;letter-spacing:-0.035em;font-weight:700;text-wrap:balance">{{ s.title }}</h3>
+<p style="margin:0;font-size:16.5px;line-height:1.55;color:#2E3756">{{ s.body }}</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:8px">
+<sc-for list="{{ s.tags }}" as="tag" hint-placeholder-count="3"><span style="padding:6px 12px;border-radius:999px;border:1.5px solid #0B1431;font-size:13.5px;font-weight:500;background:#FFFFFF">{{ tag }}</span></sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="focus" data-screen-label="Focus" style="background:#0A1330;color:#FFFFFE">
+<div style="max-width:1280px;margin:0 auto;padding:110px 24px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px;max-width:900px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#7FD0FF">Our focus</span>
+<h2 style="margin:0;font-size:clamp(40px,5.5vw,76px);line-height:0.95;letter-spacing:-0.05em;font-weight:800;text-wrap:balance">We engineer the full journey — from first impression to conversion.</h2>
+<p style="margin:0;font-size:18.5px;line-height:1.5;color:#A9B3D6;max-width:620px">Every click feels intuitive and every handoff is seamless. The result: higher intent, cleaner calls and compounding revenue lift.</p>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:clamp(20px,2.6vw,32px);font-weight:700;letter-spacing:-0.03em">
+<span style="padding:12px 24px;border-radius:999px;background:#2B4FE3;color:#FFFFFE">01 Acquisition</span><span style="color:#5B6690">→</span>
+<span style="padding:12px 24px;border-radius:999px;background:#1EA8F2;color:#0B1430">02 Experience</span><span style="color:#5B6690">→</span>
+<span style="padding:12px 24px;border-radius:999px;background:#FFD84D;color:#0B1430">03 Conversion</span><span style="color:#5B6690">→</span>
+<span style="padding:12px 24px;border-radius:999px;background:#FFFFFF;color:#0B1430">04 Retention</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:#26306A;border-radius:24px;overflow:hidden">
+<div style="background:#111A3D;padding:30px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#7FD0FF">01</span><span style="font-size:22px;font-weight:700">Reduce friction.</span><span style="color:#A9B3D6;font-size:16px;line-height:1.5">Optimize every touchpoint so users move forward faster.</span></div>
+<div style="background:#111A3D;padding:30px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#7FD0FF">02</span><span style="font-size:22px;font-weight:700">Align teams.</span><span style="color:#A9B3D6;font-size:16px;line-height:1.5">Media, creative and CRO work as one system, not silos.</span></div>
+<div style="background:#111A3D;padding:30px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#7FD0FF">03</span><span style="font-size:22px;font-weight:700">Instrument outcomes.</span><span style="color:#A9B3D6;font-size:16px;line-height:1.5">Daily KPIs drive decisions and scaling.</span></div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+<p style="margin:0;font-size:17px;line-height:1.5;color:#A9B3D6;max-width:620px">We optimize the experience for every consumer engaging with our funnels, driving the highest-intent leads and inbound calls for each vertical.</p>
+<a href="#contact" style="height:54px;padding:0 26px;display:flex;align-items:center;border-radius:999px;background:#FFD84D;color:#0B1430;text-decoration:none;font-weight:700;font-size:16px" style-hover="background:#FFFFFF;color:#0B1430">Talk to the team</a>
+</div>
+</div>
+</section>
+
+<section id="framework" data-screen-label="Services" style="max-width:1280px;margin:0 auto;padding:110px 24px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:16px;max-width:760px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#2B4FE3">Integrated growth framework</span>
+<h2 style="margin:0;font-size:clamp(40px,5.5vw,76px);line-height:0.95;letter-spacing:-0.05em;font-weight:800">End-to-end performance execution.</h2>
+</div>
+<p style="margin:0;font-size:18px;line-height:1.5;color:#4A5578;max-width:380px">Strategy, media buying, creative testing, CRO and reporting — tied together by measurement.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+<div style="border:1.5px solid #0B1431;border-radius:28px;padding:32px;background:#FFFFFF;display:flex;flex-direction:column;gap:16px" style-hover="background:#DCE6FF"><span style="width:56px;height:56px;border-radius:50%;background:#2B4FE3;color:#FFFFFE;display:grid;place-items:center;font-weight:800;font-size:20px">1</span><h3 style="margin:0;font-size:26px;letter-spacing:-0.03em;line-height:1.1">Drive impact with integrated strategy</h3><p style="margin:0;color:#4A5578;font-size:16.5px;line-height:1.55">A seamless process from planning to execution and analysis. Every channel supports the same goal: profitable growth.</p></div>
+<div style="border:1.5px solid #0B1431;border-radius:28px;padding:32px;background:#FFFFFF;display:flex;flex-direction:column;gap:16px" style-hover="background:#DCE6FF"><span style="width:56px;height:56px;border-radius:50%;background:#1EA8F2;color:#0B1430;display:grid;place-items:center;font-weight:800;font-size:20px">2</span><h3 style="margin:0;font-size:26px;letter-spacing:-0.03em;line-height:1.1">Scale revenue with precise targeting</h3><p style="margin:0;color:#4A5578;font-size:16.5px;line-height:1.55">We prioritize audience targeting to drive the most qualified leads while keeping CPAs low.</p></div>
+<div style="border:1.5px solid #0B1431;border-radius:28px;padding:32px;background:#FFFFFF;display:flex;flex-direction:column;gap:16px" style-hover="background:#DCE6FF"><span style="width:56px;height:56px;border-radius:50%;background:#FFD84D;color:#0B1430;display:grid;place-items:center;font-weight:800;font-size:20px">3</span><h3 style="margin:0;font-size:26px;letter-spacing:-0.03em;line-height:1.1">Measure results with custom trackers</h3><p style="margin:0;color:#4A5578;font-size:16.5px;line-height:1.55">Daily KPI monitoring and alerts so we can move fast and keep quality high.</p></div>
+</div>
+</section>
+
+<section id="verticals" data-screen-label="Verticals" style="max-width:1280px;margin:0 auto;padding:40px 24px 110px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:16px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#2B4FE3">Our core products</span>
+<h2 style="margin:0;font-size:clamp(40px,5.5vw,76px);line-height:0.95;letter-spacing:-0.05em;font-weight:800">Verticals we run.</h2>
+<p style="margin:0;font-size:18px;line-height:1.5;color:#4A5578;max-width:560px">Insurance, finance, home and commerce — each with funnels tuned to the economics of the category.</p>
+</div>
+<div style="display:flex;gap:4px;flex-wrap:wrap;padding:5px;border:1.5px solid #0B1431;border-radius:999px;background:#FFFFFF">
+<sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+<button sc-camel-on-click="{{ f.pick }}" style="height:40px;padding:0 18px;border-radius:999px;border:none;font-size:15px;font-weight:600;cursor:pointer;background:{{ f.bg }};color:{{ f.fg }}">{{ f.label }}</button>
+</sc-for>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px">
+<sc-for list="{{ verticals }}" as="v" hint-placeholder-count="8">
+<div sc-camel-on-mouse-enter="{{ v.enter }}" sc-camel-on-mouse-leave="{{ v.leave }}" style="border:1.5px solid #0B1431;border-radius:24px;overflow:hidden;background:#FFFFFF;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-4px);box-shadow:6px 6px 0 #0B1431">
+<div style="aspect-ratio:4/3;background:#DCE6FF;position:relative;overflow:hidden">
+<img src="{{ v.img }}" alt="{{ v.name }}" style="width:100%;height:100%;object-fit:cover;display:block">
+<span style="position:absolute;top:12px;left:12px;padding:5px 12px;border-radius:999px;font-size:12.5px;font-weight:600;background:#FFFFFF;color:#0B1430">{{ v.cat }}</span>
+<span style="position:absolute;bottom:12px;right:12px;padding:4px 10px;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:11.5px;background:#0A1330;color:#FFFFFE">{{ v.counter }}</span>
+</div>
+<div style="padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px">
+<h3 style="margin:0;font-size:22px;letter-spacing:-0.03em">{{ v.name }}</h3>
+<p style="margin:0;font-size:15px;line-height:1.5;color:#4A5578">{{ v.desc }}</p>
+<sc-if value="{{ v.hasTrades }}" hint-placeholder-val="{{ false }}"><div style="display:flex;gap:6px;flex-wrap:wrap;padding-top:4px"><sc-for list="{{ v.trades }}" as="tr" hint-placeholder-count="5"><span style="padding:4px 10px;border-radius:999px;background:#D6F1FF;font-size:12.5px;font-weight:500">{{ tr }}</span></sc-for></div></sc-if>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="process" data-screen-label="Process" style="background:#DCE6FF;border-top:1.5px solid #0B1431;border-bottom:1.5px solid #0B1431">
+<div style="max-width:1280px;margin:0 auto;padding:110px 24px 150px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px;max-width:900px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#2B4FE3">How we launch &amp; scale</span>
+<h2 style="margin:0;font-size:clamp(40px,5.5vw,76px);line-height:0.95;letter-spacing:-0.05em;font-weight:800;text-wrap:balance">A structured rollout that keeps quality tight while moving fast.</h2>
+<p style="margin:0;font-size:18px;color:#2E3756">This is how we avoid random testing and build compounding gains.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+<div style="background:#FFFFFF;border:1.5px solid #0B1431;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:14px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:64px;font-weight:800;letter-spacing:-0.06em;line-height:1;color:#2B4FE3">01</span><span style="font-family:'JetBrains Mono',monospace;font-size:12.5px;padding:6px 12px;border-radius:999px;background:#D6F1FF">Days 1–7</span></div><h3 style="margin:0;font-size:26px;letter-spacing:-0.03em">Audit + tracking map</h3><p style="margin:0;font-size:16px;line-height:1.55;color:#4A5578">Align KPIs, define success thresholds, connect analytics and call outcomes, and set performance guardrails.</p></div>
+<div style="background:#FFFFFF;border:1.5px solid #0B1431;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:14px;transform:translateY(24px)"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:64px;font-weight:800;letter-spacing:-0.06em;line-height:1;color:#2B4FE3">02</span><span style="font-family:'JetBrains Mono',monospace;font-size:12.5px;padding:6px 12px;border-radius:999px;background:#D6F1FF">Days 8–21</span></div><h3 style="margin:0;font-size:26px;letter-spacing:-0.03em">Creative system + CRO</h3><p style="margin:0;font-size:16px;line-height:1.55;color:#4A5578">Rapid creative production and controlled tests. We improve conversion before increasing spend aggressively.</p></div>
+<div style="background:#2B4FE3;color:#FFFFFE;border:1.5px solid #0B1431;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:14px;transform:translateY(48px)"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:64px;font-weight:800;letter-spacing:-0.06em;line-height:1">03</span><span style="font-family:'JetBrains Mono',monospace;font-size:12.5px;padding:6px 12px;border-radius:999px;background:#FFD84D;color:#0B1430">Day 22+</span></div><h3 style="margin:0;font-size:26px;letter-spacing:-0.03em">Scale with protection</h3><p style="margin:0;font-size:16px;line-height:1.55;color:#FFFFFE">Scale winning combinations, expand markets and languages, and keep CPL/CPA within target via daily monitoring.</p></div>
+</div>
+</div>
+</section>
+
+<section id="faq" data-screen-label="FAQ" style="max-width:1280px;margin:0 auto;padding:110px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#2B4FE3">FAQ</span>
+<h2 style="margin:0;font-size:clamp(36px,4.6vw,60px);line-height:0.98;letter-spacing:-0.05em;font-weight:800;text-wrap:balance">Questions teams usually ask us first.</h2>
+<p style="margin:0;font-size:17px;color:#4A5578">How we plug in, how fast we move, and what to expect.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
+<div style="border:1.5px solid #0B1431;border-radius:22px;background:{{ f.bg }};overflow:hidden">
+<button sc-camel-on-click="{{ f.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;background:none;border:none;text-align:left;font-size:18.5px;font-weight:600;letter-spacing:-0.01em;color:#0B1430;cursor:pointer">{{ f.q }}<span style="flex-shrink:0;width:32px;height:32px;border-radius:50%;border:1.5px solid #0B1431;display:grid;place-items:center;font-size:18px;background:#FFFFFF">{{ f.icon }}</span></button>
+<sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}"><p style="margin:0;padding:0 24px 22px;font-size:16px;line-height:1.55;color:#2E3756">{{ f.a }}</p></sc-if>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="contact" data-screen-label="Contact" style="max-width:1280px;margin:0 auto;padding:0 24px 110px">
+<div style="background:#2B4FE3;color:#FFFFFE;border:1.5px solid #0B1431;border-radius:36px;padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:48px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#BFE8FF">Ready to talk?</span>
+<h2 style="margin:0;font-size:clamp(44px,6vw,84px);line-height:0.92;letter-spacing:-0.055em;font-weight:800">Tell us what you're running.</h2>
+<p style="margin:0;font-size:18px;line-height:1.5">Vertical, geo, goals. We'll reply with a clear next-step plan.</p>
+<div style="display:flex;flex-direction:column;gap:10px;margin-top:8px">
+<span style="font-weight:700">What to include</span>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<span style="padding:8px 14px;border-radius:999px;background:#FFFFFF;color:#0B1430;font-size:14.5px">Vertical(s) + target geo</span>
+<span style="padding:8px 14px;border-radius:999px;background:#FFFFFF;color:#0B1430;font-size:14.5px">Main KPI (CPA / CPL / ROAS)</span>
+<span style="padding:8px 14px;border-radius:999px;background:#FFFFFF;color:#0B1430;font-size:14.5px">Current volume + target scale</span>
+<span style="padding:8px 14px;border-radius:999px;background:#FFFFFF;color:#0B1430;font-size:14.5px">Tracking stack (if any)</span>
+</div>
+</div>
+</div>
+<div style="background:#FFFFFF;color:#0B1430;border:1.5px solid #0B1431;border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:14px">
+<sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:10px;padding:40px 8px"><span style="font-size:34px;font-weight:800;letter-spacing:-0.04em">Message sent.</span><span style="color:#4A5578;font-size:16.5px">We typically reply within one business day.</span></div>
+</sc-if>
+<sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+<label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600">Name<input style="height:50px;padding:0 16px;border-radius:14px;border:1.5px solid #0B1431;background:#F7F8FC;font-size:16px;outline:none;color:#0B1430"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600">Work email<input type="email" style="height:50px;padding:0 16px;border-radius:14px;border:1.5px solid #0B1431;background:#F7F8FC;font-size:16px;outline:none;color:#0B1430"></label>
+</div>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600">Company<input style="height:50px;padding:0 16px;border-radius:14px;border:1.5px solid #0B1431;background:#F7F8FC;font-size:16px;outline:none;color:#0B1430"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600">Vertical(s) + target geo<input style="height:50px;padding:0 16px;border-radius:14px;border:1.5px solid #0B1431;background:#F7F8FC;font-size:16px;outline:none;color:#0B1430"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600">Goals, KPI and current volume<textarea rows="4" style="padding:14px 16px;border-radius:14px;border:1.5px solid #0B1431;background:#F7F8FC;font-size:16px;outline:none;resize:vertical;color:#0B1430"></textarea></label>
+<button sc-camel-on-click="{{ send }}" style="height:56px;border-radius:999px;border:1.5px solid #0B1431;background:#FFD84D;color:#0B1430;font-size:17px;font-weight:700;cursor:pointer;box-shadow:4px 4px 0 #0B1431">Send message</button>
+<span style="font-size:13.5px;color:#4A5578;text-align:center">We typically reply within one business day.</span>
+</sc-if>
+</div>
+</div>
+</section>
+
+<footer style="border-top:1.5px solid #0B1431;background:#FFFFFF">
+<div style="max-width:1280px;margin:0 auto;padding:48px 24px 32px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start">
+<div style="display:flex;flex-direction:column;gap:14px;max-width:360px"><img src="images/biglogo.jpg" alt="Click Ventures" style="height:34px;width:auto;align-self:flex-start"><span style="font-size:15px;line-height:1.5;color:#4A5578">Performance marketing and lead generation, engineered end to end. Miami, Florida.</span></div>
+<nav style="display:flex;gap:22px;flex-wrap:wrap;font-size:15px;font-weight:500">
+<a href="#snapshots" style="text-decoration:none">Snapshots</a><a href="#focus" style="text-decoration:none">About</a><a href="#framework" style="text-decoration:none">Services</a><a href="#verticals" style="text-decoration:none">Verticals</a><a href="#process" style="text-decoration:none">Process</a><a href="#contact" style="text-decoration:none">Contact</a>
+</nav>
+</div>
+<div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13.5px;color:#4A5578;padding-top:20px;border-top:1px solid #DCE6FF"><span>© 2026 Click Ventures. All rights reserved.</span><span>clickvs.com</span></div>
+</div>
+</footer>
+</div>
+</x-dc>
 <script>
-  const chips = document.querySelectorAll("#prodChips .cv-chip");
-  const cards = document.querySelectorAll("#prodGrid .cv-prod");
-  chips.forEach((chip) => {
-    chip.addEventListener("click", () => {
-      chips.forEach((item) => item.classList.remove("is-active"));
-      chip.classList.add("is-active");
-      const filter = chip.dataset.filter;
-      cards.forEach((card) => {
-        card.classList.toggle("is-hidden", filter !== "all" && card.dataset.cat !== filter);
-      });
+(function(){
+  function ready(fn){
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
+    else fn();
+  }
+  ready(function(){
+    var header = document.querySelector("header > div");
+    var nav = document.getElementById("site-nav") || document.querySelector("header nav");
+    if (!header || !nav) return;
+    nav.id = "site-nav";
+    var btn = header.querySelector(".menu-btn");
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "menu-btn";
+      btn.setAttribute("aria-controls", "site-nav");
+      header.insertBefore(btn, header.querySelector('a[href="#contact"]') || null);
+    }
+    function sync(){
+      var open = nav.classList.contains("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.textContent = open ? "Close" : "Menu";
+    }
+    sync();
+    btn.addEventListener("click", function(){
+      nav.classList.toggle("is-open");
+      sync();
+    });
+    nav.addEventListener("click", function(e){
+      if (e.target.closest("a")) {
+        nav.classList.remove("is-open");
+        sync();
+      }
     });
   });
-
-  document.querySelectorAll("[data-slideshow]").forEach((box, index) => {
-    const frames = [...box.querySelectorAll(":scope > img")];
-    const dots = [...box.querySelectorAll(".cv-dots button")];
-    let current = 0;
-    const show = (next) => {
-      current = (next + frames.length) % frames.length;
-      frames.forEach((frame, i) => frame.classList.toggle("is-on", i === current));
-      dots.forEach((dot, i) => dot.classList.toggle("is-on", i === current));
-    };
-    box.addEventListener("click", (event) => {
-      if (event.target.closest(".cv-dots")) return;
-      show(current + 1);
-    });
-    dots.forEach((dot, i) => {
-      dot.addEventListener("click", (event) => {
-        event.stopPropagation();
-        show(i);
-      });
-    });
-    setInterval(() => show(current + 1), 3800 + index * 350);
-  });
-
-  const form = document.querySelector(".cv-form");
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const button = form.querySelector("button");
-    button.textContent = "Message sent";
-    button.disabled = true;
-    form.reset();
-  });
+})();
 </script>
-</body>
-</html>
+
+<script type="text/x-dc" data-dc-script="">
+const IMG = 'images/verticals/';
+const V = [
+  ['Auto Insurance','Insurance','Helps drivers discover competitive rates from leading carriers.','auto-insurance',['1-6817008','2-6271668','3-7669214','4-4930676','5-18002501']],
+  ['Home Warranty','Home','Coverage plans that protect homeowners against the cost of repairing or replacing household systems.','home-warranty',['1-32497161','2-32497160','3-7859953','4-29226620','5-20500461','6-32497162']],
+  ['Home Insurance','Insurance','Homeowner policies that match coverage to the property, location and risk.','home-insurance',['1-8583638','2-5728209','3-7579042','4-28490242','5-30332492']],
+  ['Life Insurance','Insurance','Protect loved ones with tailored coverage options and quick eligibility paths.','life-insurance',['1-6393028','2-8944022','3-11145071','4-3042436','5-7086012']],
+  ['Timeshare','Home','Funnels for timeshare owners looking at exit, relief and related options.','timeshare',['1-14025912','2-9400920','3-1662549','4-38376507','5-3155666']],
+  ['Pet Insurance — CPL','Insurance','Pet coverage campaigns bought and optimized on a cost-per-lead basis.','pet-insurance',['1-6578806','2-4453160','3-6001382','4-8434594','5-6235231','6-7468980']],
+  ['Debt','Finance','Reduce payments on credit cards, loans and medical bills through vetted partners.','debt',['1-5900074','2-6578403','3-6963927','4-920382','5-6694533']],
+  ['Loans','Finance','Links consumers to flexible financing for diverse expenses.','loans',['1-4308022','2-4246045','3-9869396','4-6517092','5-36730435']],
+  ['Final Expense','Insurance','Life insurance designed to cover end-of-life costs and protect families.','final-expense',['1-8796067','2-3768131','3-4148965','4-8064882','5-7530829']],
+  ['Medicare','Insurance','Health insurance for people 65+ and qualified individuals with disabilities.','medicare',['1-39192358','2-7477702','3-6667704','4-7345460','5-8972259','6-9710820']],
+  ['Ecommerce','Commerce','Performance funnels that connect shoppers with products for personal and business needs.','ecommerce',['1-6958419','2-39219885','3-7857532','4-6169014','5-12725400','6-7007174']],
+  ['Home Services','Home','Local home-service funnels for the trades below.','home-services',['1-33404248','2-33501308','3-5691531','4-6124242','5-32497161'],['Gutters','Windows','Roofing','Siding','HVAC']]
+];
+const TABS = {
+  Overview: { note: 'Headline results across active programs, reviewed every morning.' },
+  Verticals: { note: 'Budget pacing per vertical with CPL guardrails switched on.', title: 'Spend pacing by vertical', tag: 'CPL guardrails on',
+    bars: [['Medicare',86],['Auto Insurance',72],['Final Expense',64],['Home Services',51],['Debt',38]] },
+  Creative: { note: 'Which channels are carrying the winning creatives this week.', title: 'Channel breakdown', tag: 'Creative leaderboard',
+    bars: [['Paid social',78],['Search',61],['Native',44]] },
+  Calls: { note: 'Full-funnel attribution, tracked across verticals.', title: 'Click → call → revenue', tag: 'Full-funnel attribution',
+    bars: [['Clicks',100],['Leads',46],['Qualified calls',27],['Revenue',18]] }
+};
+const METRICS = [['Conversion rate','+38%','Lift after UX streamlining'],['Cost per acquisition','−27%','Lower via creative iteration'],['ROAS','~2.3×','Improvement month over month'],['Qualified call rate','+19%','Increase in qualified calls']];
+const MBG = [['#2B4FE3','#FFFFFE'],['#1EA8F2','#0B1430'],['#FFD84D','#0B1430'],['#FFFFFF','#0B1430']];
+const BAR_COLORS = ['#2B4FE3','#1EA8F2','#FFD84D','#7FD0FF','#FFFFFF'];
+const SNAP = [
+  ['Control room','Cross-channel control room for every dollar spent.','Real-time dashboards unify platform analytics, first-party data and verified call results across every channel. Daily pacing reviews let us adjust budgets proactively and optimize for maximum profit.',['Live pacing views','By-vertical rollups','Spend / CPL guardrails'],'#FFFFFF'],
+  ['Analytics & iteration','Channel-level performance and creative winners at a glance.',"We evaluate the full funnel to find which offers, audiences and creatives can scale — doubling down on what works, cutting what doesn't, and protecting margins while scaling profitably.",['Channel breakdowns','Creative leaderboards','Automatic alerts'],'#D6F1FF'],
+  ['Measurement lab','Deeper attribution to keep CPL and CPA on target.','An integrated measurement stack connects every click, call and revenue dollar — clear visibility across every touchpoint, so we can expand into new markets and test new offers with profitability under control.',['CPL / CPA scorecards','Call & lead quality','Bid strategy feedback'],'#DCE6FF'],
+  ['Real-world reach','From dashboards to real people in real markets.','Our funnels are built to perform in the wild — across major metros, suburban pockets and niche zip codes — for both English- and Spanish-speaking audiences.',['Major US metros','EN & ES funnels','Multi-vertical expansion'],'#FFF3C2']
+];
+const FAQ = [
+  ['How quickly can you launch a new vertical or offer?','For most categories, we can move from alignment to first spend within 1–2 weeks, depending on compliance, routing and creative approvals on your side.'],
+  ['Do you handle both lead forms and inbound calls?','Yes. We support lead-only and direct inbound structures. The optimization logic is tuned to your preferred economics.'],
+  ['How do you report performance back to us?',"You get access to live dashboards plus a consistent cadence of summary reports and action plans, so your internal team always knows what's happening."],
+  ['Can you work with our existing tracking and CRM setup?','We integrate with most leading CRMs, call tracking platforms and analytics stacks. During onboarding we map attribution and data flows so nothing breaks.']
+];
+const CH = [['Paid','#2B4FE3','#FFFFFE',-2],['Creative','#FFD84D','#0B1430',1.5],['SEO','#FFFFFF','#0B1430',-1],['Email','#D6F1FF','#0B1430',2],['CRO','#1EA8F2','#0B1430',-1.5],['Social','#FFFFFF','#0B1430',1],['Branding','#DCE6FF','#0B1430',-2.5]];
+class Component extends DCLogic {
+  state = { tab:'Overview', filter:'All', faq:0, sent:false, hover:null, frame:0 };
+  componentWillUnmount(){ clearInterval(this.iv); }
+  renderVals() {
+    const s = this.state; const T = TABS[s.tab];
+    return {
+      channels: CH.map(([label,bg,fg,rot]) => ({label,bg,fg,rot})),
+      tabs: Object.keys(TABS).map(k => ({ label:k, bg: k===s.tab?'#FFFFFE':'transparent', fg: k===s.tab?'#0B1430':'#FFFFFE', pick:()=>this.setState({tab:k}) })),
+      tabNote: T.note, isOverview: s.tab==='Overview', isBars: s.tab!=='Overview',
+      metrics: METRICS.map(([label,value,note],i) => ({label,value,note,bg:MBG[i][0],fg:MBG[i][1]})),
+      barsTitle: T.title||'', barsTag: T.tag||'',
+      bars: (T.bars||[]).map(([label,p],i) => ({label, w:p+'%', val: s.tab==='Calls' ? (i===0?'100%':p+'%') : p+'% of budget', color:BAR_COLORS[i%BAR_COLORS.length]})),
+      snapshots: SNAP.map(([kicker,title,body,tags,bg]) => ({kicker,title,body,tags,bg})),
+      filters: ['All','Insurance','Finance','Home','Commerce'].map(f => ({label:f, bg:f===s.filter?'#2B4FE3':'transparent', fg:f===s.filter?'#FFFFFE':'#0B1430', pick:()=>this.setState({filter:f})})),
+      verticals: V.filter(v => s.filter==='All' || v[1]===s.filter).map(([name,cat,desc,slug,imgs,trades]) => {
+        const i = s.hover===slug ? s.frame % imgs.length : 0;
+        return { name, cat, desc, img: (window.__resources && window.__resources['v_'+slug+'_'+imgs[i]]) || (IMG+slug+'/'+imgs[i]+'.jpg'), counter:(i+1)+' / '+imgs.length, trades:trades||[], hasTrades:!!trades,
+          enter:()=>{ clearInterval(this.iv); this.setState({hover:slug, frame:1}); this.iv=setInterval(()=>this.setState(st=>({frame:st.frame+1})),900); },
+          leave:()=>{ clearInterval(this.iv); this.setState({hover:null, frame:0}); } };
+      }),
+      faqs: FAQ.map(([q,a],i) => ({q,a,open:s.faq===i,icon:s.faq===i?'−':'+',bg:s.faq===i?'#D6F1FF':'#FFFFFF',toggle:()=>this.setState({faq:s.faq===i?-1:i})})),
+      sent: s.sent, notSent: !s.sent, send: () => this.setState({sent:true})
+    };
+  }
+}
+</script>
+
+
+</body></html>
