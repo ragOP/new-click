@@ -32,8 +32,9 @@ button,input,textarea{font-family:inherit}
 
 
 <style id="mobile-fit">
-html, body { overflow-x: hidden; }
+html, body { overflow-x: clip; }
 img, svg, video { max-width: 100%; height: auto; }
+[id] { scroll-margin-top: 96px; }
 @media (max-width: 860px) {
   header { padding: 10px 12px !important; }
   header > div {
@@ -102,6 +103,11 @@ img, svg, video { max-width: 100%; height: auto; }
     height: 52px !important;
   }
   section[data-screen-label="Hero"] div[style*="gap:12px"] { width: 100%; }
+  section[data-screen-label="Hero"] > div:first-child > span {
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.35;
+  }
   #snapshots, #framework, #verticals, #faq { padding: 48px 16px !important; gap: 28px !important; }
   #focus > div, #process > div { padding: 48px 16px !important; gap: 24px !important; }
   #focus [style*="font-size:clamp(20px"] { font-size: 16px !important; gap: 8px !important; }
@@ -109,9 +115,11 @@ img, svg, video { max-width: 100%; height: auto; }
   #verticals > div:first-child, #framework > div:first-child { align-items: stretch !important; }
   #verticals div:has(> button) {
     width: 100% !important;
+    justify-content: flex-start !important;
     border-radius: 18px !important;
     flex-wrap: wrap !important;
     overflow: visible !important;
+    gap: 4px !important;
   }
   #verticals button { flex: 0 0 auto; }
   #contact { padding: 0 16px 56px !important; }
@@ -136,7 +144,7 @@ img, svg, video { max-width: 100%; height: auto; }
 </style>
 
 </helmet>
-<div id="top" style="background:#F7F8FC;min-height:100vh;overflow-x:hidden">
+<div id="top" style="background:#F7F8FC;min-height:100vh;overflow-x:clip">
 
 <header style="position:sticky;top:0;z-index:30;padding:14px 20px">
 <div style="max-width:1280px;margin:0 auto;height:64px;padding:0 10px 0 18px;display:flex;align-items:center;gap:24px;background:#FFFFFF;border:1.5px solid #0B1431;border-radius:999px">
