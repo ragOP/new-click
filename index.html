@@ -34,9 +34,24 @@ button,input,textarea{font-family:inherit}
 <style id="mobile-fit">
 html, body { overflow-x: clip; }
 img, svg, video { max-width: 100%; height: auto; }
-[id] { scroll-margin-top: 96px; }
+header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 80 !important;
+  background: #F7F8FC !important;
+  padding: 12px 20px !important;
+}
+#top { padding-top: 88px !important; }
+[id] { scroll-margin-top: var(--header-h, 104px); }
 @media (max-width: 860px) {
-  header { padding: 10px 12px !important; }
+  header {
+    padding: 8px 12px !important;
+  }
+  #top { padding-top: 118px !important; }
+  [id] { scroll-margin-top: var(--header-h, 128px); }
   header > div {
     display: grid !important;
     grid-template-columns: 1fr auto;
@@ -45,12 +60,12 @@ img, svg, video { max-width: 100%; height: auto; }
     min-height: 0 !important;
     align-items: center !important;
     border-radius: 20px !important;
-    padding: 12px !important;
-    gap: 10px 12px !important;
-    overflow: visible !important;
+    padding: 10px !important;
+    gap: 8px 10px !important;
+    overflow: hidden !important;
   }
-  header > div > a[href="#top"] { grid-area: logo; }
-  header img { height: 24px !important; width: auto !important; }
+  header > div > a[href="#top"] { grid-area: logo; min-width: 0; }
+  header img { height: 22px !important; width: auto !important; }
   header nav#site-nav,
   header nav {
     display: flex !important;
@@ -58,55 +73,65 @@ img, svg, video { max-width: 100%; height: auto; }
     position: static !important;
     width: 100% !important;
     flex: none !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
     justify-content: flex-start !important;
     gap: 6px !important;
     padding: 0 !important;
     background: none;
     border: 0;
     box-shadow: none;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+  header nav::-webkit-scrollbar { display: none; }
   header nav a {
     display: inline-flex !important;
     align-items: center;
-    min-height: 34px;
+    flex-shrink: 0;
+    min-height: 30px;
     padding: 0 10px !important;
     border-radius: 999px;
     background: #F7F8FC;
-    font-size: 13px !important;
+    font-size: 12px !important;
     text-decoration: none;
   }
   header > div > a[href="#contact"] {
     grid-area: cta;
-    height: 40px !important;
-    padding: 0 14px !important;
-    font-size: 14px !important;
+    height: 34px !important;
+    padding: 0 12px !important;
+    font-size: 13px !important;
+    white-space: nowrap;
   }
   h1 {
-    font-size: clamp(32px, 11vw, 44px) !important;
+    font-size: clamp(30px, 9.5vw, 40px) !important;
     letter-spacing: -0.045em !important;
+    line-height: 1.05 !important;
     max-width: 100% !important;
     overflow-wrap: anywhere;
   }
   h1 span { display: inline !important; transform: none !important; padding: 0 0.12em !important; }
-  h2 { font-size: clamp(28px, 8.4vw, 40px) !important; overflow-wrap: anywhere; }
+  h2 { font-size: clamp(26px, 8vw, 38px) !important; overflow-wrap: anywhere; }
   h3 { font-size: clamp(20px, 6vw, 26px) !important; }
   section[data-screen-label="Hero"] {
-    padding: 24px 16px 16px !important;
-    gap: 22px !important;
+    padding: 16px 16px 12px !important;
+    gap: 18px !important;
   }
-  section[data-screen-label="Hero"] > div:first-child { gap: 18px !important; }
+  section[data-screen-label="Hero"] > div:first-child { gap: 14px !important; }
   section[data-screen-label="Hero"] p { font-size: 16px !important; max-width: 100% !important; }
   section[data-screen-label="Hero"] a {
     justify-content: center !important;
     width: 100% !important;
-    height: 52px !important;
+    height: 50px !important;
   }
   section[data-screen-label="Hero"] div[style*="gap:12px"] { width: 100%; }
   section[data-screen-label="Hero"] > div:first-child > span {
     max-width: 100%;
     white-space: normal;
     line-height: 1.35;
+  }
+  section[data-screen-label="Hero"] span[style*="transform:rotate"] {
+    transform: none !important;
   }
   #snapshots, #framework, #verticals, #faq { padding: 48px 16px !important; gap: 28px !important; }
   #focus > div, #process > div { padding: 48px 16px !important; gap: 24px !important; }
@@ -146,7 +171,7 @@ img, svg, video { max-width: 100%; height: auto; }
 </helmet>
 <div id="top" style="background:#F7F8FC;min-height:100vh;overflow-x:clip">
 
-<header style="position:sticky;top:0;z-index:30;padding:14px 20px">
+<header style="position:fixed;top:0;left:0;right:0;z-index:80;padding:12px 20px;background:#F7F8FC">
 <div style="max-width:1280px;margin:0 auto;height:64px;padding:0 10px 0 18px;display:flex;align-items:center;gap:24px;background:#FFFFFF;border:1.5px solid #0B1431;border-radius:999px">
 <a href="#top" style="display:flex;align-items:center"><img src="images/biglogo.jpg" alt="Click Ventures" style="height:30px;display:block"></a>
 <nav id="site-nav" style="display:flex;gap:22px;flex:1;justify-content:center;flex-wrap:wrap;font-size:15px;font-weight:500">
@@ -500,6 +525,25 @@ class Component extends DCLogic {
   }
 }
 </script>
-
-
+<script>
+(function () {
+  function pinHeader() {
+    var header = document.querySelector("header");
+    var top = document.getElementById("top");
+    if (!header || !top) return;
+    var h = header.offsetHeight;
+    top.style.paddingTop = h + "px";
+    document.documentElement.style.setProperty("--header-h", h + "px");
+  }
+  pinHeader();
+  window.addEventListener("resize", pinHeader);
+  window.addEventListener("load", pinHeader);
+  if (window.ResizeObserver) {
+    var header = document.querySelector("header");
+    if (header) new ResizeObserver(pinHeader).observe(header);
+  }
+  setTimeout(pinHeader, 80);
+  setTimeout(pinHeader, 400);
+})();
+</script>
 </body></html>
