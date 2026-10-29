@@ -40,59 +40,108 @@ header {
   left: auto !important;
   right: auto !important;
   width: 100% !important;
-  z-index: auto !important;
+  z-index: 40 !important;
   background: #F7F8FC !important;
   padding: 12px 20px 16px !important;
-  overflow: hidden;
+  overflow: visible;
 }
 #top { padding-top: 0 !important; }
+.cv-menu-btn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.cv-menu-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 0;
+  border-radius: 2px;
+  background: #0B1430;
+  flex: none;
+}
+#cv-menu {
+  display: none;
+}
+#cv-menu.is-open {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(11, 20, 48, 0.4);
+}
+.cv-menu-panel {
+  width: min(86vw, 360px);
+  height: 100%;
+  background: #FFFFFF;
+  padding: 12px 0 40px;
+  overflow: auto;
+  box-shadow: 8px 0 40px rgba(11, 20, 48, 0.16);
+}
+.cv-menu-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 8px 8px auto;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: #0B1430;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+.cv-menu-panel nav {
+  display: flex;
+  flex-direction: column;
+}
+.cv-menu-panel nav a {
+  display: block;
+  padding: 16px 28px;
+  color: #0B1430;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.cv-menu-panel nav a:hover { color: #2B4FE3; }
+body.cv-menu-lock { overflow: hidden; }
 @media (max-width: 860px) {
   header {
     padding: 8px 12px 12px !important;
   }
   header > div {
     display: grid !important;
-    grid-template-columns: 1fr auto;
-    grid-template-areas: "logo cta" "nav nav";
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "menu logo cta";
     height: auto !important;
-    min-height: 0 !important;
+    min-height: 56px !important;
     align-items: center !important;
-    border-radius: 20px !important;
-    padding: 10px !important;
+    border-radius: 999px !important;
+    padding: 6px 8px 6px 6px !important;
     gap: 8px 10px !important;
     overflow: hidden !important;
   }
+  .cv-menu-btn {
+    display: inline-flex !important;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: menu;
+  }
   header > div > a[href="#top"] { grid-area: logo; min-width: 0; }
   header img { height: 22px !important; width: auto !important; }
-  header nav#site-nav,
-  header nav {
-    display: flex !important;
-    grid-area: nav;
-    position: static !important;
-    width: 100% !important;
-    flex: none !important;
-    flex-wrap: nowrap !important;
-    justify-content: flex-start !important;
-    gap: 6px !important;
-    padding: 0 !important;
-    background: none;
-    border: 0;
-    box-shadow: none;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  header nav::-webkit-scrollbar { display: none; }
-  header nav a {
-    display: inline-flex !important;
-    align-items: center;
-    flex-shrink: 0;
-    min-height: 30px;
-    padding: 0 10px !important;
-    border-radius: 999px;
-    background: #F7F8FC;
-    font-size: 12px !important;
-    text-decoration: none;
+  header nav#site-nav {
+    display: none !important;
   }
   header > div > a[href="#contact"] {
     grid-area: cta;
@@ -179,6 +228,9 @@ header {
 
 <header style="position:relative;padding:12px 20px;background:#F7F8FC">
 <div style="max-width:1280px;margin:0 auto;height:64px;padding:0 10px 0 18px;display:flex;align-items:center;gap:24px;background:#FFFFFF;border:1.5px solid #0B1431;border-radius:999px">
+<button type="button" class="cv-menu-btn" aria-label="Open menu" aria-controls="cv-menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
 <a href="#top" style="display:flex;align-items:center"><img src="images/biglogo.jpg" alt="Click Ventures" style="height:30px;display:block"></a>
 <nav id="site-nav" style="display:flex;gap:22px;flex:1;justify-content:center;flex-wrap:wrap;font-size:15px;font-weight:500">
 <a href="#snapshots" style="text-decoration:none">Snapshots</a>
@@ -432,6 +484,20 @@ header {
 </footer>
 </div>
 </x-dc>
+<div id="cv-menu">
+  <div class="cv-menu-panel">
+    <button type="button" class="cv-menu-close" aria-label="Close menu">×</button>
+    <nav>
+      <a href="#snapshots">Snapshots</a>
+      <a href="#focus">About</a>
+      <a href="#framework">Services</a>
+      <a href="#verticals">Verticals</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Get started</a>
+    </nav>
+  </div>
+</div>
 <script type="text/x-dc" data-dc-script="">
 const IMG = 'https://www.clickvs.com/images/verticals/';
 const V = [
@@ -530,5 +596,42 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+<script>
+(function () {
+  function menuEl() { return document.getElementById("cv-menu"); }
+  function buttons() { return document.querySelectorAll(".cv-menu-btn"); }
+  function openMenu() {
+    var menu = menuEl();
+    if (!menu) return;
+    menu.classList.add("is-open");
+    buttons().forEach(function (btn) { btn.setAttribute("aria-expanded", "true"); });
+    document.body.classList.add("cv-menu-lock");
+  }
+  function closeMenu() {
+    var menu = menuEl();
+    if (menu) menu.classList.remove("is-open");
+    buttons().forEach(function (btn) { btn.setAttribute("aria-expanded", "false"); });
+    document.body.classList.remove("cv-menu-lock");
+  }
+  document.addEventListener("click", function (event) {
+    if (event.target.closest(".cv-menu-btn")) {
+      var menu = menuEl();
+      if (menu && menu.classList.contains("is-open")) closeMenu();
+      else openMenu();
+      return;
+    }
+    if (event.target.closest(".cv-menu-close")) {
+      closeMenu();
+      return;
+    }
+    var menu = menuEl();
+    if (menu && event.target === menu) closeMenu();
+    if (event.target.closest("#cv-menu a")) closeMenu();
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeMenu();
+  });
+})();
 </script>
 </body></html>
